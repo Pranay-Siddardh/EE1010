@@ -1,0 +1,48 @@
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{xcolor}
+% Red hyperref configuration matching main.tex layout
+\usepackage[colorlinks=true,linkcolor=red,citecolor=red,urlcolor=black]{hyperref}
+
+% Core formatting macros defined in gvv.sty and main.tex
+\newcommand{\codebox}[1]{\par\smallskip\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\centering #1}}\par\smallskip}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\newcommand{\sbrak}[1]{\ensuremath{\left[#1\right]}}
+\newcommand{\gate}{\hfill (GATE CE 2025)}
+
+% Section and formula counter definitions
+\newcounter{formula}
+\newcounter{problem}
+\newcommand{\eqprefix}{}
+\renewcommand{\theequation}{\eqprefix.\arabic{equation}}
+\renewcommand{\thefigure}{\eqprefix.\arabic{figure}}
+
+\newcommand{\formula}[1]{\refstepcounter{formula}%
+  \renewcommand{\eqprefix}{1.1.\arabic{formula}}\setcounter{equation}{0}%
+  \par\medskip\needspace{5\baselineskip}\noindent{1.1.\arabic{formula}\quad #1}\par\nopagebreak\smallskip}
+
+\newcommand{\problem}{\refstepcounter{problem}%
+  \renewcommand{\eqprefix}{1.2.\arabic{problem}}\setcounter{equation}{0}\setcounter{figure}{0}%
+  \item }
+
+\newcommand{\solution}{\par\medskip\hspace*{1em}\textbf{Solution:} }
+
+\newenvironment{options}{\par\medskip\begin{multicols}{2}\begin{enumerate}[label=\alph*),itemsep=0pt,topsep=0pt,leftmargin=1.5em]}{\end{enumerate}\end{multicols}}
+
+\begin{document}
+
+\tableofcontents
+\newpage
+
+% Load Chapter File
+\input{chapters/2025.tex}
+
+\end{document}

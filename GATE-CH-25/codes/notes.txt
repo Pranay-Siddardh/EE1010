@@ -1,0 +1,73 @@
+q37
+
+# -----------------------------------------------------------------------------
+# FORMULA & MATHEMATICAL DERIVATION:
+#
+# Given Probability Density Function p(x):
+#   p(x) = 1/a  for x in (0, a)
+#
+# Function to find Expectation for:
+#   f(x) = x^2
+#
+# 1. Expectation Integral Formula:
+#    E[f(x)] = Integral[0 to a] ( f(x) * p(x) dx )
+#            = Integral[0 to a] ( x^2 * (1/a) dx )
+#
+# 2. Anti-derivative (Integrated Function):
+#    F(x) = Integral( (x^2)/a dx ) = (x^3) / (3*a)
+#
+# 3. Definite Integral Evaluation over [0, a]:
+#    E[f(x)] = F(a) - F(0)
+#            = (a^3)/(3*a) - 0 = (a^2) / 3
+# -----------------------------------------------------------------------------
+
+
+q36
+
+# -----------------------------------------------------------------------------
+# FORMULA & MATHEMATICAL DERIVATION:
+#
+# Divergence formula in 2D Cartesian coordinates:
+#   div(v) = ∇ · v = ∂(v_x)/∂x + ∂(v_y)/∂y
+#
+# Given vector components:
+#   v_x = a * x
+#   v_y = -b * y
+#
+# Partial Derivatives:
+#   ∂(v_x)/∂x = ∂(a*x)/∂x  = a
+#   ∂(v_y)/∂y = ∂(-b*y)/∂y = -b
+#
+# Setting Divergence to Zero (Solenoidal Vector Field Condition):
+#   ∇ · v = a - b = 0  =>  a = b
+# -----------------------------------------------------------------------------
+
+q45
+# -----------------------------------------------------------------------------
+# FORMULA & MATHEMATICAL PROPERTIES:
+#
+# 1. Trace of Matrix A:
+#    Tr(A) = a_11 + a_22 (Sum of diagonal elements)
+#
+# 2. Eigenvalue Sum Property:
+#    Sum(λ_i) = λ_1 + λ_2 + ... + λ_n = Tr(A)
+#
+# 3. Expressing λ_2 in terms of λ_1 and Tr(A) [for 2x2 Matrix]:
+#    λ_2 = Tr(A) - λ_1
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# MATHEMATICAL DERIVATION USING SYMPY:
+#
+# Process Transfer Function: G_p(s) = 2 * e^(-s) / (5s + 1)^2
+# Unit Step Response y(t) for t >= 1:
+#   y(t) = 2 * [1 - (1 + (t-1)/5) * e^(-(t-1)/5)]
+#
+# Maximum Slope Method Steps:
+# 1. d2y/dt2 = 0  => Find inflection point t_i
+# 2. S = dy/dt |_(t=t_i)  => Maximum slope S
+# 3. y_i = y(t_i)  => Height at inflection point
+# 4. theta_m = t_i - y_i / S  => Model dead time
+# 5. tau_m = K / S  => Model time constant (where gain K = 2)
+# 6. Ratio = tau_m / theta_m
+# -----------------------------------------------------------------------------
