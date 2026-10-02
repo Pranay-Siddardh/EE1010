@@ -433,13 +433,13 @@ The code to verify this is:
 \begin{align}
 f(x)=x^2-x-1=0
 \end{align}
-with the initial guess $x^{(0)}=1$. The value of the second iterate $x^{(2)}$, rounded off to two decimal places, is \underline{\hspace{2cm}}. \hfill (GATE~CH~2025)
+with the initial guess $x_{0}=1$. The value of the second iterate $x_{2}$, rounded off to two decimal places, is \underline{\hspace{2cm}}. \hfill (GATE~CH~2025)
 
 \solution Newton-Raphson improves an initial guess by using the tangent to the function at the current point. Repeating the iteration moves the approximation towards the root.
 
 The Newton-Raphson formula is given by \eqref{eq:newton_raphson}:
 \begin{align}
-x^{(n+1)}=x^{(n)}-\frac{f(x^{(n)})}{f'(x^{(n)})}.
+x_{(n+1)}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}.
 \end{align}
 Here,
 \begin{align}
@@ -448,7 +448,7 @@ f'(x)&=2x-1.
 \end{align}
 Given
 \begin{align}
-x^{(0)}=1.
+x_{0}=1.
 \end{align}
 For the first iteration,
 \begin{align}
@@ -457,7 +457,7 @@ f'(1)&=1,
 \end{align}
 and hence
 \begin{align}
-x^{(1)}&=1-\frac{-1}{1}=2.
+x_{1}&=1-\frac{-1}{1}=2.
 \end{align}
 For the second iteration,
 \begin{align}
@@ -466,7 +466,7 @@ f'(2)&=4-1=3.
 \end{align}
 Therefore,
 \begin{align}
-x^{(2)}&=2-\frac{1}{3}\\
+x_{2}&=2-\frac{1}{3}\\
 &=\frac53\\
 &=1.6667\ldots
 \end{align}
