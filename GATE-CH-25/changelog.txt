@@ -1,0 +1,21 @@
+============
+ CHANGE LOG
+============
+
+Version v1.1
+
+1) Just uploaded the main gate paper with codes and images
+2) Added readmes and other importants.
+
+Version v1.2
+
+1) Fixed the equation number glitches and the other important
+macro things like equation referring.
+2) Fixed the non bold solution heading bug.
+3) Fixed newton-raphson question (1.2.9), where x(0) is 
+superscripted instead of subscript and also removed brackets.
+
+Version v1.3
+
+1) Fixed the unnecessary conclusions like therefore proved, hence proved, etc.
+1) Fixed unnecessary conlusions like hence proved and etc.
