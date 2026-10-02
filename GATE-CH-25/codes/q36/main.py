@@ -22,15 +22,7 @@ div_v = dv_x_dx + dv_y_dy
 solution = sp.solve(sp.Eq(div_v, 0), a)
 
 # Formatted Output Display
-print("============================================================")
-print("             VECTOR FIELD DIVERGENCE ANALYSIS               ")
-print("============================================================")
 print(f"Vector Field v            : ({v_x}) i^ + ({v_y}) j^")
-print("-" * 60)
-print(f"Partial ∂(v_x)/∂x         : {dv_x_dx}")
-print(f"Partial ∂(v_y)/∂y         : {dv_y_dy}")
 print(f"Divergence (∇ · v)        : {div_v}")
-print("-" * 60)
 print(f"Zero Divergence Equation  : {div_v} = 0")
 print(f"Condition for Zero Div    : a = {solution[0]}")
-print("============================================================")

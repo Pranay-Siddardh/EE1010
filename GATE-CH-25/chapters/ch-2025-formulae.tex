@@ -1,0 +1,269 @@
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi,itemsep=0pt]
+\renewcommand{\eqprefix}{1.1.\arabic{enumi}}
+\setcounter{equation}{0}
+
+\item Dot Product of Two Vectors
+\begin{itemize}
+\item Matrix and Summation Forms:
+For two $n$-dimensional vectors $\vec{a}$ and $\vec{b}$,
+\begin{align}
+\vec{a}^{\top}\vec{b} &= \sum_{i=1}^{n}a_i b_i\label{eq:dot_product}
+\end{align}
+\end{itemize}
+
+\item Argument of Product of Complex Numbers
+\begin{itemize}
+\item Euler Form:
+For $z_1=r_1e^{i\theta_1}$ and $z_2=r_2e^{i\theta_2}$,
+\begin{align}
+z_1 &= r_1e^{i\theta_1}, \qquad z_2=r_2e^{i\theta_2}\label{eq:complex_euler_forms}\\
+z_1z_2 &= r_1r_2e^{i(\theta_1+\theta_2)}\label{eq:complex_product}\\
+\arg(z_1z_2) &= \theta_1+\theta_2 \pmod{2\pi}\label{eq:arg_product}\\
+\theta_1+\theta_2 &= \arg(z_1z_2)+2n\pi,\qquad n\in\mathbb{Z}\label{eq:arg_product_general}
+\end{align}
+\end{itemize}
+
+\item Mean Residence Time from RTD
+\begin{itemize}
+\item Mean Residence Time:
+For a residence time distribution $E(t)$,
+\begin{align}
+\bar{t} &= \frac{\int_0^\infty tE(t)\,dt}{\int_0^\infty E(t)\,dt}\label{eq:mean_rtd_ratio}\\
+\int_0^\infty E(t)\,dt &= 1\label{eq:rtd_normalization}\\
+\bar{t} &= \int_0^\infty tE(t)\,dt\label{eq:mean_rtd_integral}
+\end{align}
+\end{itemize}
+
+\item Permutations and Combinations
+\begin{itemize}
+\item Number of Ways of Choosing $r$ Items from $n$ Items:
+\begin{align}
+{}^nC_r &= \binom{n}{r}=\frac{n!}{r!(n-r)!}\label{eq:combination_formula}
+\end{align}
+\end{itemize}
+
+\item Expectation of a Function
+\begin{itemize}
+\item Continuous Random Variable:
+For a continuous random variable $X$ with probability density function $f_X(x)$,
+\begin{align}
+\mathbb{E}[g(X)] &= \int_{-\infty}^{\infty}g(x)f_X(x)\,dx\label{eq:expectation_continuous}\\
+\mathbb{E}[X] &= \int_{-\infty}^{\infty}xf_X(x)\,dx\label{eq:expectation_x}
+\end{align}
+\item Discrete Random Variable:
+\begin{align}
+\mathbb{E}[g(X)] &= \sum_x g(x)\Pr(X=x)\label{eq:expectation_discrete}
+\end{align}
+\end{itemize}
+
+\item Newton-Raphson Method
+\begin{itemize}
+\item First-Order Recurrence:
+For a differentiable function $f(x)$, the root is iteratively approximated using the Newton-Raphson recurrence
+\begin{align}
+x_{n+1} &= x_n-\frac{f(x_n)}{f'(x_n)}\label{eq:newton_raphson}
+\end{align}
+\end{itemize}
+
+\item Eigenvalues, Eigenvectors and Trace
+\begin{itemize}
+\item Definition:
+For a square matrix $\vec{A}$,
+\begin{align}
+\vec{A}\vec{x} &= \lambda\vec{x}, \qquad \vec{x}\ne\vec{0}\label{eq:eigen_definition}
+\end{align}
+where $\lambda$ is an eigenvalue and $\vec{x}$ is the corresponding eigenvector.
+
+\item Characteristic Equation:
+\begin{align}
+\det(\vec{A}-\lambda\vec{I}) &= 0\label{eq:characteristic_equation}
+\end{align}
+
+\item Relation with Trace:
+If $\lambda_1,\lambda_2,\ldots,\lambda_n$ are the eigenvalues of $\vec{A}\in\mathbb{R}^{n\times n}$,
+\begin{align}
+\operatorname{tr}(\vec{A}) &= \sum_{i=1}^{n}\lambda_i
+= \lambda_1+\lambda_2+\cdots+\lambda_n\label{eq:eigen_trace}
+\end{align}
+Also, from the eigenvalue product relation,
+\begin{align}
+\det(\vec{A}) &= \prod_{i=1}^{n}\lambda_i\label{eq:eigen_determinant}
+\end{align}
+\end{itemize}
+
+\item Trapezoidal Method for Plotting Differential Equations
+\begin{itemize}
+\item Differential Equation:
+\begin{align}
+\frac{dy}{dx} &= f(x,y)
+\end{align}
+
+\item Trapezoidal Update:
+\begin{align}
+y_{n+1}
+&= y_n+\frac{h}{2}
+\left[f(x_n,y_n)+f(x_{n+1},y_{n+1})\right]
+\label{eq:trapezoidal_method}
+\end{align}
+
+\item The method approximates the solution by using the average of the slopes at two consecutive points. The calculated points can then be used to plot the numerical solution curve.
+\end{itemize}
+
+\item Jacobian Matrix and Divergence
+\begin{itemize}
+\item Jacobian Matrix:
+For the vector field
+$\vec{F}=\myvec{F_1 & F_2 & \cdots & F_n}^{\top}$ with variables
+$\vec{x}=\myvec{x_1 & x_2 & \cdots & x_n}^{\top}$,
+\begin{align}
+J_{\vec{F}} &=
+\myvec{
+\frac{\partial F_1}{\partial x_1} & \frac{\partial F_1}{\partial x_2} & \cdots & \frac{\partial F_1}{\partial x_n}\\
+\frac{\partial F_2}{\partial x_1} & \frac{\partial F_2}{\partial x_2} & \cdots & \frac{\partial F_2}{\partial x_n}\\
+\vdots & \vdots & \ddots & \vdots\\
+\frac{\partial F_n}{\partial x_1} & \frac{\partial F_n}{\partial x_2} & \cdots & \frac{\partial F_n}{\partial x_n}
+}\label{eq:jacobian}
+\end{align}
+
+\item Divergence:
+\begin{align}
+\nabla\cdot\vec{F} &= \sum_{i=1}^{n}\frac{\partial F_i}{\partial x_i}\label{eq:divergence}
+\end{align}
+
+\item Relation Between Jacobian and Divergence:
+\begin{align}
+\nabla\cdot\vec{F} &= \operatorname{tr}(J_{\vec{F}})\label{eq:divergence_trace}
+\end{align}
+\end{itemize}
+
+\item Dead Time and Time Delay in the Laplace Domain
+\begin{itemize}
+\item Time Delay:
+A pure time delay of $\theta$ in the time domain is represented in the Laplace domain by
+\begin{align}
+e^{-\theta s}
+\end{align}
+
+\item Delayed Signal:
+If a signal $x(t)$ is delayed by $\theta$, then
+\begin{align}
+x_d(t) &= x(t-\theta)u(t-\theta)\\
+X_d(s) &= e^{-\theta s}X(s)
+\end{align}
+
+\item Significance in a Transfer Function:
+For a process transfer function
+\begin{align}
+G(s) &= G_0(s)e^{-\theta s},
+\end{align}
+the factor $e^{-\theta s}$ represents a pure time delay or dead time of $\theta$ time units, while $G_0(s)$ represents the process dynamics without the delay.
+
+\item The dead time shifts the process response along the time axis by $\theta$ without changing the steady-state gain. For a first-order plus dead-time model,
+\begin{align}
+G_{\mathrm{FOPDT}}(s) &= \frac{Ke^{-\theta s}}{\tau s+1}
+\end{align}
+where $K$ is the process gain, $\tau$ is the time constant, and $\theta$ is the dead time. This is the same FOPDT form given in \eqref{eq:fopdt_model}.
+\end{itemize}
+
+\item Maximum Slope Method for FOPDT Approximation
+\begin{itemize}
+\item First-Order Plus Dead-Time Model:
+\begin{align}
+G(s) &= \frac{Ke^{-\theta s}}{\tau s+1}\label{eq:fopdt_model}
+\end{align}
+
+\item Process Gain (from the FOPDT model in \eqref{eq:fopdt_model}):
+\begin{align}
+K &= \frac{\Delta y}{\Delta u}\label{eq:process_gain}
+\end{align}
+
+\item Maximum Slope:
+\begin{align}
+R &= \max\left(\frac{dy}{dt}\right)\label{eq:maximum_slope}
+\end{align}
+
+\item Dead Time:
+Using the maximum-slope construction in \eqref{eq:maximum_slope}, if $(t_{\mathrm{inflection}},y_{\mathrm{inflection}})$ is the inflection point,
+\begin{align}
+t_i &= t_{\mathrm{inflection}}
+-\frac{y_{\mathrm{inflection}}-y_0}{R}\label{eq:dead_time_tangent}\\
+\theta &= t_i-t_0\label{eq:dead_time}
+\end{align}
+
+\item Time Constant:
+Using the process gain and maximum slope definitions in \eqref{eq:process_gain} and \eqref{eq:maximum_slope},
+\begin{align}
+\tau &= \frac{K\Delta u}{R}\label{eq:fopdt_time_constant}
+\end{align}
+\end{itemize}
+
+\item Transfer Function and Feedback Loop
+\begin{itemize}
+\item Transfer Function:
+\begin{align}
+G(s) &= \frac{Y(s)}{X(s)}\label{eq:transfer_function}\\
+Y(s) &= G(s)X(s)\label{eq:transfer_relation}
+\end{align}
+
+\item Negative Feedback:
+For forward transfer function $G(s)$ and feedback transfer function $H(s)$,
+\begin{align}
+E(s) &= X(s)-H(s)Y(s)\label{eq:feedback_error}\\
+Y(s) &= G(s)E(s)\label{eq:feedback_output}
+\end{align}
+
+\item Closed-Loop Transfer Function:
+Using the relations in \eqref{eq:feedback_error} and \eqref{eq:feedback_output},
+\begin{align}
+Y(s) &= G(s)\left[X(s)-H(s)Y(s)\right]\label{eq:closed_loop_output}\\
+Y(s)\left[1+G(s)H(s)\right] &= G(s)X(s)\label{eq:closed_loop_relation}\\
+\frac{Y(s)}{X(s)} &= \frac{G(s)}{1+G(s)H(s)}\label{eq:closed_loop_tf}
+\end{align}
+
+\item Unity Feedback:
+Setting the feedback transfer function to unity in \eqref{eq:closed_loop_tf},
+\begin{align}
+H(s) &= 1\label{eq:unity_feedback}\\
+\frac{Y(s)}{X(s)} &= \frac{G(s)}{1+G(s)}\label{eq:unity_closed_loop}
+\end{align}
+\end{itemize}
+
+\item Routh-Hurwitz Stability Criterion
+\begin{itemize}
+\item Characteristic Equation:
+For a characteristic polynomial
+\begin{align}
+a_ns^n+a_{n-1}s^{n-1}+\cdots+a_1s+a_0 &= 0\label{eq:routh_characteristic}
+\end{align}
+
+\item Routh Array:
+\begin{align}
+\myvec{
+a_n & a_{n-2} & a_{n-4} & \cdots\\
+a_{n-1} & a_{n-3} & a_{n-5} & \cdots\\
+b_1 & b_2 & b_3 & \cdots\\
+c_1 & c_2 & c_3 & \cdots
+} &\label{eq:routh_array}
+\end{align}
+
+\item First Elements:
+From the Routh array structure in \eqref{eq:routh_array}, the first elements are
+\begin{align}
+b_1 &= \frac{a_{n-1}a_{n-2}-a_na_{n-3}}{a_{n-1}}\label{eq:routh_b1}\\
+b_2 &= \frac{a_{n-1}a_{n-4}-a_na_{n-5}}{a_{n-1}}\label{eq:routh_b2}
+\end{align}
+
+\item Number of Unstable Poles:
+\begin{align}
+N_{\mathrm{RHP}} &= \text{number of sign changes in the first column}\label{eq:routh_unstable_poles}
+\end{align}
+
+\item Stability Conditions:
+\begin{align}
+\text{Stable system} &\iff \text{no sign changes in the first column}\label{eq:routh_stable}\\
+\text{Unstable system} &\iff \text{one or more sign changes in the first column}\label{eq:routh_unstable}\\
+\text{Number of unstable poles} &= N_{\mathrm{RHP}}\label{eq:routh_rhp_count}
+\end{align}
+\end{itemize}
+
+\end{enumerate}

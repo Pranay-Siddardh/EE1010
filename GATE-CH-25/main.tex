@@ -1,48 +1,99 @@
-\documentclass[journal,12pt,onecolumn]{IEEEtran}
-\usepackage{amsmath,amssymb,amsthm}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{enumitem}
-\usepackage{needspace}
-\usepackage{multicol}
-\usepackage{listings}
-\usepackage{xcolor}
-% Red hyperref configuration matching main.tex layout
-\usepackage[colorlinks=true,linkcolor=red,citecolor=red,urlcolor=black]{hyperref}
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
 
-% Core formatting macros defined in gvv.sty and main.tex
-\newcommand{\codebox}[1]{\par\smallskip\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\centering #1}}\par\smallskip}
-\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
-\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-\newcommand{\brak}[1]{\ensuremath{\left(#1\right)}}
-\newcommand{\sbrak}[1]{\ensuremath{\left[#1\right]}}
-\newcommand{\gate}{\hfill (GATE CE 2025)}
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
 
-% Section and formula counter definitions
-\newcounter{formula}
-\newcounter{problem}
+%\usepackage[a5paper, top=10mm, bottom=10mm, left=10mm, right=10mm]{geometry}
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\raggedbottom
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black
+}
+
+\usepackage{amsfonts}
+\makeindex
+
+% ------------------------------------------------------------
+% CH 2025 problem/equation numbering.
+% The existing gvv-book style already provides the problem counter.
+% ------------------------------------------------------------
 \newcommand{\eqprefix}{}
 \renewcommand{\theequation}{\eqprefix.\arabic{equation}}
 \renewcommand{\thefigure}{\eqprefix.\arabic{figure}}
-
-\newcommand{\formula}[1]{\refstepcounter{formula}%
-  \renewcommand{\eqprefix}{1.1.\arabic{formula}}\setcounter{equation}{0}%
-  \par\medskip\needspace{5\baselineskip}\noindent{1.1.\arabic{formula}\quad #1}\par\nopagebreak\smallskip}
-
-\newcommand{\problem}{\refstepcounter{problem}%
-  \renewcommand{\eqprefix}{1.2.\arabic{problem}}\setcounter{equation}{0}\setcounter{figure}{0}%
-  \item }
-
-\newcommand{\solution}{\par\medskip\hspace*{1em}\textbf{Solution:} }
-
-\newenvironment{options}{\par\medskip\begin{multicols}{2}\begin{enumerate}[label=\alph*),itemsep=0pt,topsep=0pt,leftmargin=1.5em]}{\end{enumerate}\end{multicols}}
+\renewcommand{\theproblem}{1.2.\arabic{problem}}
+\renewcommand{\problem}{%
+  \refstepcounter{problem}%
+  \renewcommand{\eqprefix}{1.2.\arabic{problem}}%
+  \setcounter{equation}{0}%
+  \setcounter{figure}{0}%
+  \item
+}
 
 \begin{document}
+\bibliographystyle{IEEEtran}
+\onecolumn
 
-\tableofcontents
+\title{
+\begin{center}
+Math for EE
+\\
+\rule{0.4\columnwidth}{0.4pt}
+\end{center}
+}
+
+\section*{About this Book}
+
+This book introduces matrices through high school coordinate geometry. This approach makes it easier for beginners to learn Python for scientific computing. All problems in the book are from NCERT mathematics textbooks from Class 9-12.  Exercises are from CBSE board exam papers.
+
+The content is sufficient for industry jobs and covers nearly all matrix prerequisites for machine learning.
+There is no copyright, so readers are free to print and share.
+
+%This book is dedicated to my high school teachers, Dr. G.N. Chandwani and Dr. Anand K. Tripathi.
+%\begin{flushright}
+%\today
+%\end{flushright}
+%Github: https://github.com/gadepall/matgeo
+%\qquad
+License: https://creativecommons.org/licenses/by-sa/3.0/
+\\
+and
+\\
+https://www.gnu.org/licenses/fdl-1.3.en.html
+\\
+First manual appeared in January 2018
+\\
+First edition published on July 10, 2024
+\\
+In this edition, some incorrect solutions were removed.  All figures redrawn. More problems added.
+
 \newpage
 
-% Load Chapter File
-\input{chapters/2025.tex}
+\tableofcontents
+
+\newpage
+\onecolumn
+
+% Keep the original book numbering setup.
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\renewcommand{\theequation}{\eqprefix.\arabic{equation}}
+\renewcommand{\thefigure}{\eqprefix.\arabic{figure}}
+
+\setcounter{problem}{0}
+
+\section{GATE CH 2025}
+\subsection{Formulae}
+\input{chapters/ch-2025-formulae.tex}
+\newpage
+\subsection{Problems}
+\input{chapters/ch-2025-problems.tex}
 
 \end{document}

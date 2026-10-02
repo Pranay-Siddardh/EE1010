@@ -2,54 +2,54 @@
 #Date:- 28 September 2026
 #Question Number 44 in Chemical Engineering Gate Paper 2025
 
-
 import numpy as np
-
-# =============================================================================
-# THEORETICAL DERIVATION RECAP (IN CODE COMMENTS):
-# Differential Equation : dy/dx + y/x = 0
-# Separation           : (1/y) dy = -(1/x) dx
-# Integration          : ln|y| + ln|x| = C'  ==>  x*y = C  ==>  y(x) = C / x
-# Assuming C = 1       : y(x) = 1 / x
-# Definite Integral    : Integral_{a}^{b} (1/x) dx = ln(b) - ln(a)
-# =============================================================================
+import matplotlib.pyplot as plt
 
 def y_exact(x, C=1.0):
-    """Integrated solution y(x) = C / x."""
     return C / x
 
-def trapezoidal_rule(func, a, b, n, C=1.0):
-    """
-    Computes the area under y(x) using the Trapezoidal Rule:
-    Integral approx = (h / 2) * [ f(x_0) + 2*sum(f(x_i)) + f(x_n) ]
-    """
-    x = np.linspace(a, b, n + 1)
-    y = func(x, C)
-    h = (b - a) / n
+def trapezoidal_method(a, b, n_points, C=1.0):
+    x = np.linspace(a, b, n_points)
+    y = np.zeros(n_points)
+    y[0] = C / a  # Initial condition at x = 0.5
     
-    # Trapezoidal approximation formula
-    integral_approx = (h / 2.0) * (y[0] + 2 * np.sum(y[1:-1]) + y[-1])
-    return x, y, integral_approx
+    # Trapezoidal method iteration for dy/dx = -y/x
+    for i in range(n_points - 1):
+        h = x[i+1] - x[i]
+        y[i+1] = y[i] * (1.0 - h / (2.0 * x[i])) / (1.0 + h / (2.0 * x[i+1]))
+        
+    return x, y
 
 # Parameters
-a, b = 1.0, 2.0  # Integration bounds [1, 2]
-n_subintervals = 1000
+a, b = 0.5, 4.5
+n_points = 5000
 C_val = 1.0
 
-# Numerical Integration via Trapezoidal Method
-x_vals, y_vals, numerical_area = trapezoidal_rule(y_exact, a, b, n_subintervals, C=C_val)
-exact_area = np.log(b) - np.log(a)  # Exact integral = ln(2)
+# Exact curve data
+x_dense = np.linspace(0.2, 5.0, 500)
+y_dense = y_exact(x_dense, C=C_val)
 
-print("============================================================")
-print("  SOLVING dy/dx + y/x = 0 VIA TRAPEZOIDAL INTEGRATION      ")
-print("============================================================")
-print(f"Integrated Expression y(x)     : y = {C_val} / x")
-print(f"Sample Evaluations:")
-print(f"  y(1.0) = {y_exact(1.0, C_val):.4f}")
-print(f"  y(1.5) = {y_exact(1.5, C_val):.4f}")
-print(f"  y(2.0) = {y_exact(2.0, C_val):.4f}")
-print("-" * 60)
-print(f"Trapezoidal Area Int[1, 2] y dx : {numerical_area:.8f}")
-print(f"Exact Analytical Area ln(2)    : {exact_area:.8f}")
-print(f"Absolute Numerical Error       : {abs(numerical_area - exact_area):.2e}")
-print("============================================================")
+# Trapezoidal method data (5000 points from 0.5 to 4.5)
+x_trap, y_trap = trapezoidal_method(a, b, n_points, C=C_val)
+
+plt.figure(figsize=(7, 7), dpi=100)
+
+# Continuous plot without scatter markers
+plt.plot(x_dense, y_dense, color='#1f77b4', lw=2.5, label='Actual Solution $y = 1/x$')
+plt.plot(x_trap, y_trap, color='#d62728', ls='--', lw=1.5, label=f'Trapezoidal Method ($N = {n_points}$)')
+
+# Uniform Grid Setup
+plt.xlim(0, 5)
+plt.ylim(0, 5)
+plt.xticks(np.arange(0, 5.5, 0.5))
+plt.yticks(np.arange(0, 5.5, 0.5))
+plt.gca().set_aspect('equal', adjustable='box')
+
+plt.xlabel('x')
+plt.ylabel('y(x)')
+plt.grid(True, linestyle=':', alpha=0.6)
+plt.title('Q-44: Actual Solution vs Trapezoidal Method')
+plt.legend(loc='upper right')
+plt.tight_layout()
+plt.savefig("Diff-Eqn.pdf")
+print("The Curve is y=c/x and we take c=1 for this plot.")

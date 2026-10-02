@@ -81,13 +81,11 @@ int main() {
     double probability = (double)favorable_pairs / total_possible;
 
     /* Output console summary and theoretical verification */
-    printf("==================================================\n");
     printf("Total possible pickings (ordered pairs): %d\n", total_possible);
     printf("Number of favorable ordered pairs (1 Green & 1 Blue): %d\n", favorable_pairs);
     printf("Probability = favorable / possible = %d / %d = %.4f (or 7/15)\n", 
            favorable_pairs, total_possible, probability);
     printf("Verification: The result is verified with the combination formula (7C1 * 3C1) / 10C2 = (7 * 3) / 45 = 21/45 = 7/15 (0.4667).\n");
-    printf("==================================================\n");
     printf("Data containing ordered pairs successfully exported to 'main.dat'.\n");
 
     return 0;
