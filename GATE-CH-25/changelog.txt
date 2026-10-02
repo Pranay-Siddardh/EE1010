@@ -31,3 +31,10 @@ Version v1.5
 2) Removed the path to images.
 3) Added "The code(s) and dat(a)\(um)\(nothing)
 to verify this :" line. 
+
+Version v1.6 
+
+1) Changes Some Gramatical Errors in the text.
+2) Fixed wrong layot where an addition in the text is  
+displayed as equation.
+3) Some minute incorrect text placements.
