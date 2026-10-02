@@ -24,3 +24,10 @@ Version v1.4
 
 1) Changed the determinant expression in (1.2.8) as 
 det(matrix) to |matrix format|.
+
+Version v1.5
+
+1) Increased the size of images.
+2) Removed the path to images.
+3) Added "The code(s) and dat(a)\(um)\(nothing)
+to verify this :" line. 
