@@ -1,17 +1,18 @@
 # Fdb version 4
-["makeindex main.idx"] 1790950972.64971 "main.idx" "main.ind" "main" 1790959556.66268 0
-  "main.idx" 1790959556.30312 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1790972312.69028 "main.idx" "main.ind" "main" 1790972313.76063 0
+  "main.idx" 1790972313.30142 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1790959555.62406 "main.tex" "main.pdf" "main" 1790959556.6628 0
+["pdflatex"] 1790972312.76353 "main.tex" "main.pdf" "main" 1790972313.76074 2
   "/etc/texmf/web2c/texmf.cnf" 1790502251.00055 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1136768653 4524 6bce29db5bc272ba5f332261583fee9c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmbi7t.tfm" 1136768653 2228 e564491c42a4540b5ebb710a75ff306c ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmbi8r.tfm" 1136768653 4480 10409ed8bab5aea9ec9a78028b763919 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm" 1136768653 2124 2601a75482e9426d33db523edf23570a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm" 1136768653 4408 25b74d011a4c66b7f212c0cc3c90061b ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm" 1136768653 2680 312a2d12b1f1df8ee0212e7ba1962402 ""
@@ -66,9 +67,11 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1136849748 44729 811d6c62865936705a31c797a1d5dada ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb" 1136849748 44656 0cbca70e0534538582128f6b54593cca ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1136849748 46026 6dab18b61c907687b520c72847215a68 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb" 1136849748 45458 a3faba884469519614ca56ba5f6b1de1 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf" 1136768653 1372 788387fea833ef5963f4c5bffe33eb89 ""
+  "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmbi7t.vf" 1136768653 1384 6ac0f8b839230f5d9389287365b243c0 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf" 1136768653 1380 0ea3a3370054be6da6acd929ec569f06 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf" 1136768653 1948 7330aeef3af211edff3b35fb2c12a0fd ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf" 1136768653 1384 a9d8adaf491ce34e5fba99dc7bbe5f39 ""
@@ -325,11 +328,11 @@
   "figs/q62/Response-Plot.pdf" 1790938710.85868 31794 0d6c6d81c8806830c0661694d61b0bf8 ""
   "gvv-book.sty" 1790923280.87045 2364 972c828b0fdb5c1b2ef6ab44859ce8d3 ""
   "gvv.sty" 1790923273.39845 4374 e0265f3cc8fb087d2434efb730c546e4 ""
-  "main.aux" 1790959556.55312 5958 66278f4dbb6ce6008edd90ffa9824079 "pdflatex"
-  "main.ind" 1790950972.7274 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.out" 1790959556.55312 303 beba80b38d5863e1e9d90af39c26f460 "pdflatex"
-  "main.tex" 1790923876.12983 2768 41a0d11f177a763b78537ae727f87592 ""
-  "main.toc" 1790959556.55412 216 ec5221e22adcd9f16e7121871bba3628 "pdflatex"
+  "main.aux" 1790972313.54742 5866 7cf2e4bf8bf5d6e0ec70491b50ba13e5 "pdflatex"
+  "main.ind" 1790972312.75741 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.out" 1790972313.54842 303 beba80b38d5863e1e9d90af39c26f460 "pdflatex"
+  "main.tex" 1790972277.99228 2779 e15dfa3e5a38750ddf55bc464a4ffcde ""
+  "main.toc" 1790972313.54842 216 ec5221e22adcd9f16e7121871bba3628 "pdflatex"
   (generated)
   "main.aux"
   "main.idx"
