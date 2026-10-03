@@ -1,0 +1,102 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{amsfonts}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black
+}
+
+\makeindex
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\onecolumn
+
+\title{
+\begin{center}
+RGB to Black and White: A Clear Journey
+\\
+\rule{0.8\columnwidth}{0.6pt}
+\end{center}
+}
+
+\author{
+    \vspace{11cm}
+    \begin{center}
+        \includegraphics[width=0.2\columnwidth]{figs/logo.jpg}
+        \\
+        {\huge G. V. V. Sharma}
+    \end{center}
+}
+
+\maketitle
+
+\newpage
+\section*{About this Article}
+\input{chapters/about.tex}
+
+\newpage
+\tableofcontents
+
+\newpage
+\onecolumn
+
+\setcounter{secnumdepth}{2}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsectiondis}{\thesubsection.}
+
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+\numberwithin{equation}{subsection}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+% Chapter 1 starts at the top of the page
+\section{\textbf{Introduction}}
+\input{chapters/introduction.tex}
+
+\vspace*{5\baselineskip}
+\section{\textbf{RGB Image Representation}}
+\input{chapters/rgb-representation.tex}
+
+\vspace*{5\baselineskip}
+\section{\textbf{Raw Bitmap and JPEG Representation}}
+\input{chapters/bitmap-jpeg.tex}
+
+\vspace*{5\baselineskip}
+\section{\textbf{Colour Conversion}}
+\input{chapters/colour-conversion.tex}
+
+\vspace*{5\baselineskip}
+\section{\textbf{RGB to Grayscale Conversion}}
+\input{chapters/grayscale-conversion.tex}
+
+\vspace*{5\baselineskip}
+\section{\textbf{Grayscale and Black-and-White Conversion Algorithm}}
+\input{chapters/algorithm.tex}
+
+\vspace*{5\baselineskip}
+\section{\textbf{Clustering Methods and Analysis}}
+\input{chapters/clustering.tex}
+
+\vspace*{5\baselineskip}
+
+\section{\textbf{Implementation and Output}}
+\input{chapters/implementation.tex}
+
+\vspace*{5\baselineskip}
+\section{\textbf{References}}
+\input{chapters/references.tex}
+
+\end{document}

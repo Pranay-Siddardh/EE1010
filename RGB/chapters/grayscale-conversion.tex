@@ -1,0 +1,26 @@
+\subsection{Grayscale Intensity}
+
+A grayscale image represents every pixel using a single intensity
+value:
+\begin{align}
+Y&=0.299R+0.587G+0.114B\label{eq:grayscale_y}
+\end{align}
+
+A small value of $Y$ represents a dark pixel, while a large value
+represents a bright pixel.
+\vspace*{\baselineskip}
+\subsection{Black and White}
+
+A grayscale image contains many intensity levels between black and
+white. A black-and-white image instead contains two classes.
+
+Let $T$ denote the selected threshold:
+\begin{align}
+B(i,j)=
+\begin{cases}
+0, & Y(i,j)<T,\\
+255, & Y(i,j)\geq T.
+\end{cases}\label{eq:bw_threshold}
+\end{align}
+
+Thus the grayscale intensity is mapped to one of two output values.

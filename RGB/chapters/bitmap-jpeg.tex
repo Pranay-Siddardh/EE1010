@@ -1,0 +1,79 @@
+\subsection{Raw Bitmap Representation}
+
+A raw RGB bitmap stores the colour components of the pixels directly.
+For a $2\times2$ group of pixels,
+\begin{align}
+\begin{bmatrix}
+(R_{11},G_{11},B_{11}) & (R_{12},G_{12},B_{12})\\
+(R_{21},G_{21},B_{21}) & (R_{22},G_{22},B_{22})
+\end{bmatrix}\label{eq:raw_rgb_2x2}
+\end{align}
+
+\vspace*{\baselineskip}
+
+\subsection{JPEG Representation}
+
+JPEG uses a transformed and compressed representation rather than
+storing every RGB tuple independently. The JPEG standard defines processes
+for converting source image data to compressed image data.
+
+The common colour information is calculated, and the formulae used for
+this conversion are listed in the next section.
+
+\vspace*{\baselineskip}
+
+\subsection{Per-Pixel Storage}
+
+For an image containing $N$ pixels, an 8-bit RGB representation requires
+three separate 8-bit colour components for every pixel. Hence, the raw
+colour information requires
+\begin{align}
+3\times8N&=24N\label{eq:rgb_storage_bits}
+\end{align}
+bits.
+
+If the image is converted directly from RGB to grayscale, only the
+luminance value $Y$ is retained for each pixel. With an 8-bit grayscale
+representation, this requires
+\begin{align}
+8N&=8N\label{eq:grayscale_storage_bits}
+\end{align}
+bits.
+
+Thus, the storage changes from $24N$ bits for RGB to $8N$ bits for
+grayscale. The storage ratio is therefore
+\begin{align}
+\frac{8N}{24N}&=\frac{1}{3}\label{eq:rgb_grayscale_ratio}
+\end{align}
+so the grayscale representation requires one-third of the raw RGB
+storage, corresponding to a reduction of two-thirds.
+
+When the image is represented using $Y$, $Cb$, and $Cr$, the three
+components are still separate components. Each component is normally
+represented using 8-bit samples; the reduction in storage can instead be
+obtained by reducing the spatial sampling of the chrominance components.
+In particular, with 4:2:0 chroma subsampling, the $Y$ component retains
+$N$ samples, while $Cb$ and $Cr$ each contain $N/4$ samples.
+
+Therefore, before the additional JPEG transform and coding stages, the
+sample storage can be written as
+\begin{align}
+8N+8\frac{N}{4}+8\frac{N}{4}
+&=12N\label{eq:ycbcr_420_storage_bits}
+\end{align}
+bits.
+
+Thus, the factor of four applies to the \emph{number of chrominance
+samples}, not to the number of bits in an individual $Cb$ or $Cr$ sample.
+The $Y$ component is retained at full spatial resolution because it carries
+the intensity information for every pixel.
+
+For example, in a $2\times2$ group containing four $Y$ samples, 4:2:0
+subsampling uses one $Cb$ sample and one $Cr$ sample for the group. The
+$Cb$ and $Cr$ samples are therefore stored separately, but they are shared
+spatially by the four corresponding pixels.
+
+The comparison above describes sample storage before the main JPEG
+compression stages. The actual size of a JPEG file is different because
+JPEG additionally uses transformation, quantisation, and entropy coding
+as part of its coding process.

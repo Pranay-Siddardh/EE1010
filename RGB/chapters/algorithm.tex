@@ -1,0 +1,26 @@
+\subsection{RGB to Grayscale Algorithm}
+
+The conversion procedure is carried out pixel by pixel.
+
+\begin{enumerate}
+\item Read the RGB input image.
+\item Obtain $R$, $G$, and $B$ for each pixel.
+\item Calculate the luminance $Y$.
+\item Store $Y$ as the grayscale intensity.
+\item Select the threshold $T$.
+\item Compare every grayscale value with $T$.
+\item Assign black or white according to the threshold condition.
+\item Save the resulting image.
+\end{enumerate}
+
+The complete transformation is
+\begin{align}
+RGB &\rightarrow Y \rightarrow \text{Threshold}
+\rightarrow \text{Black/White}\label{eq:rgb_bw_pipeline}
+\end{align}
+\vspace*{\baselineskip}
+\subsection{Mapping to the Output Image}
+
+The calculated intensity matrix is passed to the image-writing stage.
+When JPEG is selected, the image-writing stage performs the
+corresponding JPEG encoding and compression.

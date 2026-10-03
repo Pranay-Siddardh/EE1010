@@ -1,0 +1,47 @@
+\subsection{RGB to Luminance and Chrominance}
+
+The RGB components may be transformed into three separate components,
+luminance $Y$ and chrominance $Cb$ and $Cr$:
+\begin{align}
+Y  &= 0.299R + 0.587G + 0.114B\label{eq:y_luminance}\\
+Cb &= -0.168736R - 0.331264G + 0.5B + 128\label{eq:cb_chrominance}\\
+Cr &= 0.5R - 0.418688G - 0.081312B + 128\label{eq:cr_chrominance}
+\end{align}
+
+Here, $Y$ represents luminance, while $Cb$ and $Cr$ represent
+chrominance information. The $Cb$ and $Cr$ components carry colour-difference
+information associated with blue and red, respectively. They are separate
+8-bit components in the usual 8-bit representation; they are not single-bit
+colour indicators.
+\vspace*{\baselineskip}
+\subsection{Chrominance Components}
+
+The $Cb$ component describes the blue-related colour difference and
+$Cr$ describes the red-related colour difference. These components
+retain colour information that is not required when only grayscale
+intensity is required.
+
+When chroma subsampling is used, the $Cb$ and $Cr$ components can be
+stored at a lower spatial sampling rate than $Y$. For example, in 4:2:0
+subsampling, each $2\times2$ group of pixels retains four $Y$ samples but
+uses one $Cb$ sample and one $Cr$ sample. Thus, the chrominance components
+remain separate components, while fewer chrominance samples are stored.
+\vspace*{\baselineskip}
+\subsection{Luminance Weighting}
+
+The coefficients in the luminance equation are different because the
+human visual system does not perceive the three RGB components with
+ equal sensitivity:
+\begin{align}
+0.587&>0.299>0.114\label{eq:luminance_weights}
+\end{align}
+
+The green component consequently has the largest contribution to
+luminance, followed by red and then blue.
+\vspace*{\baselineskip}
+\subsection{Information Reduction}
+
+For the purpose of grayscale conversion, the colour pixel $(R,G,B)$ is
+reduced to the single luminance value $Y$. The $Cb$ and $Cr$ components
+carry the colour-difference information and are therefore not required
+for the final grayscale intensity image.

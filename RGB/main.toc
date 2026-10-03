@@ -1,0 +1,39 @@
+\contentsline {section}{\numberline {1}\textbf {Introduction}}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}RGB Image}{5}{subsection.1.1}%
+\contentsline {section}{\numberline {2}\textbf {RGB Image Representation}}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}RGB Pixel Representation}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Colour Information}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}\textbf {Raw Bitmap and JPEG Representation}}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Raw Bitmap Representation}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}JPEG Representation}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Per-Pixel Storage}{6}{subsection.3.3}%
+\contentsline {section}{\numberline {4}\textbf {Colour Conversion}}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}RGB to Luminance and Chrominance}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Chrominance Components}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Luminance Weighting}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Information Reduction}{8}{subsection.4.4}%
+\contentsline {section}{\numberline {5}\textbf {RGB to Grayscale Conversion}}{8}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Grayscale Intensity}{8}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Black and White}{8}{subsection.5.2}%
+\contentsline {section}{\numberline {6}\textbf {Grayscale and Black-and-White Conversion Algorithm}}{9}{section.6}%
+\contentsline {subsection}{\numberline {6.1}RGB to Grayscale Algorithm}{9}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Mapping to the Output Image}{9}{subsection.6.2}%
+\contentsline {section}{\numberline {7}\textbf {Clustering Methods and Analysis}}{9}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Global Mean Thresholding}{9}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Static Reference Thresholding}{10}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Gaussian-Weighted Local Reference}{10}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Importance of $\sigma $}{11}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Purpose of $C=3$}{11}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Gaussian Local Thresholding}{11}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Computational Consideration}{11}{subsection.7.7}%
+\contentsline {section}{\numberline {8}\textbf {Implementation and Output}}{12}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Implementation}{12}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Testing Case 1: Scenery}{12}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Testing Case 2: Jersey}{15}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Program File}{16}{subsection.8.4}%
+\contentsline {section}{\numberline {9}\textbf {References}}{17}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Reference 1: RGB Image Representation}{17}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Reference 2: JPEG Image Compression}{17}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Reference 3: Y, Cb and Cr Conversion}{17}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Reference 4: Image Thresholding}{17}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Reference 5: Gaussian Filtering}{17}{subsection.9.5}%

@@ -1,0 +1,19 @@
+\subsection{RGB Pixel Representation}
+
+The three components of an RGB pixel are normally represented in the
+range $0$ to $255$ for an 8-bit image:
+\begin{align}
+0\leq R,G,B\leq255\label{eq:rgb_range}
+\end{align}
+
+The pixel at position $(i,j)$ is
+\begin{align}
+P_{ij}=(R_{ij},G_{ij},B_{ij})\label{eq:rgb_tuple}
+\end{align}
+\vspace*{\baselineskip}
+\subsection{Colour Information}
+
+Different RGB tuples may produce colours having similar perceived
+brightness. Consequently, choosing only one RGB component would discard
+important information. A weighted combination is therefore used when
+the objective is to obtain grayscale intensity.

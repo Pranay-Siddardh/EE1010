@@ -1,0 +1,25 @@
+\subsection{RGB Image}
+
+An RGB image represents colour using three components: Red, Green, and
+Blue. A pixel can therefore be represented by the tuple
+\begin{align}
+P_{ij} &= (R_{ij},G_{ij},B_{ij})\label{eq:rgb_pixel}
+\end{align}
+
+For a conventional 8-bit RGB image, each component is represented using
+8 bits. Hence, one pixel requires
+\begin{align}
+8+8+8 &= 24\label{eq:rgb_bits}
+\end{align}
+bits of colour information.
+
+For an image containing $M\times N$ pixels, the image may be viewed as
+three matrices,
+\begin{align}
+R&\in\mathbb{R}^{M\times N}\label{eq:r_matrix}\\
+G&\in\mathbb{R}^{M\times N}\label{eq:g_matrix}\\
+B&\in\mathbb{R}^{M\times N}\label{eq:b_matrix}
+\end{align}
+
+The conversion to black and white is therefore a reduction from three
+colour values per pixel to one intensity value per pixel.

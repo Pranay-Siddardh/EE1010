@@ -1,0 +1,139 @@
+\subsection{Global Mean Thresholding}
+
+The first dynamic method calculates one reference intensity from the
+complete grayscale image. If the grayscale matrix is denoted by $Y$,
+the reference is the mean intensity of all pixels:
+\begin{align}
+\mu &= \frac{1}{MN}\sum_{i=1}^{M}\sum_{j=1}^{N}Y(i,j)\label{eq:global_mean}
+\end{align}
+
+Every pixel is then compared with this single image-wide reference. The
+corresponding binary decision is
+\begin{align}
+B(i,j)&=
+\begin{cases}
+255, & Y(i,j)\geq\mu,\\
+0, & Y(i,j)<\mu.
+\end{cases}\label{eq:global_mean_threshold}
+\end{align}
+
+This method is adaptive in the sense that the reference changes with the
+input image, but the reference itself is global. It therefore does not
+change from one location to another within the same image.
+\vspace*{\baselineskip}
+\subsection{Static Reference Thresholding}
+
+For comparison, a fixed reference of $128$ is used in the static
+thresholding method. A grayscale pixel is assigned to white when its
+intensity is at least $128$ and to black otherwise:
+\begin{align}
+B(i,j)&=
+\begin{cases}
+255, & Y(i,j)\geq128,\\
+0, & Y(i,j)<128.
+\end{cases}\label{eq:static_threshold}
+\end{align}
+
+The purpose of this fixed reference is to provide a simple baseline
+against which the dynamically calculated references can be compared.
+\vspace*{\baselineskip}
+\subsection{Gaussian-Weighted Local Reference}
+
+A more localized reference is obtained by applying a Gaussian filter to
+the grayscale intensity matrix. Instead of giving every neighbouring
+pixel equal importance, the Gaussian function gives greater importance
+to pixels close to the point being considered and progressively less
+importance to pixels farther away.
+
+The Gaussian weighting function is
+\begin{align}
+w(d)&=\exp\left(-\frac{d^2}{2\sigma^2}\right)\label{eq:gaussian_weight}
+\end{align}
+
+Here, $d$ is the distance from the point being processed and $\sigma$
+controls the spatial spread of the Gaussian weighting. The corresponding
+local reference can be understood as the weighted average
+\begin{align}
+\mu_G(i,j)&=
+\frac{\displaystyle\sum_{(u,v)\in\mathcal{N}}
+w(d_{uv})Y(u,v)}
+{\displaystyle\sum_{(u,v)\in\mathcal{N}}w(d_{uv})}\label{eq:gaussian_local_mean}
+\end{align}
+
+Thus, the reference intensity is different at different locations in
+the image and follows the local intensity distribution smoothly.
+
+In the implementation, this operation is performed using
+\texttt{gaussian\_filter}:
+\newpage
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily]
+local_mean = gaussian_filter(
+    grayscale_matrix.astype(np.float32), sigma=sigma
+)
+\end{lstlisting}
+\vspace*{\baselineskip}
+\subsection{Importance of $\sigma$}
+
+The value of $\sigma$ determines how localized the Gaussian reference
+is. A smaller value concentrates the weighting around the current pixel,
+so the reference responds strongly to nearby intensity variations. A
+larger value spreads the weighting over a wider region, causing pixels
+farther from the current point to contribute more significantly.
+
+Consequently, $\sigma=10$ gives the localized reference used in this
+implementation, whereas $\sigma=20$ gives the wider reference. As
+$\sigma$ becomes sufficiently large, the Gaussian weights over the
+relevant region become increasingly similar. The Gaussian-weighted
+average therefore approaches the behaviour of an ordinary average over a
+broad neighbourhood.
+\vspace*{\baselineskip}
+\subsection{Purpose of $C=3$}
+
+After the Gaussian local reference is calculated, the implementation
+uses the threshold
+\begin{align}
+T_G(i,j)&=\mu_G(i,j)-C\label{eq:gaussian_threshold}
+\end{align}
+
+The constant $C=3$ is introduced as a small offset to the Gaussian local
+reference. Subtracting this value slightly lowers the local threshold,
+allowing pixels that are marginally darker than the calculated local mean
+to still be classified as white. In this implementation, $C=3$ is used
+as a small empirical adjustment to fine-tune the sensitivity of the
+resulting black-and-white output.
+\vspace*{\baselineskip}
+\subsection{Gaussian Local Thresholding}
+
+The complete decision made by the Gaussian method is therefore
+\begin{align}
+B(i,j)&=
+\begin{cases}
+255, & Y(i,j)\geq\mu_G(i,j)-3,\\
+0, & Y(i,j)<\mu_G(i,j)-3.
+\end{cases}\label{eq:gaussian_bw_threshold}
+\end{align}
+
+The important difference from the global methods is that $\mu_G(i,j)$
+is not one constant for the entire image. It is a spatially varying
+reference calculated from the surrounding grayscale intensities.
+\vspace*{\baselineskip}
+\subsection{Computational Consideration}
+
+The Gaussian method provides a locally varying reference, but this comes
+at an increased computational cost compared with a single global mean.
+Conceptually, the local reference has to be evaluated throughout the
+image by considering the surrounding pixels and their Gaussian
+contributions. The process can therefore be viewed as
+\begin{align}
+\text{pixel}\;\rightarrow\;\text{neighbourhood}
+\;\rightarrow\;\text{Gaussian weights}
+\;\rightarrow\;\text{local reference}
+\;\rightarrow\;\text{threshold}\label{eq:gaussian_pipeline}
+\end{align}
+
+A larger effective Gaussian neighbourhood also involves a broader set
+of surrounding pixels. Thus, although the Gaussian reference provides
+better spatial adaptation, a direct pixel-by-pixel implementation can be
+time-consuming. The \texttt{scipy.ndimage.gaussian\_filter} function used
+here performs the filtering efficiently while implementing the same
+Gaussian smoothing principle.
