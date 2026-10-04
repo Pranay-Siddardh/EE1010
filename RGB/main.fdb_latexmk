@@ -1,11 +1,11 @@
 # Fdb version 4
-["makeindex main.idx"] 1791036775.49309 "main.idx" "main.ind" "main" 1791036777.49337 0
-  "main.idx" 1791036777.11606 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1791091953.66779 "main.idx" "main.ind" "main" 1791091955.79967 0
+  "main.idx" 1791091955.42475 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1791036776.5591 "main.tex" "main.pdf" "main" 1791036777.49348 0
+["pdflatex"] 1791091954.87432 "main.tex" "main.pdf" "main" 1791091955.79977 0
   "/etc/texmf/web2c/texmf.cnf" 1790502251.00055 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -316,11 +316,11 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1790830987 3641128 6f7c409421042f8f9e49c9848a2966ff ""
   "chapters/about.tex" 1791034954.14162 937 7c3fe9fe6b61d372b7948aaecab405a2 ""
   "chapters/algorithm.tex" 1791030426 870 812955d26759b2dcefa3a0d351286f22 ""
-  "chapters/bitmap-jpeg.tex" 1791036004.67509 2947 ed865231ad0c6cc8b69873300d161cf4 ""
+  "chapters/bitmap-jpeg.tex" 1791091773.55029 2954 c4d7212201438d608ba57f06b9327e28 ""
   "chapters/clustering.tex" 1791036190.41211 5452 e562fba5a04c4bc92da83d785dff09be ""
   "chapters/colour-conversion.tex" 1791035763.38085 2048 ec591c943c18d21764ed3ecddec3c93b ""
   "chapters/grayscale-conversion.tex" 1791030426 685 ea9a32564512c698d23200a1bd2cc4b6 ""
-  "chapters/implementation.tex" 1791036511.3027 4409 c852194a02eef9135c74d7959c86986e ""
+  "chapters/implementation.tex" 1791091804.28477 4409 2048bc8bbae9ad2bfacbd27a2987dc13 ""
   "chapters/introduction.tex" 1791030426 810 fb902577b0cc6c6286cd8343ad316612 ""
   "chapters/references.tex" 1791034265.95155 1064 ef0f469190ad590061d3c2c415bfcc10 ""
   "chapters/rgb-representation.tex" 1791030426 634 cf0c1451e83ec56be713f5291ba84593 ""
@@ -339,11 +339,11 @@
   "figs/scenery/output_grayscale.pdf" 1791025463.61896 6664955 de8221b7a8c066a94cbe24d745fcfa66 ""
   "gvv-book.sty" 1791030426 2364 972c828b0fdb5c1b2ef6ab44859ce8d3 ""
   "gvv.sty" 1791030426 4374 e0265f3cc8fb087d2434efb730c546e4 ""
-  "main.aux" 1791036777.39707 10810 8117d4a5115e116c6bd84389bd9e61a0 "pdflatex"
-  "main.ind" 1791036775.57606 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.out" 1791036777.39807 7039 b81b2e52901a9a2a2beeafc6a616eb5e "pdflatex"
+  "main.aux" 1791091955.70275 10810 8117d4a5115e116c6bd84389bd9e61a0 "pdflatex"
+  "main.ind" 1791091953.76476 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.out" 1791091955.70275 7039 b81b2e52901a9a2a2beeafc6a616eb5e "pdflatex"
   "main.tex" 1791036760.27961 2162 f7df11e7824c003d92ea2249d56cb9ab ""
-  "main.toc" 1791036777.39807 3534 333e0e1de352655b2607eeffc3fad5d5 "pdflatex"
+  "main.toc" 1791091955.70375 3534 333e0e1de352655b2607eeffc3fad5d5 "pdflatex"
   (generated)
   "main.aux"
   "main.idx"

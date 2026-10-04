@@ -1,3 +1,8 @@
-Version V1
+Version v1
 
 1) Writing and Publishing the Article.
+
+Version v2
+
+1) Edited few spelling mistakes and updated an equation
+multiplication was missed in the equation (3.3.2)
