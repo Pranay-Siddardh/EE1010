@@ -3,64 +3,66 @@
 %\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
 \usepackage{tfrupee} % Include tfrupee package
 
+
 \setlength{\headheight}{1cm} % Set the height of the header box
 \setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
 
+
 %\usepackage[a5paper, top=10mm, bottom=10mm, left=10mm, right=10mm]{geometry}
 
+%
 \usepackage{gvv-book}
 \usepackage{gvv}
 \raggedbottom
 
+%\usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    urlcolor=black
+    urlcolor=black % Changes text color instead of placing a box around it
 }
-
 \usepackage{amsfonts}
 \makeindex
-
-% ------------------------------------------------------------
-% CH 2025 problem/equation numbering.
-% The existing gvv-book style already provides the problem counter.
-% ------------------------------------------------------------
-\newcommand{\eqprefix}{}
-\renewcommand{\theequation}{\eqprefix.\arabic{equation}}
-\renewcommand{\thefigure}{\eqprefix.\arabic{figure}}
-\renewcommand{\theproblem}{1.2.\arabic{problem}}
-\renewcommand{\problem}{%
-  \refstepcounter{problem}%
-  \renewcommand{\eqprefix}{1.2.\arabic{problem}}%
-  \setcounter{equation}{0}%
-  \setcounter{figure}{0}%
-  \item
-}
 
 \begin{document}
 \bibliographystyle{IEEEtran}
 \onecolumn
 
+
 \title{
-\begin{center}
-Math for EE
-\\
+	%\begin{flushleft}
+	\begin{center}
+	%MATRICES \\ In Geometry
+	Math for EE
+	\\
 \rule{0.4\columnwidth}{0.4pt}
+%\end{flushleft}
 \end{center}
 }
-
+% \author{
+% \vspace{11cm}
+% 	\begin{flushleft}
+% 	\begin{center}
+% \includegraphics[width=0.2\columnwidth]{figs/logo.jpg}
+% \\
+% 		{	\huge G. V. V. Sharma}
+% 	\end{center}
+% 	\end{flushleft}
+% \IEEEpubid{\makebox[\columnwidth]{978-1-7281-5966-1/20/\$31.00 ©2020 IEEE \hfill} \hspace{\columnsep}\makebox[\columnwidth]{ }}
+% }
+% \maketitle 
 \section*{About this Book}
 
-This book introduces matrices through high school coordinate geometry. This approach makes it easier for beginners to learn Python for scientific computing. All problems in the book are from NCERT mathematics textbooks from Class 9-12.  Exercises are from CBSE board exam papers.
+This book introduces matrices through high school coordinate geometry. This approach makes it easier for beginners to learn Python for scientific computing. All problems in the book are from NCERT mathematics textbooks from Class 9-12.  Exercises are from CBSE board exam papers.   
 
 The content is sufficient for industry jobs and covers nearly all matrix prerequisites for machine learning.
-There is no copyright, so readers are free to print and share.
+There is no copyright, so readers are free to print and share.  
 
 %This book is dedicated to my high school teachers, Dr. G.N. Chandwani and Dr. Anand K. Tripathi.
 %\begin{flushright}
 %\today
 %\end{flushright}
 %Github: https://github.com/gadepall/matgeo
-%\qquad
+%		\\
 License: https://creativecommons.org/licenses/by-sa/3.0/
 \\
 and
@@ -75,25 +77,21 @@ In this edition, some incorrect solutions were removed.  All figures redrawn. Mo
 
 \newpage
 
+
 \tableofcontents
 
 \newpage
 \onecolumn
 
-% Keep the original book numbering setup.
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
-\renewcommand{\theequation}{\eqprefix.\arabic{equation}}
-\renewcommand{\thefigure}{\eqprefix.\arabic{figure}}
-
-\setcounter{problem}{0}
 
 \section{GATE CH 2025}
 \subsection{Formulae}
 \input{chapters/ch-2025-formulae.tex}
-\newpage
+\newpage 
 \subsection{Problems}
 \input{chapters/ch-2025-problems.tex}
-
 \end{document}
+
