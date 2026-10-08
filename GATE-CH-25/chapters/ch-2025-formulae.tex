@@ -9,18 +9,86 @@ For two $n$-dimensional vectors $\vec{a}$ and $\vec{b}$,
 \end{align}
 \end{itemize}
 
-\item Argument of Product of Complex Numbers
+\item Complex Numbers and Arguments
 \begin{itemize}
-\item Euler Form:
-For $z_1=r_1e^{i\theta_1}$ and $z_2=r_2e^{i\theta_2}$,
-\begin{align}
-z_1 &= r_1e^{i\theta_1}, \qquad z_2=r_2e^{i\theta_2}\label{eq:complex_euler_forms}\\
-z_1z_2 &= r_1r_2e^{i(\theta_1+\theta_2)}\label{eq:complex_product}\\
-\arg(z_1z_2) &= \theta_1+\theta_2 \pmod{2\pi}\label{eq:arg_product}\\
-\theta_1+\theta_2 &= \arg(z_1z_2)+2n\pi,\qquad n\in\mathbb{Z}\label{eq:arg_product_general}
-\end{align}
-\end{itemize}
 
+\item Vector Representation of a Complex Number:
+
+A complex number
+\begin{align}
+z=a+bi
+\end{align}
+can be represented by
+\begin{align}
+\vec{z}
+=
+\myvec{
+a\\
+b
+}.
+\label{eq:complex_vector}
+\end{align}
+
+\item Matrix Representation of Complex Multiplication:
+
+If
+\begin{align}
+z_1=a+bi,
+\qquad
+z_2=c+di,
+\end{align}
+then
+\begin{align}
+\myvec{
+\operatorname{Re}(z_1z_2)\\
+\operatorname{Im}(z_1z_2)
+}
+&=
+\myvec{
+a&-b\\
+b&a
+}
+\myvec{
+c\\
+d
+}.
+\label{eq:complex_multiplication_matrix}
+\end{align}
+
+\item Argument from the Dot Product:
+
+Let
+\begin{align}
+\vec{z}
+=
+\myvec{
+x\\
+y
+}
+\end{align}
+represent a nonzero complex number and let
+\begin{align}
+\hat{i}
+=
+\myvec{
+1\\
+0
+}
+\end{align}
+be the unit vector along the positive real axis.
+
+Then
+\begin{align}
+\cos\theta
+&=
+\frac{\vec{z}^{\top}\hat{i}}
+{\|\vec{z}\|\,\|\hat{i}\|}.
+\label{eq:complex_argument_dot_product}
+\end{align}
+
+The signs of $x$ and $y$ determine the quadrant of the resultant vector.
+
+\end{itemize}
 \item Mean Residence Time from RTD
 \begin{itemize}
 \item Mean Residence Time:
@@ -74,7 +142,7 @@ where $\lambda$ is an eigenvalue and $\vec{x}$ is the corresponding eigenvector.
 
 \item Characteristic Equation:
 \begin{align}
-\det(\vec{A}-\lambda\vec{I}) &= 0\label{eq:characteristic_equation}
+\mydet{\vec{A}-\lambda\vec{I}} &= 0\label{eq:characteristic_equation}
 \end{align}
 
 \item Relation with Trace:
@@ -85,7 +153,7 @@ If $\lambda_1,\lambda_2,\ldots,\lambda_n$ are the eigenvalues of $\vec{A}\in\mat
 \end{align}
 Also, from the eigenvalue product relation,
 \begin{align}
-\det(\vec{A}) &= \prod_{i=1}^{n}\lambda_i\label{eq:eigen_determinant}
+\mydet{\vec{A}} &= \prod_{i=1}^{n}\lambda_i\label{eq:eigen_determinant}
 \end{align}
 \end{itemize}
 

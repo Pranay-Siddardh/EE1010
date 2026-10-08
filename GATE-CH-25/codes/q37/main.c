@@ -29,7 +29,7 @@ int main(void) {
     const char *filename = "main.dat";
 
     // Seed pseudo-random generator
-    srand(time(NULL)); 
+    srand(time(NULL));     
 
     // Generate N uniform random numbers in [0, 5] directly
     uniform(filename, n, a);

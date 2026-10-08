@@ -18,7 +18,9 @@ The inner product of these vectors $(\vec{a}\cdot\vec{b})$ is \hfill (GATE~CH~20
 
 \solution The dot product of two vectors is given by \eqref{eq:dot_product}:
 \begin{align}
-\vec{a}\cdot\vec{b} &= a_xb_x+a_yb_y+a_zb_z.
+\vec{a}\cdot\vec{b} &= \vec{a^{\top}b}\\
+&= \myvec{a_x & a_y &a_z}\myvec{b_x\\b_y\\b_z}\\
+&= a_xb_x+a_yb_y+a_zb_z.
 \end{align}
 Substituting the components of the given vectors,
 \begin{align}
@@ -45,31 +47,193 @@ The code to verify this is:
     \end{multicols}
 \end{enumerate}
 
-\solution The given complex numbers are
+\solution
+
+A complex number
 \begin{align}
-z_1 &= 1-i,\\
-z_2 &= i.
+z=a+bi
 \end{align}
-For the product of two complex numbers, using the relation in \eqref{eq:complex_product},
+can be represented by the vector
 \begin{align}
-\arg(z_1z_2) &= \arg(z_1)+\arg(z_2) \pmod{2\pi}.
+\vec{z}
+=
+\myvec{
+a\\
+b
+}.
+\label{eq:q13_complex_vector}
 \end{align}
-First calculate the product:
+
+If
 \begin{align}
-z_1z_2
-&=(1-i)i\\
-&=i-i^2\\
-&=1+i.
+z_1=a+bi,
+\qquad
+z_2=c+di,
 \end{align}
-The complex number $1+i$ has equal positive real and imaginary parts. Hence,
+then multiplication by $z_1$ can be represented by
 \begin{align}
-\arg(1+i)&=\tan^{-1}\left(\frac{1}{1}\right)\\
-&=\frac{\pi}{4}.
+\myvec{
+\operatorname{Re}(z_1z_2)\\
+\operatorname{Im}(z_1z_2)
+}
+&=
+\myvec{
+a&-b\\
+b&a
+}
+\myvec{
+c\\
+d
+}
+\label{eq:q13_complex_transformation}
+\end{align}
+
+For the given numbers,
+\begin{align}
+z_1&=1-i,
+&
+z_2&=i.
+\end{align}
+
+Therefore,
+\begin{align}
+\myvec{
+a\\
+b
+}
+&=
+\myvec{
+1\\
+-1
+},
+&
+\myvec{
+c\\
+d
+}
+&=
+\myvec{
+0\\
+1
+}.
+\end{align}
+
+Using the transformation matrix, \eqref{eq:complex_multiplication_matrix},
+
+\begin{align}
+\vec{z_1z_2}
+&=
+\myvec{
+1&1\\
+-1&1
+}
+\myvec{
+0\\
+1
+}
+\\
+&=
+\myvec{
+1\\
+1
+}.
+\label{eq:q13_resultant_vector}
+\end{align}
+
+Thus, the resultant vector is
+\begin{align}
+\vec{z_1z_2}
+=
+\myvec{
+1\\
+1
+}.
+\end{align}
+
+Since both components are positive, the resultant vector lies in the
+first quadrant.
+
+The unit vector along the positive real axis is
+
+\begin{align}
+\hat{i}
+=
+\myvec{
+1\\
+0
+},
+\qquad
+\|\hat{i}\|=1.
+\label{eq:q13_real_axis_unit_vector}
+\end{align}
+
+Using the dot-product relation,
+
+\begin{align}
+\cos\theta
+&=
+\frac{
+\vec{z_1z_2}^{\top}\hat{i}
+}{
+\|\vec{z_1z_2}\|\,\|\hat{i}\|
+}.
+\label{eq:q13_dot_product}
+\end{align}
+
+Now,
+
+\begin{align}
+\vec{z_1z_2}^{\top}\hat{i}
+&=
+\myvec{
+1&1
+}
+\myvec{
+1\\
+0
+}
+\\
+&=1,
+\end{align}
+
+and
+
+\begin{align}
+\|\vec{z_1z_2}\|
+&=
+\sqrt{1^2+1^2}
+\\
+&=\sqrt{2}.
+\end{align}
+
+Therefore,
+
+\begin{align}
+\cos\theta
+&=
+\frac{1}{\sqrt{2}}.
+\end{align}
+
+Since the resultant vector lies in the first quadrant,
+
+\begin{align}
+0<\theta<\frac{\pi}{2}.
+\end{align}
+
+Hence,
+
+\begin{align}
+\theta
+&=
+\cos^{-1}\left(\frac{1}{\sqrt{2}}\right)
+\\
+&=
+\frac{\pi}{4}.
 \end{align}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{figs/q13/Argument-Complex.pdf}
+    \includegraphics[width=0.75\linewidth]{figs/q13/Argument-Complex.pdf}
     \caption{Complex-plane representation of $z_1z_2$}
     \label{fig:ch25_q13}
 \end{figure}
@@ -158,7 +322,7 @@ Hence,
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{figs/q35/RTD-Plot.pdf}
+    \includegraphics[width=0.75\linewidth]{figs/q35/RTD-Plot.pdf}
     \caption{Residence time distribution $E(t)$ for the given reactor}
     \label{fig:ch25_q35}
 \end{figure}
@@ -267,7 +431,7 @@ The expected value represents the average output obtained when the possible outc
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{figs/q37/Expected-Value.pdf}
+    \includegraphics[width=0.75\linewidth]{figs/q37/Expected-Value.pdf}
     \caption{Uniform probability density over the interval $(0,a)$}
     \label{fig:ch25_q37}
 \end{figure}
@@ -285,10 +449,10 @@ The codes and data to verify this are:
 \end{lstlisting}
 
 % ----------------------------------------------------------- GATE Q44
-\item The differential equation
-\begin{align}
-\frac{dy}{dx}+\frac{y}{x}=0
-\end{align}
+\item The differential equation\\
+\[
+\frac{dy}{dx}=-\frac{y}{x}
+\]
 has which of the following correct solution(s)? \hfill (GATE~CH~2025)
 \begin{enumerate}[itemsep=0pt]
     \begin{multicols}{4}
@@ -298,15 +462,102 @@ has which of the following correct solution(s)? \hfill (GATE~CH~2025)
         \item $y=0$
     \end{multicols}
 \end{enumerate}
-
 \solution
-Rearranging the differential equation,
+
+\begingroup
+
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}}
+\numberwithin{equation}{enumii}
+
+\begin{enumerate}[label=\theenumii, ref=\theenumii, itemsep=0pt]
+
+\item \textbf{Theoretical Solution}
+
+Rearranging the given differential equation,
+
 \begin{align}
-\frac{dy}{dx}=-\frac{y}{x}.
+\frac{dy}{dx}
+&=-\frac{y}{x}.
 \end{align}
 
-For numerical plotting, the trapezoidal method approximates the solution using the average slope over a step. For
-$f(x,y)=-y/x$, the update is
+Separating the variables,
+
+\begin{align}
+\frac{1}{y}\,dy
+&=-\frac{1}{x}\,dx.
+\end{align}
+
+Integrating both sides,
+
+\begin{align}
+\int\frac{1}{y}\,dy
+&=-\int\frac{1}{x}\,dx.
+\end{align}
+
+Therefore,
+
+\begin{align}
+\ln|y|
+&=-\ln|x|+C.
+\end{align}
+
+Hence,
+
+\begin{align}
+\ln|xy|
+&=C,
+\end{align}
+
+which gives
+
+\begin{align}
+y&=\frac{C}{x}.
+\end{align}
+
+For $C=0$,
+
+\begin{align}
+y&=0.
+\end{align}
+
+Thus, both
+
+\[
+y=\frac{C}{x}
+\qquad\text{and}\qquad
+y=0
+\]
+
+are valid solutions.
+
+\item \textbf{Numerical Method}
+
+For numerical verification, the trapezoidal method can be applied to
+
+\begin{align}
+\frac{dy}{dx}
+&=f(x,y)=-\frac{y}{x}.
+\end{align}
+
+For a step size $h$, the trapezoidal approximation is
+
+\begin{align}
+y_{n+1}
+&=y_n+\frac{h}{2}
+\left[
+f(x_n,y_n)+f(x_{n+1},y_{n+1})
+\right].
+\end{align}
+
+Substituting
+
+\begin{align}
+f(x,y)
+&=-\frac{y}{x},
+\end{align}
+
+gives
+
 \begin{align}
 y_{n+1}
 &=y_n+\frac{h}{2}
@@ -316,31 +567,24 @@ y_{n+1}
 \right].
 \end{align}
 
-The analytical solution is obtained by separation of variables:
-\begin{align}
-\frac{1}{y}\,dy=-\frac{1}{x}\,dx.
-\end{align}
+This relation is used iteratively to obtain the numerical solution,
 
-Integrating,
-\begin{align}
-\ln|y|&=-\ln|x|+C,\\
-\ln|xy|&=C,\\
-y&=\frac{C}{x}.
-\end{align}
-
-For $C=0$,
-\begin{align}
-y=0.
-\end{align}
-
-So as we solve for y, we end up with either $y = 0$ or $y = \frac{C}{x}$. \\
+which can then be compared with the theoretical solution
+$y=C/x$.
 
 The trapezoidal method can then be used to generate numerical points for plotting the solution family.
 
+\end{enumerate}
+
+\endgroup
+
+% Restore the normal equation numbering for the following questions
+\numberwithin{equation}{enumi}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{figs/q44/Diff-Eqn.pdf}
-    \caption{Solution family $y=C/x$ for the given differential equation}
+    % your Q44 figure here
+    \caption{Numerical solution of the differential equation.}
     \label{fig:ch25_q44}
 \end{figure}
 The code to verify this is:
@@ -361,48 +605,7 @@ One of its eigenvalues is $0.27$. The other eigenvalue, rounded off to two decim
 \end{align}
 The eigenvalues are obtained from the characteristic equation
 \begin{align}
-\left| \vec{A}-\lambda\vec{I} \right|=0.
-\end{align}
-For the given matrix,
-\begin{align}
-\left| 
-\begin{matrix} 
-	2-\lambda & 3 \\ 
-	1 & 2-\lambda 
-\end{matrix} 
-\right| =0.
-\end{align}
-Therefore,
-\begin{align}
-(2-\lambda)^2-3&=0\\
-\lambda^2-4\lambda+1&=0.
-\end{align}
-Solving the quadratic equation,
-\begin{align}
-\lambda&=\frac{4\pm\sqrt{16-4}}{2}\\
-&=2\pm\sqrt{3}.
-\end{align}
-Thus,
-\begin{align}
-\lambda_1&=2-\sqrt{3}\approx0.27,\\
-\lambda_2&=2+\sqrt{3}\approx3.73.
-\end{align}
-
-For completeness, the corresponding eigenvectors can be obtained from $(\vec{A}-\lambda\vec{I})\vec{x}=0$. For $\lambda_1=2-\sqrt{3}$,
-\begin{align}
-\sqrt{3}x+3y&=0,
-\end{align}
-so one eigenvector is
-\begin{align}
-\vec{x}_1=\myvec{\sqrt{3}\\-1}.
-\end{align}
-For $\lambda_2=2+\sqrt{3}$,
-\begin{align}
--\sqrt{3}x+3y&=0,
-\end{align}
-so one eigenvector is
-\begin{align}
-\vec{x}_2=\myvec{\sqrt{3}\\1}.
+\mydet{ \vec{A}-\lambda\vec{I}} &= 0.
 \end{align}
 
 From the trace relation in \eqref{eq:eigen_trace}, the sum of the eigenvalues is
@@ -474,7 +677,7 @@ Thus, rounded off to two decimal places, $x_{2}=1.67$.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{figs/q46/Newton-Raphson.pdf}
+    \includegraphics[width=0.75\linewidth]{figs/q46/Newton-Raphson.pdf}
     \caption{Newton-Raphson iteration for $f(x)=x^2-x-1$}
     \label{fig:ch25_q46}
 \end{figure}
@@ -484,79 +687,261 @@ The code to verify this is:
 \end{lstlisting}
 
 % ----------------------------------------------------------- GATE Q60
+% ----------------------------------------------------------- GATE Q60
+
 \item The transfer function of a process is
+
 \begin{align}
 G_p(s)=\frac{2e^{-s}}{(5s+1)^2}.
-\end{align}
-The process is fitted to a first-order plus dead-time (FOPDT) model using the maximum slope method. If $\tau_m$ and $\theta_m$ are the fitted time constant and dead time, respectively, then $\tau_m/\theta_m$, rounded off to two decimal places, is \underline{\hspace{2cm}}. \hfill (GATE~CH~2025)
-
-The unit-step response and its derivatives for $1/(\tau s+1)^2$ are
-\begin{align}
-y(t)&=1-\left(1+\frac{t}{\tau}\right)e^{-t/\tau},\\
-\frac{dy}{dt}&=\frac{t}{\tau^2}e^{-t/\tau},\\
-\frac{d^2y}{dt^2}&=\frac{1}{\tau^2}\left(1-\frac{t}{\tau}\right)e^{-t/\tau}.
+\label{eq:q60_transfer}
 \end{align}
 
-\solution From the time-delay relation, the factor $e^{-s}$ represents a pure time delay of $1$ min. Thus the dynamic response of the second-order part is shifted by $1$ min.
+The process is fitted to a first-order plus dead-time (FOPDT) model using
+the maximum slope method. If $\tau_m$ and $\theta_m$ are the fitted time
+constant and dead time, respectively, then
+$\tau_m/\theta_m$, rounded off to two decimal places, is
+\underline{\hspace{2cm}}.
+\hfill (GATE~CH~2025)
 
-For the dynamic part,
+The unit-step response of
+
 \begin{align}
-G_0(s)=\frac{2}{(5s+1)^2},
+\frac{1}{(\tau s+1)^2}
 \end{align}
-so
+
+is
+
 \begin{align}
-K=2,\qquad \tau=5\text{ min},\qquad \theta=1\text{ min}.
+y(t)
+&=1-\left(1+\frac{t}{\tau}\right)e^{-t/\tau},
+\label{eq:q60_response}
+\\
+\frac{dy}{dt}
+&=\frac{t}{\tau^2}e^{-t/\tau},
+\label{eq:q60_first_derivative}
+\\
+\frac{d^2y}{dt^2}
+&=\frac{1}{\tau^2}
+\left(1-\frac{t}{\tau}\right)e^{-t/\tau}.
+\label{eq:q60_second_derivative}
 \end{align}
-For the normalized second-order response, the maximum slope occurs at the inflection point, where
+
+\solution
+
+From \eqref{eq:q60_transfer}, the process gain, time constant and
+dead time are
+
 \begin{align}
-\frac{d^2y}{dt^2}=0.
+K=2,\qquad
+\tau=5~\text{min},\qquad
+\theta=1~\text{min}.
+\label{eq:q60_parameters}
 \end{align}
-Hence,
+
+The factor $e^{-s}$ represents a pure time delay of $1$ min.
+Therefore, the actual process response is the delayed version of the
+second-order response in \eqref{eq:q60_response}.
+
+Thus, the actual step response is
+
 \begin{align}
-1-\frac{t}{\tau}=0\implies t=\tau=5\text{ min}.
+y_p(t)
+=
+\begin{cases}
+0, & t<1,\\[4pt]
+2\left[
+1+\frac{t-1}{5}
+\right]
+e^{-(t-1)/5}
+\text{ subtracted from }2,
+& t\geq1.
+\end{cases}
 \end{align}
-Including the dead time,
+
+Equivalently, writing the second branch directly,
+
 \begin{align}
-t_{\mathrm{inflection}}=1+5=6\text{ min}.
+y_p(t)
+=
+\begin{cases}
+0, & t<1,\\[4pt]
+2\left[
+1-\left(1+\dfrac{t-1}{5}\right)
+e^{-(t-1)/5}
+\right],
+& t\geq1.
+\end{cases}
+\label{eq:q60_actual_curve}
 \end{align}
-At this point, the output is
+
+For $t\geq1$, differentiating \eqref{eq:q60_actual_curve} gives
+
 \begin{align}
-y_{\mathrm{inflection}}
-&=2\left[1-\left(1+\frac55\right)e^{-1}\right]\\
-&=2\left(1-\frac2e\right).
+\frac{dy_p}{dt}
+&=
+\frac{2(t-1)}{25}e^{-(t-1)/5},
+\label{eq:q60_slope}
+\\
+\frac{d^2y_p}{dt^2}
+&=
+\frac{2}{25}
+\left(1-\frac{t-1}{5}\right)
+e^{-(t-1)/5}.
+\label{eq:q60_second_derivative_actual}
 \end{align}
-The maximum slope is
+
+The maximum slope occurs at the inflection point. Hence, from
+\eqref{eq:q60_second_derivative_actual},
+
+\begin{align}
+\frac{d^2y_p}{dt^2}=0.
+\end{align}
+
+Since the exponential term is non-zero,
+
+\begin{align}
+1-\frac{t-1}{5}&=0,
+\\
+t-1&=5,
+\\
+t_i&=6~\text{min}.
+\label{eq:q60_inflection}
+\end{align}
+
+Using the actual curve in \eqref{eq:q60_actual_curve}, the output at
+the inflection point is
+
+\begin{align}
+y_i
+&=y_p(6)
+\\
+&=
+2\left[
+1-\left(1+\frac{6-1}{5}\right)
+e^{-(6-1)/5}
+\right]
+\\
+&=
+2\left(1-\frac{2}{e}\right).
+\label{eq:q60_inflection_output}
+\end{align}
+
+The maximum slope is obtained from \eqref{eq:q60_slope}:
+
 \begin{align}
 R
-&=2\left[\frac{t}{\tau^2}e^{-t/\tau}\right]_{t=5}\\
-&=\frac{2}{5e}.
+&=
+\left.\frac{dy_p}{dt}\right|_{t=6}
+\\
+&=
+\frac{2(6-1)}{25}
+e^{-(6-1)/5}
+\\
+&=
+\frac{2}{5e}.
+\label{eq:q60_max_slope}
 \end{align}
-Using the maximum-slope relations in \eqref{eq:maximum_slope} and \eqref{eq:fopdt_time_constant}, the fitted time constant is
+
+The maximum-slope method approximates the actual curve by the tangent
+at the inflection point. Therefore,
+
 \begin{align}
-\tau_m&=\frac{K\Delta u}{R}\\
-&=\frac{2\times1}{2/(5e)}\\
-&=5e.
+y-y_i=R(t-t_i).
+\label{eq:q60_tangent}
 \end{align}
-Using the dead-time tangent relation in \eqref{eq:dead_time_tangent}, the tangent at the inflection point intersects the time axis at
+
+Substituting \eqref{eq:q60_inflection_output},
+\eqref{eq:q60_max_slope}, and \eqref{eq:q60_inflection} into
+\eqref{eq:q60_tangent},
+
+\begin{align}
+y-\left(2-\frac{4}{e}\right)
+=
+\frac{2}{5e}(t-6).
+\label{eq:q60_tangent_expanded}
+\end{align}
+
+The fitted dead time $\theta_m$ is the time-axis intercept of this
+tangent. Therefore, putting $y=0$ in
+\eqref{eq:q60_tangent_expanded},
+
+\begin{align}
+-\left(2-\frac{4}{e}\right)
+&=
+\frac{2}{5e}(\theta_m-6).
+\end{align}
+
+Hence,
+
 \begin{align}
 \theta_m
-&=t_{\mathrm{inflection}}-\frac{y_{\mathrm{inflection}}}{R}\\
-&=6-\frac{2(1-2/e)}{2/(5e)}\\
-&=16-5e.
+&=
+6-\frac{2(1-2/e)}{2/(5e)}
+\\
+&=
+6-5e+10
+\\
+&=
+16-5e
+\\
+&\approx2.4086~\text{min}.
+\label{eq:q60_dead_time}
 \end{align}
+
+For the fitted FOPDT model,
+
+\begin{align}
+G_m(s)
+=
+\frac{K e^{-\theta_m s}}
+{\tau_m s+1},
+\end{align}
+
+the maximum slope is
+
+\begin{align}
+R=\frac{K}{\tau_m}.
+\label{eq:q60_fopdt_slope}
+\end{align}
+
 Therefore,
+
+\begin{align}
+\tau_m
+&=
+\frac{K}{R}
+\\
+&=
+\frac{2}{2/(5e)}
+\\
+&=
+5e
+\\
+&\approx13.5914~\text{min}.
+\label{eq:q60_time_constant}
+\end{align}
+
+Finally, using \eqref{eq:q60_dead_time} and
+\eqref{eq:q60_time_constant},
+
 \begin{align}
 \frac{\tau_m}{\theta_m}
-&=\frac{5e}{16-5e}\\
-&\approx5.64.
+&=
+\frac{5e}{16-5e}
+\\
+&=
+\frac{13.5914}{2.4086}
+\\
+&\approx5.642.
 \end{align}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{figs/q60/FOPDT-Modelling.pdf}
+    \includegraphics[width=0.75\linewidth]{figs/q60/FOPDT-Modelling.pdf}
     \caption{Maximum-slope FOPDT approximation of the given process response}
     \label{fig:ch25_q60}
 \end{figure}
+\newpage
 The code to verify this is:
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/q60/main.py}@*)
@@ -638,7 +1023,7 @@ Hence the maximum value of $k_c^m$ below which the system is stable, rounded to 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{figs/q62/Response-Plot.pdf}
+    \includegraphics[width=0.75\linewidth]{figs/q62/Response-Plot.pdf}
     \caption{Cascade-loop reduction and Routh-Hurwitz stability calculation for Q62}
     \label{fig:ch25_q62_solution}
 \end{figure}
