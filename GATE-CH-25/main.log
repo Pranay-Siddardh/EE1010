@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.10.1)  8 OCT 2026 14:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.10.1)  8 OCT 2026 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1336,7 +1336,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--253
 []\OT1/ptm/m/n/10 Dead Time: Us-ing the maximum-slope con-struc-tion in [], if
  []
 
-[6]) [7] (./chapters/ch-2025-problems.tex
+[6] [7]) [8] (./chapters/ch-2025-problems.tex
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1366,7 +1366,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}
 <to be read again> 
                    \relax 
 l.89 \end{align}
-                 [8]
+                 [9]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.5}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1384,14 +1384,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.2.7}
 <to be read again> 
                    \relax 
 l.141 \end{align}
-                  [9]
-<figs/q13/Argument-Complex.pdf, id=206, 505.89pt x 505.89pt>
+                  [10]
+<figs/q13/Argument-Complex.pdf, id=210, 505.89pt x 505.89pt>
 File: figs/q13/Argument-Complex.pdf Graphic file (type pdf)
 <use figs/q13/Argument-Complex.pdf>
 Package pdftex.def Info: figs/q13/Argument-Complex.pdf  used on input line 236.
 
 (pdftex.def)             Requested size: 273.14647pt x 273.15337pt.
-[10 <./figs/q13/Argument-Complex.pdf>]
+[11 <./figs/q13/Argument-Complex.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1415,13 +1415,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1}
 <to be read again> 
                    \relax 
 l.291 \end{align}
-                  [11]
-<figs/q35/RTD-Plot.pdf, id=319, 578.16pt x 325.215pt>
+                  [12]
+<figs/q35/RTD-Plot.pdf, id=323, 578.16pt x 325.215pt>
 File: figs/q35/RTD-Plot.pdf Graphic file (type pdf)
 <use figs/q35/RTD-Plot.pdf>
 Package pdftex.def Info: figs/q35/RTD-Plot.pdf  used on input line 325.
 (pdftex.def)             Requested size: 273.14647pt x 153.64505pt.
-[12]
+[13]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1439,14 +1439,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.5.3}
 <to be read again> 
                    \relax 
 l.362 \end{align}
-                  [13 <./figs/q35/RTD-Plot.pdf>]
+                  [14 <./figs/q35/RTD-Plot.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.400 \end{align}
-                  [14]
-<figs/q37/Expected-Value.pdf, id=453, 650.43pt x 397.485pt>
+                  [15]
+<figs/q37/Expected-Value.pdf, id=457, 650.43pt x 397.485pt>
 File: figs/q37/Expected-Value.pdf Graphic file (type pdf)
 <use figs/q37/Expected-Value.pdf>
 Package pdftex.def Info: figs/q37/Expected-Value.pdf  used on input line 434.
@@ -1456,7 +1456,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 452--453
 
  []
 
-[15 <./figs/q37/Expected-Value.pdf>]
+[16 <./figs/q37/Expected-Value.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1504,7 +1504,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}
 <to be read again> 
                    \relax 
 l.540 \end{align}
-                  [16]
+                  [17]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1523,6 +1523,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}
                    \relax 
 l.568 \end{align}
                  
+<figs/q44/Diff-Eqn.pdf, id=567, 505.89pt x 505.89pt>
+File: figs/q44/Diff-Eqn.pdf Graphic file (type pdf)
+<use figs/q44/Diff-Eqn.pdf>
+Package pdftex.def Info: figs/q44/Diff-Eqn.pdf  used on input line 586.
+(pdftex.def)             Requested size: 273.14647pt x 273.15337pt.
+[18 <./figs/q44/Diff-Eqn.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1534,7 +1540,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.8.2}
 <to be read again> 
                    \relax 
 l.605 \end{align}
-                  [17]
+                 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1552,13 +1558,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.9.3}
 <to be read again> 
                    \relax 
 l.651 \end{align}
-                  [18]
-<figs/q46/Newton-Raphson.pdf, id=589, 578.16pt x 361.35pt>
+                  [19]
+<figs/q46/Newton-Raphson.pdf, id=644, 578.16pt x 361.35pt>
 File: figs/q46/Newton-Raphson.pdf Graphic file (type pdf)
 <use figs/q46/Newton-Raphson.pdf>
 Package pdftex.def Info: figs/q46/Newton-Raphson.pdf  used on input line 680.
 (pdftex.def)             Requested size: 273.14647pt x 170.71672pt.
-
+[20 <./figs/q46/Newton-Raphson.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10.1
 }) has been already used, duplicate ignored
 <to be read again> 
@@ -1588,14 +1594,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.10.5
 <to be read again> 
                    \relax 
 l.727 \end{align}
-                  [19 <./figs/q46/Newton-Raphson.pdf>] [20] [21]
-<figs/q60/FOPDT-Modelling.pdf, id=704, 722.7pt x 433.62pt>
+                  [21] [22]
+<figs/q60/FOPDT-Modelling.pdf, id=761, 722.7pt x 433.62pt>
 File: figs/q60/FOPDT-Modelling.pdf Graphic file (type pdf)
 <use figs/q60/FOPDT-Modelling.pdf>
 Package pdftex.def Info: figs/q60/FOPDT-Modelling.pdf  used on input line 940.
 (pdftex.def)             Requested size: 273.14647pt x 163.88408pt.
-[22 <./figs/q60/FOPDT-Modelling.pdf>]
-<figs/q62/Q62-Problem.pdf, id=840, 1332.98pt x 263.98625pt>
+[23] [24 <./figs/q60/FOPDT-Modelling.pdf>]
+<figs/q62/Q62-Problem.pdf, id=905, 1332.98pt x 263.98625pt>
 File: figs/q62/Q62-Problem.pdf Graphic file (type pdf)
 <use figs/q62/Q62-Problem.pdf>
 Package pdftex.def Info: figs/q62/Q62-Problem.pdf  used on input line 955.
@@ -1636,13 +1642,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.11.6
 <to be read again> 
                    \relax 
 l.980 \end{align}
-                  [23 <./figs/q62/Q62-Problem.pdf>]
-<figs/q62/Response-Plot.pdf, id=858, 722.7pt x 433.62pt>
+                  [25 <./figs/q62/Q62-Problem.pdf>]
+<figs/q62/Response-Plot.pdf, id=924, 722.7pt x 433.62pt>
 File: figs/q62/Response-Plot.pdf Graphic file (type pdf)
 <use figs/q62/Response-Plot.pdf>
 Package pdftex.def Info: figs/q62/Response-Plot.pdf  used on input line 1026.
 (pdftex.def)             Requested size: 273.14647pt x 163.88408pt.
-[24]) [25 <./figs/q62/Response-Plot.pdf>] (./main.aux)
+[26]) [27 <./figs/q62/Response-Plot.pdf>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -1651,10 +1657,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BEBA80B38D5863E1E9D90AF39C26F460;303.
  ) 
 Here is how much of TeX's memory you used:
- 52727 strings out of 467533
- 1273652 string characters out of 5422138
- 1914116 words of memory out of 5000000
- 80603 multiletter control sequences out of 15000+600000
+ 52736 strings out of 467533
+ 1273885 string characters out of 5422138
+ 1914120 words of memory out of 5000000
+ 80610 multiletter control sequences out of 15000+600000
  665143 words of font info for 126 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,17n,118p,1194b,1390s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1676,10 +1682,10 @@ f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (25 pages, 510404 bytes).
+Output written on main.pdf (27 pages, 523955 bytes).
 PDF statistics:
- 1110 PDF objects out of 1200 (max. 8388607)
- 608 compressed objects within 7 object streams
- 276 named destinations out of 1000 (max. 500000)
- 168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1176 PDF objects out of 1200 (max. 8388607)
+ 632 compressed objects within 7 object streams
+ 278 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
