@@ -43,3 +43,9 @@ Version v1.7
 
 1) Changed The \problem to \item and removed unimportant commands from the main tex file.
 2) Changed thhe multicols 2 from to 4.
+
+Version v1.8
+
+1) Revised the codes with CoordGeo.
+2) Edited 1.2.2 approach using transformation matrices and dot prod.
+3) Elaborated 1.2.10 Question Solving.

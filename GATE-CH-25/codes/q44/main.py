@@ -185,11 +185,11 @@ plt.plot(
 # Uniform Grid Setup
 # -----------------------------------------------------------
 
-plt.xlim(-5, 5)
-plt.ylim(-5, 5)
+plt.xlim(0, 5)
+plt.ylim(0, 5)
 
-plt.xticks(np.arange(-5, 5.5, 0.5))
-plt.yticks(np.arange(-5, 5.5, 0.5))
+plt.xticks(np.arange(0, 5.5, 0.5))
+plt.yticks(np.arange(0, 5.5, 0.5))
 
 plt.gca().set_aspect('equal', adjustable='box')
 
