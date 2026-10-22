@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.10.1)  4 OCT 2026 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.10.1)  22 OCT 2026 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1198,34 +1198,34 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 16.
+Package hyperref Info: Option `colorlinks' set `true' on input line 11.
 \@indexfile=\write4
 \openout4 = `main.idx'.
 
 Writing index file main.idx
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 20.
+h' as default language. on input line 14.
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 -- Lines per column: 45 (approximate, difference = 0.60239pt).
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1261,14 +1261,14 @@ LaTeX Font Info:    ... okay on input line 20.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \celsius on input line 20.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 20.
+LaTeX Info: Redefining \celsius on input line 14.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 14.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 20.
-Package gensymb Info: Using \Omega for \ohm on input line 20.
+LaTeX Info: Redefining \ohm on input line 14.
+Package gensymb Info: Using \Omega for \ohm on input line 14.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -1279,7 +1279,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 20.
+or `english'. on input line 14.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count404
@@ -1301,22 +1301,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 20.
+Package hyperref Info: Link coloring ON on input line 14.
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 \c@lstlisting=\count410
-<figs/logo.jpg, id=187, 2537.48pt x 2047.65pt>
-File: figs/logo.jpg Graphic file (type jpg)
-<use figs/logo.jpg>
-Package pdftex.def Info: figs/logo.jpg  used on input line 43.
-(pdftex.def)             Requested size: 72.83794pt x 58.77106pt.
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/base/8r.enc}
-
-
- <./figs/logo.jpg>] (./chapters/about.tex) [2] (./main.toc
+(./main.toc
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -1329,171 +1320,226 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3])
+))
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-[4] (./chapters/introduction.tex) (./chapters/rgb-representation.tex) [5
-
-] (./chapters/bitmap-jpeg.tex [6]) (./chapters/colour-conversion.tex [7]) (./ch
-apters/grayscale-conversion.tex) [8] (./chapters/algorithm.tex) (./chapters/clu
-stering.tex [9]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
-7.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [10]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 75.
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sigma' on input line 75.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 75.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 90.
-
-[11])
-Underfull \hbox (badness 3364) in paragraph at lines 134--92
-\OT1/ptm/m/n/10 round-ing pix-els. Thus, al-though the Gaus-sian ref-er-ence pr
-o-vides bet-ter spa-tial
+] (./chapters/problem.tex
+\c@implementationimagecount=\count411
+<figs/arjun/input.jpg, id=181, 1355.0625pt x 1206.5075pt>
+File: figs/arjun/input.jpg Graphic file (type jpg)
+<use figs/arjun/input.jpg>
+Package pdftex.def Info: figs/arjun/input.jpg  used on input line 80.
+(pdftex.def)             Requested size: 99.0614pt x 88.20134pt.
+<figs/arya/input.jpg, id=182, 903.375pt x 1162.3425pt>
+File: figs/arya/input.jpg Graphic file (type jpg)
+<use figs/arya/input.jpg>
+Package pdftex.def Info: figs/arya/input.jpg  used on input line 81.
+(pdftex.def)             Requested size: 68.54968pt x 88.2006pt.
+<figs/mudit/input.jpg, id=183, 889.3225pt x 1055.945pt>
+File: figs/mudit/input.jpg Graphic file (type jpg)
+<use figs/mudit/input.jpg>
+Package pdftex.def Info: figs/mudit/input.jpg  used on input line 82.
+(pdftex.def)             Requested size: 74.2819pt x 88.19928pt.
+<figs/visweshwar/input.jpg, id=184, 925.4575pt x 899.36pt>
+File: figs/visweshwar/input.jpg Graphic file (type jpg)
+<use figs/visweshwar/input.jpg>
+Package pdftex.def Info: figs/visweshwar/input.jpg  used on input line 83.
+(pdftex.def)             Requested size: 90.75775pt x 88.19843pt.
+[2 <./figs/arjun/input.jpg> <./figs/arya/input.jpg>]
+<figs/saksham/input.jpg, id=198, 1258.7025pt x 1258.7025pt>
+File: figs/saksham/input.jpg Graphic file (type jpg)
+<use figs/saksham/input.jpg>
+Package pdftex.def Info: figs/saksham/input.jpg  used on input line 84.
+(pdftex.def)             Requested size: 88.19499pt x 88.19499pt.
+<figs/pranay/input.jpg, id=199, 2794.44pt x 3222.0375pt>
+File: figs/pranay/input.jpg Graphic file (type jpg)
+<use figs/pranay/input.jpg>
+Package pdftex.def Info: figs/pranay/input.jpg  used on input line 85.
+(pdftex.def)             Requested size: 76.49556pt x 88.2007pt.
+<figs/nethra/input.jpg, id=200, 959.585pt x 963.6pt>
+File: figs/nethra/input.jpg Graphic file (type jpg)
+<use figs/nethra/input.jpg>
+Package pdftex.def Info: figs/nethra/input.jpg  used on input line 86.
+(pdftex.def)             Requested size: 87.82312pt x 88.19058pt.
+<figs/sara/input.jpg, id=201, 1361.085pt x 1507.6325pt>
+File: figs/sara/input.jpg Graphic file (type jpg)
+<use figs/sara/input.jpg>
+Package pdftex.def Info: figs/sara/input.jpg  used on input line 87.
+(pdftex.def)             Requested size: 79.62627pt x 88.19958pt.
+<figs/arjun/gray.jpg, id=202, 1355.0625pt x 1206.5075pt>
+File: figs/arjun/gray.jpg Graphic file (type jpg)
+<use figs/arjun/gray.jpg>
+Package pdftex.def Info: figs/arjun/gray.jpg  used on input line 99.
+(pdftex.def)             Requested size: 99.0614pt x 88.20134pt.
+<figs/arya/gray.jpg, id=203, 903.375pt x 1162.3425pt>
+File: figs/arya/gray.jpg Graphic file (type jpg)
+<use figs/arya/gray.jpg>
+Package pdftex.def Info: figs/arya/gray.jpg  used on input line 100.
+(pdftex.def)             Requested size: 68.54968pt x 88.2006pt.
+<figs/mudit/gray.jpg, id=204, 889.3225pt x 1055.945pt>
+File: figs/mudit/gray.jpg Graphic file (type jpg)
+<use figs/mudit/gray.jpg>
+Package pdftex.def Info: figs/mudit/gray.jpg  used on input line 101.
+(pdftex.def)             Requested size: 74.2819pt x 88.19928pt.
+<figs/visweshwar/gray.jpg, id=205, 925.4575pt x 899.36pt>
+File: figs/visweshwar/gray.jpg Graphic file (type jpg)
+<use figs/visweshwar/gray.jpg>
+Package pdftex.def Info: figs/visweshwar/gray.jpg  used on input line 102.
+(pdftex.def)             Requested size: 90.75775pt x 88.19843pt.
+[3 <./figs/mudit/input.jpg> <./figs/visweshwar/input.jpg> <./figs/saksham/input
+.jpg> <./figs/pranay/input.jpg> <./figs/nethra/input.jpg> <./figs/sara/input.jp
+g> <./figs/arjun/gray.jpg> <./figs/arya/gray.jpg>]
+<figs/saksham/gray.jpg, id=210, 1258.7025pt x 1258.7025pt>
+File: figs/saksham/gray.jpg Graphic file (type jpg)
+<use figs/saksham/gray.jpg>
+Package pdftex.def Info: figs/saksham/gray.jpg  used on input line 103.
+(pdftex.def)             Requested size: 88.19499pt x 88.19499pt.
+<figs/pranay/gray.jpg, id=211, 2794.44pt x 3222.0375pt>
+File: figs/pranay/gray.jpg Graphic file (type jpg)
+<use figs/pranay/gray.jpg>
+Package pdftex.def Info: figs/pranay/gray.jpg  used on input line 104.
+(pdftex.def)             Requested size: 76.49556pt x 88.2007pt.
+<figs/nethra/gray.jpg, id=212, 959.585pt x 963.6pt>
+File: figs/nethra/gray.jpg Graphic file (type jpg)
+<use figs/nethra/gray.jpg>
+Package pdftex.def Info: figs/nethra/gray.jpg  used on input line 105.
+(pdftex.def)             Requested size: 87.82312pt x 88.19058pt.
+<figs/sara/gray.jpg, id=213, 1361.085pt x 1507.6325pt>
+File: figs/sara/gray.jpg Graphic file (type jpg)
+<use figs/sara/gray.jpg>
+Package pdftex.def Info: figs/sara/gray.jpg  used on input line 106.
+(pdftex.def)             Requested size: 79.62627pt x 88.19958pt.
+<figs/arjun/static.jpg, id=214, 1355.0625pt x 1206.5075pt>
+File: figs/arjun/static.jpg Graphic file (type jpg)
+<use figs/arjun/static.jpg>
+Package pdftex.def Info: figs/arjun/static.jpg  used on input line 120.
+(pdftex.def)             Requested size: 99.0614pt x 88.20134pt.
+<figs/arya/static.jpg, id=215, 903.375pt x 1162.3425pt>
+File: figs/arya/static.jpg Graphic file (type jpg)
+<use figs/arya/static.jpg>
+Package pdftex.def Info: figs/arya/static.jpg  used on input line 121.
+(pdftex.def)             Requested size: 68.54968pt x 88.2006pt.
+[4 <./figs/mudit/gray.jpg> <./figs/visweshwar/gray.jpg> <./figs/saksham/gray.jp
+g> <./figs/pranay/gray.jpg> <./figs/nethra/gray.jpg> <./figs/sara/gray.jpg>]
+<figs/mudit/static.jpg, id=220, 889.3225pt x 1055.945pt>
+File: figs/mudit/static.jpg Graphic file (type jpg)
+<use figs/mudit/static.jpg>
+Package pdftex.def Info: figs/mudit/static.jpg  used on input line 122.
+(pdftex.def)             Requested size: 74.2819pt x 88.19928pt.
+<figs/visweshwar/static.jpg, id=221, 925.4575pt x 899.36pt>
+File: figs/visweshwar/static.jpg Graphic file (type jpg)
+<use figs/visweshwar/static.jpg>
+Package pdftex.def Info: figs/visweshwar/static.jpg  used on input line 123.
+(pdftex.def)             Requested size: 90.75775pt x 88.19843pt.
+<figs/saksham/static.jpg, id=222, 1258.7025pt x 1258.7025pt>
+File: figs/saksham/static.jpg Graphic file (type jpg)
+<use figs/saksham/static.jpg>
+Package pdftex.def Info: figs/saksham/static.jpg  used on input line 124.
+(pdftex.def)             Requested size: 88.19499pt x 88.19499pt.
+<figs/pranay/static.jpg, id=223, 2794.44pt x 3222.0375pt>
+File: figs/pranay/static.jpg Graphic file (type jpg)
+<use figs/pranay/static.jpg>
+Package pdftex.def Info: figs/pranay/static.jpg  used on input line 125.
+(pdftex.def)             Requested size: 76.49556pt x 88.2007pt.
+<figs/nethra/static.jpg, id=224, 959.585pt x 963.6pt>
+File: figs/nethra/static.jpg Graphic file (type jpg)
+<use figs/nethra/static.jpg>
+Package pdftex.def Info: figs/nethra/static.jpg  used on input line 126.
+(pdftex.def)             Requested size: 87.82312pt x 88.19058pt.
+<figs/sara/static.jpg, id=225, 1361.085pt x 1507.6325pt>
+File: figs/sara/static.jpg Graphic file (type jpg)
+<use figs/sara/static.jpg>
+Package pdftex.def Info: figs/sara/static.jpg  used on input line 127.
+(pdftex.def)             Requested size: 79.62627pt x 88.19958pt.
+[5 <./figs/arjun/static.jpg> <./figs/arya/static.jpg> <./figs/mudit/static.jpg>
+ <./figs/visweshwar/static.jpg> <./figs/saksham/static.jpg> <./figs/pranay/stat
+ic.jpg> <./figs/nethra/static.jpg> <./figs/sara/static.jpg>]
+<figs/arjun/dynamic.jpg, id=232, 1355.0625pt x 1206.5075pt>
+File: figs/arjun/dynamic.jpg Graphic file (type jpg)
+<use figs/arjun/dynamic.jpg>
+Package pdftex.def Info: figs/arjun/dynamic.jpg  used on input line 150.
+(pdftex.def)             Requested size: 99.0614pt x 88.20134pt.
+<figs/arya/dynamic.jpg, id=233, 903.375pt x 1162.3425pt>
+File: figs/arya/dynamic.jpg Graphic file (type jpg)
+<use figs/arya/dynamic.jpg>
+Package pdftex.def Info: figs/arya/dynamic.jpg  used on input line 151.
+(pdftex.def)             Requested size: 68.54968pt x 88.2006pt.
+<figs/mudit/dynamic.jpg, id=234, 889.3225pt x 1055.945pt>
+File: figs/mudit/dynamic.jpg Graphic file (type jpg)
+<use figs/mudit/dynamic.jpg>
+Package pdftex.def Info: figs/mudit/dynamic.jpg  used on input line 152.
+(pdftex.def)             Requested size: 74.2819pt x 88.19928pt.
+<figs/visweshwar/dynamic.jpg, id=235, 925.4575pt x 899.36pt>
+File: figs/visweshwar/dynamic.jpg Graphic file (type jpg)
+<use figs/visweshwar/dynamic.jpg>
+Package pdftex.def Info: figs/visweshwar/dynamic.jpg  used on input line 153.
+(pdftex.def)             Requested size: 90.75775pt x 88.19843pt.
+<figs/saksham/dynamic.jpg, id=236, 1258.7025pt x 1258.7025pt>
+File: figs/saksham/dynamic.jpg Graphic file (type jpg)
+<use figs/saksham/dynamic.jpg>
+Package pdftex.def Info: figs/saksham/dynamic.jpg  used on input line 154.
+(pdftex.def)             Requested size: 88.19499pt x 88.19499pt.
+<figs/pranay/dynamic.jpg, id=237, 2794.44pt x 3222.0375pt>
+File: figs/pranay/dynamic.jpg Graphic file (type jpg)
+<use figs/pranay/dynamic.jpg>
+Package pdftex.def Info: figs/pranay/dynamic.jpg  used on input line 155.
+(pdftex.def)             Requested size: 76.49556pt x 88.2007pt.
+<figs/nethra/dynamic.jpg, id=238, 959.585pt x 963.6pt>
+File: figs/nethra/dynamic.jpg Graphic file (type jpg)
+<use figs/nethra/dynamic.jpg>
+Package pdftex.def Info: figs/nethra/dynamic.jpg  used on input line 156.
+(pdftex.def)             Requested size: 87.82312pt x 88.19058pt.
+<figs/sara/dynamic.jpg, id=239, 1361.085pt x 1507.6325pt>
+File: figs/sara/dynamic.jpg Graphic file (type jpg)
+<use figs/sara/dynamic.jpg>
+Package pdftex.def Info: figs/sara/dynamic.jpg  used on input line 157.
+(pdftex.def)             Requested size: 79.62627pt x 88.19958pt.
+[6 <./figs/arjun/dynamic.jpg> <./figs/arya/dynamic.jpg> <./figs/mudit/dynamic.j
+pg> <./figs/visweshwar/dynamic.jpg> <./figs/saksham/dynamic.jpg> <./figs/pranay
+/dynamic.jpg>]) [7 <./figs/nethra/dynamic.jpg> <./figs/sara/dynamic.jpg>] (./ch
+apters/appendix.tex [8] [9] [10] [11]) [12] (./chapters/references.tex
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
+[][]$\OT1/ptm/m/n/10 https : / / scikit-[]image . org / docs / stable / auto[]e
+xamples / applications / plot[]thresholding .
  []
 
+) [13
 
-Underfull \hbox (badness 3514) in paragraph at lines 134--92
-\OT1/ptm/m/n/10 adap-ta-tion, a di-rect pixel-by-pixel im-ple-men-ta-tion can b
-e time-consuming. The
- []
-
-(./chapters/implementation.tex
-<figs/scenery/input.jpg, id=327, 4111.36pt x 3083.52pt>
-File: figs/scenery/input.jpg Graphic file (type jpg)
-<use figs/scenery/input.jpg>
-Package pdftex.def Info: figs/scenery/input.jpg  used on input line 19.
-(pdftex.def)             Requested size: 182.09764pt x 136.54103pt.
-
-Underfull \vbox (badness 3815) has occurred while \output is active []
-
-[12]
-<figs/scenery/output_grayscale.pdf, id=333, 2960.17932pt x 2220.13449pt>
-File: figs/scenery/output_grayscale.pdf Graphic file (type pdf)
-<use figs/scenery/output_grayscale.pdf>
-Package pdftex.def Info: figs/scenery/output_grayscale.pdf  used on input line 
-26.
-(pdftex.def)             Requested size: 182.09764pt x 136.55609pt.
-<figs/scenery/averaged_reference.pdf, id=334, 2960.17932pt x 2220.13449pt>
-File: figs/scenery/averaged_reference.pdf Graphic file (type pdf)
-<use figs/scenery/averaged_reference.pdf>
-Package pdftex.def Info: figs/scenery/averaged_reference.pdf  used on input lin
-e 33.
-(pdftex.def)             Requested size: 182.09764pt x 136.55609pt.
-<figs/scenery/fixed_reference.pdf, id=335, 2960.17932pt x 2220.13449pt>
-File: figs/scenery/fixed_reference.pdf Graphic file (type pdf)
-<use figs/scenery/fixed_reference.pdf>
-Package pdftex.def Info: figs/scenery/fixed_reference.pdf  used on input line 4
-0.
-(pdftex.def)             Requested size: 182.09764pt x 136.55609pt.
-[13 <./figs/scenery/input.jpg> <./figs/scenery/output_grayscale.pdf> <./figs/sc
-enery/averaged_reference.pdf>]
-<figs/scenery/gaussian_localized_reference.pdf, id=350, 2960.17932pt x 2220.134
-49pt>
-File: figs/scenery/gaussian_localized_reference.pdf Graphic file (type pdf)
-<use figs/scenery/gaussian_localized_reference.pdf>
-Package pdftex.def Info: figs/scenery/gaussian_localized_reference.pdf  used on
- input line 47.
-(pdftex.def)             Requested size: 182.09764pt x 136.55609pt.
-<figs/scenery/gaussian_wide_reference.pdf, id=351, 2960.17932pt x 2220.13449pt>
-
-File: figs/scenery/gaussian_wide_reference.pdf Graphic file (type pdf)
-<use figs/scenery/gaussian_wide_reference.pdf>
-Package pdftex.def Info: figs/scenery/gaussian_wide_reference.pdf  used on inpu
-t line 54.
-(pdftex.def)             Requested size: 182.09764pt x 136.55609pt.
-<figs/jersey/input.jpg, id=352, 1541.76pt x 1027.84pt>
-File: figs/jersey/input.jpg Graphic file (type jpg)
-<use figs/jersey/input.jpg>
-Package pdftex.def Info: figs/jersey/input.jpg  used on input line 66.
-(pdftex.def)             Requested size: 182.09764pt x 121.39072pt.
-[14 <./figs/scenery/fixed_reference.pdf> <./figs/scenery/gaussian_localized_ref
-erence.pdf> <./figs/scenery/gaussian_wide_reference.pdf>]
-<figs/jersey/output_grayscale.pdf, id=371, 1110.06725pt x 740.04483pt>
-File: figs/jersey/output_grayscale.pdf Graphic file (type pdf)
-<use figs/jersey/output_grayscale.pdf>
-Package pdftex.def Info: figs/jersey/output_grayscale.pdf  used on input line 7
-3.
-(pdftex.def)             Requested size: 182.09764pt x 121.39072pt.
-<figs/jersey/averaged_reference.pdf, id=372, 1110.06725pt x 740.04483pt>
-File: figs/jersey/averaged_reference.pdf Graphic file (type pdf)
-<use figs/jersey/averaged_reference.pdf>
-Package pdftex.def Info: figs/jersey/averaged_reference.pdf  used on input line
- 80.
-(pdftex.def)             Requested size: 182.09764pt x 121.39072pt.
-<figs/jersey/fixed_reference.pdf, id=373, 1110.06725pt x 740.04483pt>
-File: figs/jersey/fixed_reference.pdf Graphic file (type pdf)
-<use figs/jersey/fixed_reference.pdf>
-Package pdftex.def Info: figs/jersey/fixed_reference.pdf  used on input line 87
-.
-(pdftex.def)             Requested size: 182.09764pt x 121.39072pt.
-[15 <./figs/jersey/input.jpg> <./figs/jersey/output_grayscale.pdf> <./figs/jers
-ey/averaged_reference.pdf>]
-<figs/jersey/gaussian_localized_reference.pdf, id=387, 1110.06725pt x 740.04483
-pt>
-File: figs/jersey/gaussian_localized_reference.pdf Graphic file (type pdf)
-<use figs/jersey/gaussian_localized_reference.pdf>
-Package pdftex.def Info: figs/jersey/gaussian_localized_reference.pdf  used on 
-input line 94.
-(pdftex.def)             Requested size: 182.09764pt x 121.39072pt.
-<figs/jersey/gaussian_wide_reference.pdf, id=388, 1110.06725pt x 740.04483pt>
-File: figs/jersey/gaussian_wide_reference.pdf Graphic file (type pdf)
-<use figs/jersey/gaussian_wide_reference.pdf>
-Package pdftex.def Info: figs/jersey/gaussian_wide_reference.pdf  used on input
- line 101.
-(pdftex.def)             Requested size: 182.09764pt x 121.39072pt.
-[16 <./figs/jersey/fixed_reference.pdf> <./figs/jersey/gaussian_localized_refer
-ence.pdf> <./figs/jersey/gaussian_wide_reference.pdf>]) (./chapters/references.
-tex) [17] (./main.aux)
+] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B81B2E52901A9A2A2BEEAFC6A616EB5E;7039.
+(rerunfilecheck)             Checksum: B2ECBCFF59D15C93DBED531B31F7D035;5408.
  ) 
 Here is how much of TeX's memory you used:
- 52691 strings out of 467533
- 1275359 string characters out of 5422138
- 1914935 words of memory out of 5000000
- 80698 multiletter control sequences out of 15000+600000
- 669580 words of font info for 132 fonts, out of 8000000 for 9000
+ 52663 strings out of 467533
+ 1276167 string characters out of 5422138
+ 1907154 words of memory out of 5000000
+ 80745 multiletter control sequences out of 15000+600000
+ 659865 words of font info for 106 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,14n,118p,1194b,1227s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,14n,118p,1194b,1111s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (17 pages, 14094943 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (13 pages, 6979568 bytes).
 PDF statistics:
- 509 PDF objects out of 1000 (max. 8388607)
- 418 compressed objects within 5 object streams
- 112 named destinations out of 1000 (max. 500000)
- 486 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 302 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 493 words of extra memory for PDF output out of 10000 (max. 10000000)
 

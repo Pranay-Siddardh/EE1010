@@ -1,0 +1,217 @@
+% Problem statement and implementation for the RGB image-processing project.
+% Image files are stored under figs/<name>/<type>.jpg.
+
+% Keep subsection headings numeric (1.1, 1.2) under IEEEtran.
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\quad}
+\renewcommand{\subsection}{%
+  \@startsection{subsection}{2}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+
+\subsection{Problem-Statement}
+
+Image processing is the computational manipulation and analysis of digital images. A digital image is represented by pixels containing RGB (Red, Green, Blue) values, arranged in a two-dimensional array for a 2D image.
+
+The luminance intensity $Y$ of each pixel is calculated from its RGB components using the relation given in Appendix~\eqref{eq:app_y_luminance}:
+
+% Number equations as section.subsection.equation.
+\renewcommand{\theequation}{\arabic{section}.\arabic{subsection}.\arabic{equation}}
+\setcounter{equation}{0}
+
+\begin{align}
+Y &= 0.299R + 0.587G + 0.114B
+\label{eq:problem_y_luminance}
+\end{align}
+
+The resulting luminance values form a grayscale image. Given a threshold value $T$, convert this grayscale image into a binary black-and-white image using the thresholding relation given in Appendix~\eqref{eq:app_bw_threshold}:
+
+\begin{align}
+B(x,y) &=
+\begin{cases}
+0, & Y(x,y) \leq T,\\
+255, & Y(x,y) > T.
+\end{cases}
+\label{eq:problem_bw_threshold}
+\end{align}
+
+Store the resulting binary image in a separate array without modifying the original grayscale image.
+
+\subsection{Implementation}
+
+The implementation is presented in four stages: the original input images, their grayscale versions, fixed-threshold outputs, and average-threshold outputs. The same order of subjects is retained throughout to make the results directly comparable.
+
+% Add modest whitespace between paragraphs and after subsection-level headings.
+\setlength{\parskip}{0.45em}
+\makeatletter
+\renewcommand{\subsubsection}{%
+  \@startsection{subsubsection}{3}{\z@}%
+  {-2.8ex\@plus -1ex \@minus -.2ex}%
+  {1.2ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+
+% Automatically number images as subsection.subsubsection.image.
+\newcounter{implementationimagecount}
+\newcommand{\startimplementationimages}{\setcounter{implementationimagecount}{0}}
+\newcommand{\implementationimage}[2]{%
+  \begin{minipage}[t]{0.47\textwidth}
+    \centering
+    \IfFileExists{#1}{\includegraphics[width=\linewidth,height=3.1cm,keepaspectratio]{#1}}{\fbox{\parbox[c][2.4cm][c]{0.9\linewidth}{\centering\scriptsize Missing image file\\\texttt{\detokenize{#1}}}}}\par
+    \stepcounter{implementationimagecount}%
+    \vspace{2pt}
+    {\footnotesize Fig. \thesubsection.\arabic{subsubsection}.\arabic{implementationimagecount}: #2}
+  \end{minipage}%
+}
+
+% --------------------------------------------------
+% 1.2.1 Input Images
+% --------------------------------------------------
+\subsubsection{Input Images}
+\startimplementationimages
+
+The original images used in this project are shown below. They are retained as the reference for comparing the grayscale conversion and the two thresholding methods.
+
+\begin{center}
+\implementationimage{figs/arjun/input.jpg}{Arjun}\hfill
+\implementationimage{figs/arya/input.jpg}{Arya}\par\vspace{0.6em}
+\implementationimage{figs/mudit/input.jpg}{Mudit}\hfill
+\implementationimage{figs/visweshwar/input.jpg}{Visweshwar}\par\vspace{0.6em}
+\implementationimage{figs/saksham/input.jpg}{Saksham}\hfill
+\implementationimage{figs/pranay/input.jpg}{Pranay}\par\vspace{0.6em}
+\implementationimage{figs/nethra/input.jpg}{Nethra}\hfill
+\implementationimage{figs/sara/input.jpg}{Sara}
+\end{center}
+
+% --------------------------------------------------
+% 1.2.2 Grayscaled Images
+% --------------------------------------------------
+\subsubsection{Grayscaled Images}
+\startimplementationimages
+
+Each input image is converted into a grayscale image by reducing the three RGB components to one luminance value, $Y(x,y)$, using the luminance equation defined in the Appendix. The resulting intensity image preserves brightness information while removing colour information.
+
+\begin{center}
+\implementationimage{figs/arjun/gray.jpg}{Arjun}\hfill
+\implementationimage{figs/arya/gray.jpg}{Arya}\par\vspace{0.6em}
+\implementationimage{figs/mudit/gray.jpg}{Mudit}\hfill
+\implementationimage{figs/visweshwar/gray.jpg}{Visweshwar}\par\vspace{0.6em}
+\implementationimage{figs/saksham/gray.jpg}{Saksham}\hfill
+\implementationimage{figs/pranay/gray.jpg}{Pranay}\par\vspace{0.6em}
+\implementationimage{figs/nethra/gray.jpg}{Nethra}\hfill
+\implementationimage{figs/sara/gray.jpg}{Sara}
+\end{center}
+
+% --------------------------------------------------
+% 1.2.3 Method-1: Fixed Thresholding
+% --------------------------------------------------
+\subsubsection{Method-1: Fixed Thresholding}
+\startimplementationimages
+
+In fixed thresholding, a constant threshold $T$ is selected before processing the images. For each pixel, the luminance $Y(x,y)$—calculated using the equation defined in the Appendix—is compared with $T$. If $Y(x,y)\leq T$, the output pixel is set to $0$ (black); otherwise, it is set to $255$ (white).
+
+A limitation of fixed thresholding is that one threshold may not classify foreground and background effectively across images with different brightness and contrast. Consequently, large regions can become the same colour in the binary output and useful details may be lost. This limitation motivates the image-dependent average-thresholding method described next.
+
+\begin{center}
+\implementationimage{figs/arjun/static.jpg}{Arjun (Fixed Threshold)}\hfill
+\implementationimage{figs/arya/static.jpg}{Arya (Fixed Threshold)}\par\vspace{0.6em}
+\implementationimage{figs/mudit/static.jpg}{Mudit (Fixed Threshold)}\hfill
+\implementationimage{figs/visweshwar/static.jpg}{Visweshwar (Fixed Threshold)}\par\vspace{0.6em}
+\implementationimage{figs/saksham/static.jpg}{Saksham (Fixed Threshold)}\hfill
+\implementationimage{figs/pranay/static.jpg}{Pranay (Fixed Threshold)}\par\vspace{0.6em}
+\implementationimage{figs/nethra/static.jpg}{Nethra (Fixed Threshold)}\hfill
+\implementationimage{figs/sara/static.jpg}{Sara (Fixed Threshold)}
+\end{center}
+
+The code to implement this is:
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/auto/static.py}@*)
+\end{lstlisting}
+
+% --------------------------------------------------
+% 1.2.4 Method-2: Average Thresholding
+% --------------------------------------------------
+\subsubsection{Method-2: Average Thresholding}
+\startimplementationimages
+
+In average thresholding, the threshold is calculated from the grayscale intensities of the current image instead of being fixed in advance. For an image with $M\times N$ pixels, the average threshold is
+
+\begin{equation}
+T_{\mathrm{avg}}=\frac{1}{MN}\sum_{x=1}^{M}\sum_{y=1}^{N}Y(x,y).
+\end{equation}
+
+Each pixel is classified by comparing its luminance with $T_{\mathrm{avg}}$: pixels with $Y(x,y)\leq T_{\mathrm{avg}}$ become black, while pixels with $Y(x,y)>T_{\mathrm{avg}}$ become white. The advantage is relativity: the threshold responds to the overall brightness distribution of each input image rather than applying the same threshold to every image. Since this is a single image-wide average, it does not necessarily compensate for uneven lighting at different locations within the same image.
+
+\begin{center}
+\implementationimage{figs/arjun/dynamic.jpg}{Arjun (Dynamic Threshold)}\hfill
+\implementationimage{figs/arya/dynamic.jpg}{Arya (Dynamic Threshold)}\par\vspace{0.6em}
+\implementationimage{figs/mudit/dynamic.jpg}{Mudit (Dynamic Threshold)}\hfill
+\implementationimage{figs/visweshwar/dynamic.jpg}{Visweshwar (Dynamic Threshold)}\par\vspace{0.6em}
+\implementationimage{figs/saksham/dynamic.jpg}{Saksham (Dynamic Threshold)}\hfill
+\implementationimage{figs/pranay/dynamic.jpg}{Pranay (Dynamic Threshold)}\par\vspace{0.6em}
+\implementationimage{figs/nethra/dynamic.jpg}{Nethra (Dynamic Threshold)}\hfill
+\implementationimage{figs/sara/dynamic.jpg}{Sara (Dynamic Threshold)}
+\end{center}
+
+The code to implement this is:
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/auto/dynamic.py}@*)
+\end{lstlisting}
+
+% --------------------------------------------------
+% 1.2.5 Comparative Analysis and Conclusion
+% --------------------------------------------------
+\subsubsection{Comparative Analysis and Conclusion}
+\label{sec:comparison}
+
+The fixed-threshold and average-threshold outputs are compared separately
+for each input image. Fixed thresholding uses the constant reference
+$T=128$, whereas average thresholding calculates a global threshold from
+the mean grayscale intensity of the current image. The comparison focuses
+on the visibility of relevant features, separation of foreground and
+background, preservation of useful details, and overall interpretability.
+Because these properties must be judged from the actual output images, a
+winner is assigned independently for each case rather than assuming that
+either method is always superior.
+
+\paragraph{Summary of results}
+The winning method for each input image is recorded in the table below.
+The classification is based on the comparison of the corresponding fixed
+(static) and mean-based (dynamic) thresholding outputs.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.45}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{|>{\centering\arraybackslash}p{0.27\textwidth}|>{\centering\arraybackslash}p{0.27\textwidth}|>{\centering\arraybackslash}p{0.27\textwidth}|}
+\hline
+\rule{0pt}{2.8ex}\textbf{Static Wins} &
+\textbf{Dynamic Wins} &
+\textbf{Tie} \\
+\hline
+\rule{0pt}{2.6ex}Mudit\par Sara &
+Visweshwar\par Saksham &
+Arjun\par Arya\par Nethra\par Pranay \\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Conclusion}
+The comparison is expected to show that thresholding performance depends
+on the image being processed. A fixed threshold provides a consistent
+reference and can work well when the subject and background are separated
+near that intensity. Mean-based thresholding adapts its reference to the
+overall grayscale intensity distribution, but because it uses one global
+mean, it may still perform poorly when illumination or contrast varies
+within an image. Neither method is guaranteed to produce the best result
+for every input.
+
+Therefore, the preferred thresholding method must be selected on a
+case-by-case basis according to the image's characteristics and the
+purpose of the output. The winner for one image need not be the winner for
+another; the final selection should be justified by the observed detail
+preservation and foreground--background separation, rather than by a
+universal ranking of the methods.
