@@ -289,7 +289,7 @@ E\brak{t}=\begin{cases}
 0, & t>0.5\text{ min}.
 \end{cases}
 \end{align}
-The mean residence time \brak{in min} is \underline{\hspace{2cm}} \brak{rounded off to two decimal places}. \hfill (GATE~CH~2025)
+The mean residence time \brak{in min} is \underline{\hspace{2cm}} (rounded off to two decimal places). \hfill (GATE~CH~2025)
 
 \solution Using the mean residence-time relation in \eqref{eq:mean_rtd_ratio},
 \begin{align}
@@ -353,16 +353,20 @@ For
 \vec{v}=v_x\hat{i}+v_y\hat{j},
 \end{align}
 the Jacobian is
+
+\begin{align}
 \begingroup
-\setlength{\arraycolsep}{3pt}
-\begin{equation}
-J_{\vec{v}}=
+\setlength{\arraycolsep}{2pt}
+\renewcommand{\arraystretch}{1.8}
 \myvec{
-\dfrac{\partial v_x}{\partial x} & \dfrac{\partial v_x}{\partial y}\\[-2pt]
-\dfrac{\partial v_y}{\partial x} & \dfrac{\partial v_y}{\partial y}
-}.
-\end{equation}
+\dfrac{\partial v_x}{\partial x} &
+\dfrac{\partial v_x}{\partial y}\\
+\dfrac{\partial v_y}{\partial x} &
+\dfrac{\partial v_y}{\partial y}
+}
 \endgroup
+\end{align}
+
 The divergence is the trace:
 \begin{align}
 \nabla\cdot\vec{v}
@@ -690,7 +694,6 @@ The code to verify this is:
 \end{lstlisting}
 
 % ----------------------------------------------------------- GATE Q60
-% ----------------------------------------------------------- GATE Q60
 
 \item The transfer function of a process is
 
@@ -950,8 +953,7 @@ The code to verify this is:
 \end{lstlisting}
 
 % ----------------------------------------------------------- GATE Q62
-\item The block diagram of a series cascade control system \brak{with time in minutes} is shown in the figure. For $\tau_I=8$ min and $K_c^s=1$, the maximum value of $K_c^m$, below which the cascade control system is stable, is \underline{\hspace{2cm}} \brak{rounded off to the nearest integer}. \hfill (GATE~CH~2025)
-
+\item The block diagram of a series cascade control system (with time in minutes) is shown in the figure. For $\tau_I=8$ min and $K_c^s=1$, the maximum value of $K_c^m$, below which the cascade control system is stable, is \underline{\hspace{2cm}} (rounded off to the nearest integer). \hfill (GATE~CH~2025)
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{figs/q62/Q62-Problem.pdf}
