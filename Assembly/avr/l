@@ -1,0 +1,57 @@
+;Including the most important library, says that thsi is for arduino uno.
+.include "m328Pdef.inc"
+
+.org 0x0000
+    rjmp Reset
+
+Reset:
+    ldi r16, low(RAMEND)
+    out SPL, r16
+    ldi r16, high(RAMEND)
+    out SPH, r16
+    ldi r16, 0xF0
+    out DDRD, r16
+    ldi r20, 0x90  
+    rjmp loopy
+
+loopy:
+	rcall nthcount
+	rcall delay_2s
+	subi r20, 0x10
+	brne loopy
+	rjmp stop
+
+nthcount:
+	mov r21, r20
+	out PORTD, r21
+	rcall delay_400ms
+	subi r21, 0x10
+	brne nthcount
+	ret
+
+stop:
+	rjmp stop
+
+delay_2s:
+    ldi  r17, 96
+    ldi  r18, 168
+    ldi  r19, 0
+
+delay2s:
+    subi r19, 1
+    sbci r18, 0
+    sbci r17, 0
+    brne delay2s
+    ret
+
+delay_400ms:
+    ldi r17, 19
+    ldi r18, 135
+    ldi r19, 255
+
+delay_loop:
+    subi r19, 1
+    sbci r18, 0
+    sbci r17, 0
+    brne delay_loop
+    ret

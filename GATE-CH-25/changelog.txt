@@ -49,3 +49,8 @@ Version v1.8
 1) Revised the codes with CoordGeo.
 2) Edited 1.2.2 approach using transformation matrices and dot prod.
 3) Elaborated 1.2.10 Question Solving.
+
+Version v1.9
+
+1) Changed () with \brak{}.
+2) Changed the jacobian matrix clumsy elements in the fomulae section. 

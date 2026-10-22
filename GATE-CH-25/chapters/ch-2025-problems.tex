@@ -6,7 +6,7 @@
 \vec{a} &= \sqrt{2}\hat{i}+\frac{1}{\sqrt{2}}\hat{j}+\hat{k},\\
 \vec{b} &= \frac{1}{\sqrt{2}}\hat{i}+\sqrt{2}\hat{j}-\hat{k}.
 \end{align}
-The inner product of these vectors $(\vec{a}\cdot\vec{b})$ is \hfill (GATE~CH~2025)
+The inner product of these vectors $\brak{\vec{a}\cdot\vec{b}}$ is \hfill (GATE~CH~2025)
 \begin{enumerate}[itemsep=0pt]
     \begin{multicols}{4}
         \item $0$
@@ -27,7 +27,7 @@ Substituting the components of the given vectors,
 \vec{a}\cdot\vec{b}
 &=\left(\sqrt{2}\right)\left(\frac{1}{\sqrt{2}}\right)
 +\left(\frac{1}{\sqrt{2}}\right)\left(\sqrt{2}\right)
-+(1)(-1)\\
++\brak{1}\brak{-1}\\
 &=1+1-1\\
 &=1.
 \end{align}
@@ -73,8 +73,8 @@ z_2=c+di,
 then multiplication by $z_1$ can be represented by
 \begin{align}
 \myvec{
-\operatorname{Re}(z_1z_2)\\
-\operatorname{Im}(z_1z_2)
+\operatorname{Re}\brak{z_1z_2}\\
+\operatorname{Im}\brak{z_1z_2}
 }
 &=
 \myvec{
@@ -266,7 +266,7 @@ The total number of ways of selecting two balls from ten balls is
 \end{align}
 Therefore,
 \begin{align}
-P(1\text{ green},1\text{ blue})
+P\brak{1\text{ green},1\text{ blue}}
 &=\frac{{}^3C_1\,{}^7C_1}{{}^{10}C_2}\\
 &=\frac{3\times7}{\frac{10\times9}{2}}\\
 &=\frac{21}{45}\\
@@ -282,34 +282,34 @@ The code and data to verify this are:
 \end{lstlisting}
 
 % ----------------------------------------------------------- GATE Q35
-\item The residence time distribution function $E(t)$ for a reactor is given by
+\item The residence time distribution function $E\brak{t}$ for a reactor is given by
 \begin{align}
-E(t)=\begin{cases}
+E\brak{t}=\begin{cases}
 1-2t, & t\leq0.5\text{ min},\\
 0, & t>0.5\text{ min}.
 \end{cases}
 \end{align}
-The mean residence time (in min) is \underline{\hspace{2cm}} (rounded off to two decimal places). \hfill (GATE~CH~2025)
+The mean residence time \brak{in min} is \underline{\hspace{2cm}} \brak{rounded off to two decimal places}. \hfill (GATE~CH~2025)
 
 \solution Using the mean residence-time relation in \eqref{eq:mean_rtd_ratio},
 \begin{align}
-\bar{t}=\frac{\displaystyle\int_0^\infty tE(t)\,dt}{\displaystyle\int_0^\infty E(t)\,dt}.
+\bar{t}=\frac{\displaystyle\int_0^\infty tE\brak{t}\,dt}{\displaystyle\int_0^\infty E\brak{t}\,dt}.
 \end{align}
-Since $E(t)=0$ for $t>0.5$,
+Since $E\brak{t}=0$ for $t>0.5$,
 \begin{align}
-\bar{t}=\frac{\displaystyle\int_0^{0.5}t(1-2t)\,dt}{\displaystyle\int_0^{0.5}(1-2t)\,dt}.
+\bar{t}=\frac{\displaystyle\int_0^{0.5}t\brak{1-2t}\,dt}{\displaystyle\int_0^{0.5}\brak{1-2t}\,dt}.
 \end{align}
 For the numerator,
 \begin{align}
-\int_0^{0.5}t(1-2t)\,dt
-&=\int_0^{0.5}(t-2t^2)\,dt\\
+\int_0^{0.5}t\brak{1-2t}\,dt
+&=\int_0^{0.5}\brak{t-2t^2}\,dt\\
 &=\left[\frac{t^2}{2}-\frac{2t^3}{3}\right]_0^{0.5}\\
 &=\frac18-\frac1{12}\\
 &=\frac1{24}.
 \end{align}
 For the denominator,
 \begin{align}
-\int_0^{0.5}(1-2t)\,dt
+\int_0^{0.5}\brak{1-2t}\,dt
 &=\left[t-t^2\right]_0^{0.5}\\
 &=\frac12-\frac14\\
 &=\frac14.
@@ -323,7 +323,7 @@ Hence,
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.70\linewidth]{figs/q35/RTD-Plot.pdf}
-    \caption{Residence time distribution $E(t)$ for the given reactor}
+    \caption{Residence time distribution $E\brak{t}$ for the given reactor}
     \label{fig:ch25_q35}
 \end{figure}
 The code to verify this is:
@@ -353,17 +353,20 @@ For
 \vec{v}=v_x\hat{i}+v_y\hat{j},
 \end{align}
 the Jacobian is
-\begin{align}
+\begingroup
+\setlength{\arraycolsep}{3pt}
+\begin{equation}
 J_{\vec{v}}=
 \myvec{
-\dfrac{\partial v_x}{\partial x} & \dfrac{\partial v_x}{\partial y}\\
+\dfrac{\partial v_x}{\partial x} & \dfrac{\partial v_x}{\partial y}\\[-2pt]
 \dfrac{\partial v_y}{\partial x} & \dfrac{\partial v_y}{\partial y}
 }.
-\end{align}
+\end{equation}
+\endgroup
 The divergence is the trace:
 \begin{align}
 \nabla\cdot\vec{v}
-&=\operatorname{tr}(J_{\vec{v}})\\
+&=\operatorname{tr}\brak{J_{\vec{v}}}\\
 &=\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}.
 \end{align}
 Here,
@@ -393,12 +396,12 @@ The code to verify this is:
 % ----------------------------------------------------------- GATE Q37
 \item Let $X$ be a continuous random variable with probability density function
 \begin{align}
-p(x)=\begin{cases}
-\dfrac{1}{a}, & x\in(0,a),\\
+p\brak{x}=\begin{cases}
+\dfrac{1}{a}, & x\in\brak{0,a},\\
 0, & \text{otherwise},
 \end{cases}
 \end{align}
-where $a$ is a positive constant. Let $f(x)=x^2$. The expected value of $f(X)$ is \hfill (GATE~CH~2025)
+where $a$ is a positive constant. Let $f\brak{x}=x^2$. The expected value of $f\brak{X}$ is \hfill (GATE~CH~2025)
 \begin{enumerate}[itemsep=0pt]
     \begin{multicols}{4}
         \item $\dfrac{a^2}{3}$
@@ -410,12 +413,12 @@ where $a$ is a positive constant. Let $f(x)=x^2$. The expected value of $f(X)$ i
 
 \solution The given function and probability density are
 \begin{align}
-f(x)&=x^2,\\
-p(x)&=\frac1a,\qquad 0<x<a.
+f\brak{x}&=x^2,\\
+p\brak{x}&=\frac1a,\qquad 0<x<a.
 \end{align}
 The expected value of a function of a continuous random variable is obtained from \eqref{eq:expectation_continuous}, which is the continuous form of taking a weighted average over all possible outcomes:
 \begin{align}
-E[f(X)]=\int_{-\infty}^{\infty}f(x)p(x)\,dx.
+E[f\brak{X}]=\int_{-\infty}^{\infty}f\brak{x}p\brak{x}\,dx.
 \end{align}
 Since the density is non-zero only from $0$ to $a$,
 \begin{align}
@@ -432,7 +435,7 @@ The expected value represents the average output obtained when the possible outc
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{figs/q37/Expected-Value.pdf}
-    \caption{Uniform probability density over the interval $(0,a)$}
+    \caption{Uniform probability density over the interval $\brak{0,a}$}
     \label{fig:ch25_q37}
 \end{figure}
 The codes and data to verify this are:
@@ -453,7 +456,7 @@ The codes and data to verify this are:
 \[
 \frac{dy}{dx}=-\frac{y}{x}
 \]
-has which of the following correct solution(s)? \hfill (GATE~CH~2025)
+has which of the following correct solution\brak{s}? \hfill (GATE~CH~2025)
 \begin{enumerate}[itemsep=0pt]
     \begin{multicols}{4}
         \item $y=x+c$
@@ -536,7 +539,7 @@ For numerical verification, the trapezoidal method can be applied to
 
 \begin{align}
 \frac{dy}{dx}
-&=f(x,y)=-\frac{y}{x}.
+&=f\brak{x,y}=-\frac{y}{x}.
 \end{align}
 
 For a step size $h$, the trapezoidal approximation is
@@ -545,14 +548,14 @@ For a step size $h$, the trapezoidal approximation is
 y_{n+1}
 &=y_n+\frac{h}{2}
 \left[
-f(x_n,y_n)+f(x_{n+1},y_{n+1})
+f\brak{x_n,y_n}+f\brak{x_{n+1},y_{n+1}}
 \right].
 \end{align}
 
 Substituting
 
 \begin{align}
-f(x,y)
+f\brak{x,y}
 &=-\frac{y}{x},
 \end{align}
 
@@ -610,16 +613,16 @@ The eigenvalues are obtained from the characteristic equation
 
 From the trace relation in \eqref{eq:eigen_trace}, the sum of the eigenvalues is
 \begin{align}
-\lambda_1+\lambda_2&=(2-\sqrt{3})+(2+\sqrt{3})\\
+\lambda_1+\lambda_2&=\brak{2-\sqrt{3}}+\brak{2+\sqrt{3}}\\
 &=4.
 \end{align}
 The trace of the matrix is
 \begin{align}
-\operatorname{tr}(\vec{A})=2+2=4.
+\operatorname{tr}\brak{\vec{A}}=2+2=4.
 \end{align}
 Hence,
 \begin{align}
-\boxed{\lambda_1+\lambda_2=\operatorname{tr}(\vec{A})}.
+\boxed{\lambda_1+\lambda_2=\operatorname{tr}\brak{\vec{A}}}.
 \end{align}
 Using the given value $\lambda_1=0.27$ and the trace,
 \begin{align}
@@ -634,7 +637,7 @@ The code to verify this is:
 % ----------------------------------------------------------- GATE Q46
 \item The Newton-Raphson method is used to obtain the root of
 \begin{align}
-f(x)=x^2-x-1=0
+f\brak{x}=x^2-x-1=0
 \end{align}
 with the initial guess $x_{0}=1$. The value of the second iterate $x_{2}$, rounded off to two decimal places, is \underline{\hspace{2cm}}. \hfill (GATE~CH~2025)
 
@@ -642,12 +645,12 @@ with the initial guess $x_{0}=1$. The value of the second iterate $x_{2}$, round
 
 The Newton-Raphson formula is given by \eqref{eq:newton_raphson}:
 \begin{align}
-x_{(n+1)}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}.
+x_{\brak{n+1}}=x_{n}-\frac{f\brak{x_{n}}}{f'\brak{x_{n}}}.
 \end{align}
 Here,
 \begin{align}
-f(x)&=x^2-x-1,\\
-f'(x)&=2x-1.
+f\brak{x}&=x^2-x-1,\\
+f'\brak{x}&=2x-1.
 \end{align}
 Given
 \begin{align}
@@ -655,8 +658,8 @@ x_{0}=1.
 \end{align}
 For the first iteration,
 \begin{align}
-f(1)&=-1,\\
-f'(1)&=1,
+f\brak{1}&=-1,\\
+f'\brak{1}&=1,
 \end{align}
 and hence
 \begin{align}
@@ -664,8 +667,8 @@ x_{1}&=1-\frac{-1}{1}=2.
 \end{align}
 For the second iteration,
 \begin{align}
-f(2)&=4-2-1=1,\\
-f'(2)&=4-1=3.
+f\brak{2}&=4-2-1=1,\\
+f'\brak{2}&=4-1=3.
 \end{align}
 Therefore,
 \begin{align}
@@ -678,7 +681,7 @@ Thus, rounded off to two decimal places, $x_{2}=1.67$.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{figs/q46/Newton-Raphson.pdf}
-    \caption{Newton-Raphson iteration for $f(x)=x^2-x-1$}
+    \caption{Newton-Raphson iteration for $f\brak{x}=x^2-x-1$}
     \label{fig:ch25_q46}
 \end{figure}
 The code to verify this is:
@@ -692,11 +695,11 @@ The code to verify this is:
 \item The transfer function of a process is
 
 \begin{align}
-G_p(s)=\frac{2e^{-s}}{(5s+1)^2}.
+G_p\brak{s}=\frac{2e^{-s}}{\brak{5s+1}^2}.
 \label{eq:q60_transfer}
 \end{align}
 
-The process is fitted to a first-order plus dead-time (FOPDT) model using
+The process is fitted to a first-order plus dead-time \brak{FOPDT} model using
 the maximum slope method. If $\tau_m$ and $\theta_m$ are the fitted time
 constant and dead time, respectively, then
 $\tau_m/\theta_m$, rounded off to two decimal places, is
@@ -706,13 +709,13 @@ $\tau_m/\theta_m$, rounded off to two decimal places, is
 The unit-step response of
 
 \begin{align}
-\frac{1}{(\tau s+1)^2}
+\frac{1}{\brak{\tau s+1}^2}
 \end{align}
 
 is
 
 \begin{align}
-y(t)
+y\brak{t}
 &=1-\left(1+\frac{t}{\tau}\right)e^{-t/\tau},
 \label{eq:q60_response}
 \\
@@ -745,14 +748,14 @@ second-order response in \eqref{eq:q60_response}.
 Thus, the actual step response is
 
 \begin{align}
-y_p(t)
+y_p\brak{t}
 =
 \begin{cases}
 0, & t<1,\\[4pt]
 2\left[
 1+\frac{t-1}{5}
 \right]
-e^{-(t-1)/5}
+e^{-\brak{t-1}/5}
 \text{ subtracted from }2,
 & t\geq1.
 \end{cases}
@@ -761,13 +764,13 @@ e^{-(t-1)/5}
 Equivalently, writing the second branch directly,
 
 \begin{align}
-y_p(t)
+y_p\brak{t}
 =
 \begin{cases}
 0, & t<1,\\[4pt]
 2\left[
 1-\left(1+\dfrac{t-1}{5}\right)
-e^{-(t-1)/5}
+e^{-\brak{t-1}/5}
 \right],
 & t\geq1.
 \end{cases}
@@ -779,14 +782,14 @@ For $t\geq1$, differentiating \eqref{eq:q60_actual_curve} gives
 \begin{align}
 \frac{dy_p}{dt}
 &=
-\frac{2(t-1)}{25}e^{-(t-1)/5},
+\frac{2\brak{t-1}}{25}e^{-\brak{t-1}/5},
 \label{eq:q60_slope}
 \\
 \frac{d^2y_p}{dt^2}
 &=
 \frac{2}{25}
 \left(1-\frac{t-1}{5}\right)
-e^{-(t-1)/5}.
+e^{-\brak{t-1}/5}.
 \label{eq:q60_second_derivative_actual}
 \end{align}
 
@@ -813,12 +816,12 @@ the inflection point is
 
 \begin{align}
 y_i
-&=y_p(6)
+&=y_p\brak{6}
 \\
 &=
 2\left[
 1-\left(1+\frac{6-1}{5}\right)
-e^{-(6-1)/5}
+e^{-\brak{6-1}/5}
 \right]
 \\
 &=
@@ -834,8 +837,8 @@ R
 \left.\frac{dy_p}{dt}\right|_{t=6}
 \\
 &=
-\frac{2(6-1)}{25}
-e^{-(6-1)/5}
+\frac{2\brak{6-1}}{25}
+e^{-\brak{6-1}/5}
 \\
 &=
 \frac{2}{5e}.
@@ -846,7 +849,7 @@ The maximum-slope method approximates the actual curve by the tangent
 at the inflection point. Therefore,
 
 \begin{align}
-y-y_i=R(t-t_i).
+y-y_i=R\brak{t-t_i}.
 \label{eq:q60_tangent}
 \end{align}
 
@@ -857,7 +860,7 @@ Substituting \eqref{eq:q60_inflection_output},
 \begin{align}
 y-\left(2-\frac{4}{e}\right)
 =
-\frac{2}{5e}(t-6).
+\frac{2}{5e}\brak{t-6}.
 \label{eq:q60_tangent_expanded}
 \end{align}
 
@@ -868,7 +871,7 @@ tangent. Therefore, putting $y=0$ in
 \begin{align}
 -\left(2-\frac{4}{e}\right)
 &=
-\frac{2}{5e}(\theta_m-6).
+\frac{2}{5e}\brak{\theta_m-6}.
 \end{align}
 
 Hence,
@@ -876,7 +879,7 @@ Hence,
 \begin{align}
 \theta_m
 &=
-6-\frac{2(1-2/e)}{2/(5e)}
+6-\frac{2\brak{1-2/e}}{2/\brak{5e}}
 \\
 &=
 6-5e+10
@@ -891,7 +894,7 @@ Hence,
 For the fitted FOPDT model,
 
 \begin{align}
-G_m(s)
+G_m\brak{s}
 =
 \frac{K e^{-\theta_m s}}
 {\tau_m s+1},
@@ -912,7 +915,7 @@ Therefore,
 \frac{K}{R}
 \\
 &=
-\frac{2}{2/(5e)}
+\frac{2}{2/\brak{5e}}
 \\
 &=
 5e
@@ -947,7 +950,7 @@ The code to verify this is:
 \end{lstlisting}
 
 % ----------------------------------------------------------- GATE Q62
-\item The block diagram of a series cascade control system (with time in minutes) is shown in the figure. For $\tau_I=8$ min and $K_c^s=1$, the maximum value of $K_c^m$, below which the cascade control system is stable, is \underline{\hspace{2cm}} (rounded off to the nearest integer). \hfill (GATE~CH~2025)
+\item The block diagram of a series cascade control system \brak{with time in minutes} is shown in the figure. For $\tau_I=8$ min and $K_c^s=1$, the maximum value of $K_c^m$, below which the cascade control system is stable, is \underline{\hspace{2cm}} \brak{rounded off to the nearest integer}. \hfill (GATE~CH~2025)
 
 \begin{figure}[H]
     \centering
@@ -958,46 +961,46 @@ The code to verify this is:
 
 \solution The inner process is
 \begin{align}
-G_1(s)=\frac{1}{2s+1},
+G_1\brak{s}=\frac{1}{2s+1},
 \end{align}
 and the inner controller gain is $K_c^s=1$. Therefore, the closed-loop inner transfer function is
 \begin{align}
-G_{\mathrm{inner}}(s)
-&=\frac{K_c^sG_1(s)}{1+K_c^sG_1(s)}\\
-&=\frac{1/(2s+1)}{1+1/(2s+1)}\\
-&=\frac{1}{2(s+1)}.
+G_{\mathrm{inner}}\brak{s}
+&=\frac{K_c^sG_1\brak{s}}{1+K_c^sG_1\brak{s}}\\
+&=\frac{1/\brak{2s+1}}{1+1/\brak{2s+1}}\\
+&=\frac{1}{2\brak{s+1}}.
 \end{align}
 The outer process is
 \begin{align}
-G_2(s)=\frac{2}{(8s+1)(4s+1)}.
+G_2\brak{s}=\frac{2}{\brak{8s+1}\brak{4s+1}}.
 \end{align}
 Hence the equivalent process for the outer loop is
 \begin{align}
-G_{\mathrm{eq}}(s)
-&=G_{\mathrm{inner}}(s)G_2(s)\\
-&=\frac{1}{(s+1)(8s+1)(4s+1)}.
+G_{\mathrm{eq}}\brak{s}
+&=G_{\mathrm{inner}}\brak{s}G_2\brak{s}\\
+&=\frac{1}{\brak{s+1}\brak{8s+1}\brak{4s+1}}.
 \end{align}
 The outer controller is
 \begin{align}
-G_c(s)=K_c^m\frac{\tau_Is+1}{\tau_Is}.
+G_c\brak{s}=K_c^m\frac{\tau_Is+1}{\tau_Is}.
 \end{align}
 Since $\tau_I=8$ min,
 \begin{align}
-G_c(s)=K_c^m\frac{8s+1}{8s}.
+G_c\brak{s}=K_c^m\frac{8s+1}{8s}.
 \end{align}
 Therefore, the open-loop transfer function of the outer loop is
 \begin{align}
-G_c(s)G_{\mathrm{eq}}(s)
-&=K_c^m\frac{8s+1}{8s(s+1)(8s+1)(4s+1)}\\
-&=\frac{K_c^m}{8s(s+1)(4s+1)}.
+G_c\brak{s}G_{\mathrm{eq}}\brak{s}
+&=K_c^m\frac{8s+1}{8s\brak{s+1}\brak{8s+1}\brak{4s+1}}\\
+&=\frac{K_c^m}{8s\brak{s+1}\brak{4s+1}}.
 \end{align}
 For unity negative feedback, using \eqref{eq:unity_closed_loop}, the characteristic equation is
 \begin{align}
-1+\frac{K_c^m}{8s(s+1)(4s+1)}=0,
+1+\frac{K_c^m}{8s\brak{s+1}\brak{4s+1}}=0,
 \end{align}
 which gives
 \begin{align}
-8s(s+1)(4s+1)+K_c^m&=0\\
+8s\brak{s+1}\brak{4s+1}+K_c^m&=0\\
 32s^3+40s^2+8s+K_c^m&=0.
 \end{align}
 Using the Routh-Hurwitz relations in \eqref{eq:routh_array}, the Routh array is
@@ -1005,7 +1008,7 @@ Using the Routh-Hurwitz relations in \eqref{eq:routh_array}, the Routh array is
 \myvec{
 32 & 8\\
 40 & K_c^m\\
-\dfrac{40(8)-32K_c^m}{40} & 0\\
+\dfrac{40\brak{8}-32K_c^m}{40} & 0\\
 K_c^m &
 }.
 \end{align}
