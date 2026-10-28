@@ -54,3 +54,7 @@ Version v1.9
 
 1) Changed () with \brak{}.
 2) Changed the jacobian matrix clumsy elements in the fomulae section. 
+
+Version v2.0
+
+1) Changed the layout for formulae to formula-cum-solution.

@@ -9,6 +9,19 @@ For two $n$-dimensional vectors $\vec{a}$ and $\vec{b}$,
 &= \sum_{i=1}^{n}a_i b_i
 \label{eq:dot_product}
 \end{align}
+
+\solution
+By the definition of the dot product, multiply corresponding components of the two vectors and add the products:
+\begin{align}
+\vec{a}^{\top}\vec{b}
+&=
+\myvec{a_1 & a_2 & \cdots & a_n}
+\myvec{b_1\\b_2\\\vdots\\b_n}
+\\
+&=a_1b_1+a_2b_2+\cdots+a_nb_n
+\\
+&=\sum_{i=1}^{n}a_i b_i.
+\end{align}
 \end{itemize}
 
 \item Complex Numbers and Arguments
@@ -31,6 +44,14 @@ b
 \label{eq:complex_vector}
 \end{align}
 
+
+\solution
+Writing $z=a+bi$, its real and imaginary parts are $\operatorname{Re}(z)=a$ and $\operatorname{Im}(z)=b$. Placing these components in a column gives
+\begin{align}
+\vec{z}
+&=\myvec{\operatorname{Re}(z)\\\operatorname{Im}(z)}
+=\myvec{a\\b}.
+\end{align}
 \item Matrix Representation of Complex Multiplication:
 
 If
@@ -57,6 +78,19 @@ d
 \label{eq:complex_multiplication_matrix}
 \end{align}
 
+
+\solution
+Expand the product:
+\begin{align}
+z_1z_2
+&=(a+bi)(c+di)\\
+&=(ac-bd)+i(ad+bc).
+\end{align}
+Thus the real and imaginary parts are $ac-bd$ and $ad+bc$. Matrix multiplication gives the same components:
+\begin{align}
+\myvec{ac-bd\\ad+bc}
+&=\myvec{a&-b\\b&a}\myvec{c\\d}.
+\end{align}
 \item Argument from the Dot Product:
 
 Let
@@ -90,6 +124,14 @@ Then
 
 The signs of $x$ and $y$ determine the quadrant of the resultant vector.
 
+
+\solution
+The dot-product identity is $\vec{u}^{\top}\vec{v}=\|\vec{u}\|\|\vec{v}\|\cos\theta$. Taking $\vec{u}=\vec{z}$ and $\vec{v}=\hat{i}$ and rearranging gives
+\begin{align}
+\cos\theta
+&=\frac{\vec{z}^{\top}\hat{i}}{\|\vec{z}\|\,\|\hat{i}\|}.
+\end{align}
+Since $\hat{i}=\myvec{1\\0}$, its norm is $1$ and $\vec{z}^{\top}\hat{i}=x$, so $\cos\theta=x/\sqrt{x^2+y^2}$. The signs of $x$ and $y$ identify the quadrant.
 \end{itemize}
 
 \item Mean Residence Time from RTD
@@ -108,6 +150,21 @@ For a residence time distribution $E\brak{t}$,
 &= \int_0^\infty tE\brak{t}\,dt
 \label{eq:mean_rtd_integral}
 \end{align}
+
+\solution
+The mean of a continuous distribution is its first moment divided by its total area. Hence
+\begin{align}
+\bar{t}
+&=\frac{\int_0^\infty tE(t)\,dt}{\int_0^\infty E(t)\,dt}.
+\end{align}
+For a normalized residence time distribution, the total area is one:
+\begin{align}
+\int_0^\infty E(t)\,dt&=1.
+\end{align}
+Substituting this normalization into the ratio yields
+\begin{align}
+\bar{t}&=\int_0^\infty tE(t)\,dt.
+\end{align}
 \end{itemize}
 
 \item Permutations and Combinations
@@ -118,6 +175,14 @@ For a residence time distribution $E\brak{t}$,
 &= \binom{n}{r}
 =\frac{n!}{r!\brak{n-r}!}
 \label{eq:combination_formula}
+\end{align}
+
+\solution
+First count ordered selections of $r$ distinct items from $n$: there are $n!/(n-r)!$ such selections. Each unordered group is counted $r!$ times, once for every ordering of its selected items. Therefore
+\begin{align}
+{}^nC_r
+&=\frac{n!/(n-r)!}{r!}
+=\frac{n!}{r!(n-r)!}.
 \end{align}
 \end{itemize}
 
@@ -135,11 +200,30 @@ For a continuous random variable $X$ with probability density function $f_X\brak
 \label{eq:expectation_x}
 \end{align}
 
+
+\solution
+For a continuous random variable, the probability of values in an interval is obtained by integrating its density. The expectation is the probability-weighted average of $g(x)$, so
+\begin{align}
+\mathbb{E}[g(X)]
+&=\int_{-\infty}^{\infty}g(x)f_X(x)\,dx.
+\end{align}
+Taking $g(x)=x$ gives the expectation of $X$:
+\begin{align}
+\mathbb{E}[X]
+&=\int_{-\infty}^{\infty}xf_X(x)\,dx.
+\end{align}
 \item Discrete Random Variable:
 \begin{align}
 \mathbb{E}[g\brak{X}]
 &= \sum_x g\brak{x}\Pr\brak{X=x}
 \label{eq:expectation_discrete}
+\end{align}
+
+\solution
+For a discrete random variable, each possible value $x$ occurs with probability $\Pr(X=x)$. Summing the value of $g(x)$ weighted by these probabilities gives
+\begin{align}
+\mathbb{E}[g(X)]
+&=\sum_x g(x)\Pr(X=x).
 \end{align}
 \end{itemize}
 
@@ -152,6 +236,16 @@ For a differentiable function $f\brak{x}$, the root is iteratively approximated 
 x_{n+1}
 &= x_n-\frac{f\brak{x_n}}{f'\brak{x_n}}
 \label{eq:newton_raphson}
+\end{align}
+
+\solution
+Approximate $f(x)$ near $x_n$ by its tangent line:
+\begin{align}
+f(x_{n+1})&\approx f(x_n)+f'(x_n)(x_{n+1}-x_n).
+\end{align}
+To find a root, set $f(x_{n+1})\approx 0$ and choose the step $x_{n+1}-x_n=-f(x_n)/f'(x_n)$. This gives
+\begin{align}
+x_{n+1}&=x_n-\frac{f(x_n)}{f'(x_n)}.
 \end{align}
 \end{itemize}
 
@@ -167,6 +261,13 @@ For a square matrix $\vec{A}$,
 \end{align}
 where $\lambda$ is an eigenvalue and $\vec{x}$ is the corresponding eigenvector.
 
+
+\solution
+An eigenvector is a nonzero vector whose direction is unchanged by multiplication by the matrix; the scalar factor is its eigenvalue. Rearranging the defining equation gives
+\begin{align}
+(\vec{A}-\lambda\vec{I})\vec{x}&=\vec{0}.
+\end{align}
+For a nonzero solution $\vec{x}$ to exist, the matrix must be singular. Therefore its determinant must vanish, which gives the characteristic equation in the next subsection.
 \item Characteristic Equation:
 \begin{align}
 \mydet{\vec{A}-\lambda\vec{I}}
@@ -174,6 +275,16 @@ where $\lambda$ is an eigenvalue and $\vec{x}$ is the corresponding eigenvector.
 \label{eq:characteristic_equation}
 \end{align}
 
+
+\solution
+From $\vec{A}\vec{x}=\lambda\vec{x}$, move the right-hand side to the left:
+\begin{align}
+(\vec{A}-\lambda\vec{I})\vec{x}&=\vec{0}.
+\end{align}
+A nonzero eigenvector exists only if $\vec{A}-\lambda\vec{I}$ is singular. Thus
+\begin{align}
+\mydet{\vec{A}-\lambda\vec{I}}&=0.
+\end{align}
 \item Relation with Trace:
 
 If $\lambda_1,\lambda_2,\ldots,\lambda_n$ are the eigenvalues of $\vec{A}\in\mathbb{R}^{n\times n}$,
@@ -190,6 +301,16 @@ Also, from the eigenvalue product relation,
 &= \prod_{i=1}^{n}\lambda_i
 \label{eq:eigen_determinant}
 \end{align}
+
+\solution
+The characteristic polynomial is $\det(\lambda\vec{I}-\vec{A})$. Its coefficient of $\lambda^{n-1}$ is $-\operatorname{tr}(\vec{A})$, while its roots are the eigenvalues. Comparing coefficients with $\prod_{i=1}^{n}(\lambda-\lambda_i)$ gives
+\begin{align}
+\operatorname{tr}(\vec{A})&=\sum_{i=1}^{n}\lambda_i.
+\end{align}
+The constant term of the characteristic polynomial gives the product of eigenvalues, so
+\begin{align}
+\det(\vec{A})&=\prod_{i=1}^{n}\lambda_i.
+\end{align}
 \end{itemize}
 
 \item Trapezoidal Method for Plotting Differential Equations
@@ -200,6 +321,9 @@ Also, from the eigenvalue product relation,
 &= f\brak{x,y}
 \end{align}
 
+
+\solution
+This is the differential equation being approximated. At a point $(x_n,y_n)$, the slope of the solution curve is specified by $f(x_n,y_n)$; the step size is $h=x_{n+1}-x_n$.
 \item Trapezoidal Update:
 \begin{align}
 y_{n+1}
@@ -212,6 +336,14 @@ f\brak{x_{n+1},y_{n+1}}
 \label{eq:trapezoidal_method}
 \end{align}
 
+
+\solution
+Over one step, the trapezoidal rule approximates the change in $y$ by the step width multiplied by the average of the slopes at the two endpoints:
+\begin{align}
+y_{n+1}-y_n
+&\approx \frac{h}{2}\left[f(x_n,y_n)+f(x_{n+1},y_{n+1})\right].
+\end{align}
+Rearranging gives the trapezoidal update formula.
 \item The method approximates the solution by using the average of the slopes at two consecutive points. The calculated points can then be used to plot the numerical solution curve.
 \end{itemize}
 
@@ -251,6 +383,9 @@ J_{\vec{F}}
 \label{eq:jacobian}
 \end{align}
 
+
+\solution
+Each entry of the Jacobian is the partial derivative of one component of $\vec{F}$ with respect to one variable. Placing all derivatives $\partial F_i/\partial x_j$ in row $i$, column $j$ gives the displayed matrix $J_{\vec{F}}$.
 \item Divergence:
 \begin{align}
 \nabla\cdot\vec{F}
@@ -259,6 +394,14 @@ J_{\vec{F}}
 \label{eq:divergence}
 \end{align}
 
+
+\solution
+Divergence measures the net local outflow of a vector field. It is defined as the sum of the partial derivative of each component with respect to its corresponding coordinate:
+\begin{align}
+\nabla\cdot\vec{F}
+&=\frac{\partial F_1}{\partial x_1}+\cdots+\frac{\partial F_n}{\partial x_n}
+=\sum_{i=1}^{n}\frac{\partial F_i}{\partial x_i}.
+\end{align}
 \item Relation Between Jacobian and Divergence:
 \begin{align}
 \nabla\cdot\vec{F}
@@ -266,6 +409,14 @@ J_{\vec{F}}
 \label{eq:divergence_trace}
 \end{align}
 
+
+\solution
+The trace of a matrix is the sum of its diagonal entries. The diagonal entries of $J_{\vec{F}}$ are $\partial F_i/\partial x_i$, so
+\begin{align}
+\operatorname{tr}(J_{\vec{F}})
+&=\sum_{i=1}^{n}\frac{\partial F_i}{\partial x_i}
+=\nabla\cdot\vec{F}.
+\end{align}
 \end{itemize}
 
 \item Dead Time and Time Delay in the Laplace Domain
@@ -278,6 +429,9 @@ A pure time delay of $\theta$ in the time domain is represented in the Laplace d
 e^{-\theta s}
 \end{align}
 
+
+\solution
+By the Laplace time-shift property, delaying a causal signal by $\theta$ multiplies its transform by $e^{-\theta s}$. Thus the delay contributes the factor $e^{-\theta s}$ in the Laplace domain.
 \item Delayed Signal:
 
 If a signal $x\brak{t}$ is delayed by $\theta$, then
@@ -288,6 +442,14 @@ X_d\brak{s}
 &= e^{-\theta s}X\brak{s}
 \end{align}
 
+
+\solution
+A delay of $\theta$ shifts the signal to the right, so the delayed time signal is $x(t-\theta)$; the step function $u(t-\theta)$ ensures it is zero before the delay. By the Laplace time-shift theorem,
+\begin{align}
+\mathcal{L}\{x(t-\theta)u(t-\theta)\}
+&=e^{-\theta s}X(s).
+\end{align}
+Therefore $X_d(s)=e^{-\theta s}X(s)$.
 \item Significance in a Transfer Function:
 
 For a process transfer function
@@ -297,12 +459,31 @@ G\brak{s}
 \end{align}
 the factor $e^{-\theta s}$ represents a pure time delay or dead time of $\theta$ time units, while $G_0\brak{s}$ represents the process dynamics without the delay.
 
+
+\solution
+A pure time delay has Laplace-domain factor $e^{-\theta s}$. Separating that factor from the delay-free dynamics gives
+\begin{align}
+G(s)&=G_0(s)e^{-\theta s}.
+\end{align}
+For first-order dynamics, $G_0(s)=K/(\tau s+1)$, so the FOPDT model is
+\begin{align}
+G_{\mathrm{FOPDT}}(s)&=\frac{Ke^{-\theta s}}{\tau s+1}.
+\end{align}
 \item The dead time shifts the process response along the time axis by $\theta$ without changing the steady-state gain. For a first-order plus dead-time model,
 \begin{align}
 G_{\mathrm{FOPDT}}\brak{s}
 &= \frac{Ke^{-\theta s}}{\tau s+1}
 \end{align}
 where $K$ is the process gain, $\tau$ is the time constant, and $\theta$ is the dead time. This is the same FOPDT form given in \eqref{eq:fopdt_model}.
+
+\solution
+The delay factor $e^{-\theta s}$ multiplies the delay-free first-order model $K/(\tau s+1)$. Therefore,
+\begin{align}
+G_{\mathrm{FOPDT}}(s)
+&=\frac{K}{\tau s+1}e^{-\theta s}
+=\frac{Ke^{-\theta s}}{\tau s+1}.
+\end{align}
+
 
 \end{itemize}
 
@@ -316,6 +497,12 @@ G\brak{s}
 \label{eq:fopdt_model}
 \end{align}
 
+
+\solution
+A first-order process without delay has transfer function $K/(\tau s+1)$. Including a dead time $\theta$ multiplies it by the delay factor $e^{-\theta s}$, yielding
+\begin{align}
+G(s)&=\frac{Ke^{-\theta s}}{\tau s+1}.
+\end{align}
 \item Process Gain (from the FOPDT model in \eqref{eq:fopdt_model}):
 \begin{align}
 K
@@ -323,6 +510,12 @@ K
 \label{eq:process_gain}
 \end{align}
 
+
+\solution
+At steady state, the gain is the ratio of the change in output to the change in input. Hence
+\begin{align}
+K&=\frac{\Delta y}{\Delta u}.
+\end{align}
 \item Maximum Slope:
 \begin{align}
 R
@@ -330,6 +523,12 @@ R
 \label{eq:maximum_slope}
 \end{align}
 
+
+\solution
+The maximum slope of the measured response is the largest value of its time derivative. Therefore
+\begin{align}
+R&=\max\left(\frac{dy}{dt}\right).
+\end{align}
 \item Dead Time:
 
 Using the maximum-slope construction in \eqref{eq:maximum_slope}, if $\brak{t_{\mathrm{inflection}},y_{\mathrm{inflection}}}$ is the inflection point,
@@ -343,6 +542,21 @@ t_i
 \label{eq:dead_time}
 \end{align}
 
+
+\solution
+The tangent at the inflection point has slope $R$ and passes through $(t_{\mathrm{inflection}},y_{\mathrm{inflection}})$. Its intersection with the initial output level $y_0$ satisfies
+\begin{align}
+y_0-y_{\mathrm{inflection}}
+&=R(t_i-t_{\mathrm{inflection}}).
+\end{align}
+Solving for the intersection time gives
+\begin{align}
+t_i&=t_{\mathrm{inflection}}-\frac{y_{\mathrm{inflection}}-y_0}{R}.
+\end{align}
+The dead time is the difference between this intercept and the initial time $t_0$:
+\begin{align}
+\theta&=t_i-t_0.
+\end{align}
 \item Time Constant:
 
 Using the process gain and maximum slope definitions in \eqref{eq:process_gain} and \eqref{eq:maximum_slope},
@@ -352,6 +566,14 @@ Using the process gain and maximum slope definitions in \eqref{eq:process_gain} 
 \label{eq:fopdt_time_constant}
 \end{align}
 
+
+\solution
+For the first-order model, the initial tangent slope is $R=\Delta y/\tau$. Since $\Delta y=K\Delta u$, substitute to obtain
+\begin{align}
+R&=\frac{K\Delta u}{\tau}
+\quad\implies\quad
+\tau=\frac{K\Delta u}{R}.
+\end{align}
 \end{itemize}
 
 \item Transfer Function and Feedback Loop
@@ -367,6 +589,16 @@ Y\brak{s}
 \label{eq:transfer_relation}
 \end{align}
 
+
+\solution
+By definition, the transfer function is the ratio of the output transform to the input transform under zero initial conditions:
+\begin{align}
+G(s)&=\frac{Y(s)}{X(s)}.
+\end{align}
+Multiplying both sides by $X(s)$ gives
+\begin{align}
+Y(s)&=G(s)X(s).
+\end{align}
 \item Negative Feedback:
 
 For forward transfer function $G\brak{s}$ and feedback transfer function $H\brak{s}$,
@@ -379,6 +611,16 @@ Y\brak{s}
 \label{eq:feedback_output}
 \end{align}
 
+
+\solution
+In negative feedback, the measured output is subtracted from the reference input to form the error:
+\begin{align}
+E(s)&=X(s)-H(s)Y(s).
+\end{align}
+The forward path maps the error to the output, giving
+\begin{align}
+Y(s)&=G(s)E(s).
+\end{align}
 \item Closed-Loop Transfer Function:
 
 Using the relations in \eqref{eq:feedback_error} and \eqref{eq:feedback_output},
@@ -400,6 +642,20 @@ Y\brak{s}
 \label{eq:closed_loop_tf}
 \end{align}
 
+
+\solution
+Substitute $E(s)=X(s)-H(s)Y(s)$ into $Y(s)=G(s)E(s)$:
+\begin{align}
+Y(s)&=G(s)\left[X(s)-H(s)Y(s)\right].
+\end{align}
+Collect the terms involving $Y(s)$:
+\begin{align}
+Y(s)\left[1+G(s)H(s)\right]&=G(s)X(s).
+\end{align}
+Dividing by $X(s)[1+G(s)H(s)]$ yields
+\begin{align}
+\frac{Y(s)}{X(s)}&=\frac{G(s)}{1+G(s)H(s)}.
+\end{align}
 \item Unity Feedback:
 
 Setting the feedback transfer function to unity in \eqref{eq:closed_loop_tf},
@@ -412,6 +668,12 @@ H\brak{s}
 \label{eq:unity_closed_loop}
 \end{align}
 
+
+\solution
+For unity feedback, $H(s)=1$. Substituting this into the closed-loop transfer function gives
+\begin{align}
+\frac{Y(s)}{X(s)}&=\frac{G(s)}{1+G(s)}.
+\end{align}
 \end{itemize}
 
 \item Routh-Hurwitz Stability Criterion
@@ -426,6 +688,12 @@ a_ns^n+a_{n-1}s^{n-1}+\cdots+a_1s+a_0
 \label{eq:routh_characteristic}
 \end{align}
 
+
+\solution
+The characteristic equation is obtained by setting the denominator polynomial of the system equal to zero:
+\begin{align}
+a_ns^n+a_{n-1}s^{n-1}+\cdots+a_1s+a_0&=0.
+\end{align}
 \item Routh Array:
 \begin{align}
 \myvec{
@@ -437,6 +705,9 @@ c_1 & c_2 & c_3 & \cdots
 &\label{eq:routh_array}
 \end{align}
 
+
+\solution
+The first two rows are formed by alternating coefficients of the characteristic polynomial. The subsequent rows are calculated recursively from the two rows above; their first-column entries are used to determine the number of right-half-plane roots.
 \item First Elements:
 
 From the Routh array structure in \eqref{eq:routh_array}, the first elements are
@@ -449,6 +720,13 @@ b_2
 \label{eq:routh_b2}
 \end{align}
 
+
+\solution
+Each new Routh-row entry is obtained from a $2\times2$ determinant of the two preceding rows, divided by the first entry of the row immediately above. Applying this rule to the first two entries gives
+\begin{align}
+b_1&=\frac{a_{n-1}a_{n-2}-a_na_{n-3}}{a_{n-1}},\\
+b_2&=\frac{a_{n-1}a_{n-4}-a_na_{n-5}}{a_{n-1}}.
+\end{align}
 \item Number of Unstable Poles:
 \begin{align}
 N_{\mathrm{RHP}}
@@ -456,6 +734,9 @@ N_{\mathrm{RHP}}
 \label{eq:routh_unstable_poles}
 \end{align}
 
+
+\solution
+The Routh-Hurwitz criterion states that the number of sign changes in the first column of the Routh array equals the number of roots in the right half-plane. Hence this count is $N_{\mathrm{RHP}}$.
 \item Stability Conditions:
 \begin{align}
 \text{Stable system}
@@ -469,6 +750,9 @@ N_{\mathrm{RHP}}
 \label{eq:routh_rhp_count}
 \end{align}
 
+
+\solution
+A continuous-time system is stable when all characteristic roots lie in the left half-plane. By the Routh-Hurwitz criterion, this occurs when the first column has no sign changes. One or more sign changes indicate right-half-plane roots and therefore instability.
 \end{itemize}
 
 \end{enumerate}
