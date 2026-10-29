@@ -1,0 +1,6 @@
+{
+  "max_accounts": 5,
+  "base_storage_gb": 1,
+  "max_cloud_storage_gb": 50,
+  "last_effective_cloud_storage_bytes": 53687091200
+}

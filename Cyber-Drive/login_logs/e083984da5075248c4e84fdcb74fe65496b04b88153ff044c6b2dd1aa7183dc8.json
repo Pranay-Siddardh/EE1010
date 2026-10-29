@@ -1,0 +1,52 @@
+[
+  {
+    "event": "login",
+    "method": "password",
+    "timestamp": "2026-10-11T09:44:24+00:00"
+  },
+  {
+    "event": "logout",
+    "method": "password",
+    "timestamp": "2026-10-11T09:45:29+00:00"
+  },
+  {
+    "event": "login",
+    "method": "password",
+    "timestamp": "2026-10-11T09:46:38+00:00"
+  },
+  {
+    "event": "logout",
+    "method": "password",
+    "timestamp": "2026-10-11T09:47:13+00:00"
+  },
+  {
+    "event": "login",
+    "method": "password",
+    "timestamp": "2026-10-11T09:47:56+00:00"
+  },
+  {
+    "event": "logout",
+    "method": "password",
+    "timestamp": "2026-10-11T09:49:10+00:00"
+  },
+  {
+    "event": "login",
+    "method": "password",
+    "timestamp": "2026-10-11T09:49:38+00:00"
+  },
+  {
+    "event": "logout",
+    "method": "password",
+    "timestamp": "2026-10-11T09:49:40+00:00"
+  },
+  {
+    "event": "login",
+    "method": "password",
+    "timestamp": "2026-10-11T09:54:04+00:00"
+  },
+  {
+    "event": "logout",
+    "method": "password",
+    "timestamp": "2026-10-11T10:02:16+00:00"
+  }
+]

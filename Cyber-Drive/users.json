@@ -1,0 +1,14 @@
+{
+  "Pranay": {
+    "display_name": "Siddardh",
+    "email": "ee26btech11230@iith.ac.in",
+    "password": "scrypt:32768:8:1$08oOlCRmBsBWcjJl$3564966aa71ba3cbc535e97bde0a502958fe3671d78c7dd0f045953e5a0ddb0fc130691a56eda4a1d10eea2ec201268207ef38a54c58129904fe92c8bde744f5",
+    "folder": "Siddardh",
+    "provider": "email",
+    "google_sub": null,
+    "quota_bytes": 1073741824,
+    "email_verified": true,
+    "created_at": "2026-10-11T09:21:02+00:00",
+    "quota_approved_at": "2026-10-12T08:21:46+00:00"
+  }
+}

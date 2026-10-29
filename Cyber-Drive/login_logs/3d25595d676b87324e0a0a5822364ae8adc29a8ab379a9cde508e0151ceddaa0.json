@@ -1,0 +1,12 @@
+[
+  {
+    "event": "login",
+    "method": "password",
+    "timestamp": "2026-10-27T06:52:32+00:00"
+  },
+  {
+    "event": "logout",
+    "method": "password",
+    "timestamp": "2026-10-27T06:52:56+00:00"
+  }
+]

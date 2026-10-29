@@ -1,0 +1,170 @@
+[
+  {
+    "time": "2026-10-11T15:50:22+00:00",
+    "admin": "Admin",
+    "action": "Admin login succeeded",
+    "details": "Successful sign-in through the shared login page",
+    "ip": "172.21.131.135"
+  },
+  {
+    "time": "2026-10-11T15:50:34+00:00",
+    "admin": "Admin",
+    "action": "Approved storage change request",
+    "details": "Arya: increased by 3 GB; new total 4 GB",
+    "ip": "172.21.131.135"
+  },
+  {
+    "time": "2026-10-11T15:52:15+00:00",
+    "admin": "Admin",
+    "action": "Admin logout",
+    "details": "Admin signed out",
+    "ip": "172.21.131.135"
+  },
+  {
+    "time": "2026-10-11T15:52:18+00:00",
+    "admin": "Admin",
+    "action": "Admin login succeeded",
+    "details": "Successful sign-in through the shared login page",
+    "ip": "172.21.131.135"
+  },
+  {
+    "time": "2026-10-11T15:52:20+00:00",
+    "admin": "Admin",
+    "action": "Admin logout",
+    "details": "Admin signed out",
+    "ip": "172.21.131.135"
+  },
+  {
+    "time": "2026-10-12T08:21:21+00:00",
+    "admin": "Admin",
+    "action": "Admin login succeeded",
+    "details": "Successful sign-in through the shared login page",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:21:31+00:00",
+    "admin": "Admin",
+    "action": "Admin changed client quota",
+    "details": "Arya: 4 GB -> 1 GB",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:21:40+00:00",
+    "admin": "Admin",
+    "action": "Admin changed client quota",
+    "details": "Nehan Mohammad: 1 GB -> 1 GB",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:21:46+00:00",
+    "admin": "Admin",
+    "action": "Admin changed client quota",
+    "details": "Pranay: 2 GB -> 1 GB",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:22:50+00:00",
+    "admin": "Admin",
+    "action": "Changed admin password",
+    "details": "Password updated successfully",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:28:09+00:00",
+    "admin": "Admin",
+    "action": "Admin logout",
+    "details": "Admin signed out",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:28:14+00:00",
+    "admin": "Admin",
+    "action": "Admin login succeeded",
+    "details": "Successful sign-in through the shared login page",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:28:55+00:00",
+    "admin": "Admin",
+    "action": "Updated server settings",
+    "details": "max_accounts=5, base_storage_gb=1, max_cloud_storage_gb=50",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:28:55+00:00",
+    "admin": "Admin",
+    "action": "Updated account/storage policy",
+    "details": "max_accounts=5; base_storage_gb=1",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:30:06+00:00",
+    "admin": "Admin",
+    "action": "Admin logout",
+    "details": "Admin signed out",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:43:38+00:00",
+    "admin": "Admin",
+    "action": "Admin login succeeded",
+    "details": "Successful sign-in through the shared login page",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:43:53+00:00",
+    "admin": "Admin",
+    "action": "Admin logout",
+    "details": "Admin signed out",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:44:08+00:00",
+    "admin": "Admin",
+    "action": "Admin login succeeded",
+    "details": "Successful sign-in through the shared login page",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-12T08:44:09+00:00",
+    "admin": "Admin",
+    "action": "Admin logout",
+    "details": "Admin signed out",
+    "ip": "10.1.139.176"
+  },
+  {
+    "time": "2026-10-27T06:51:44+00:00",
+    "admin": "Admin",
+    "action": "Admin login succeeded",
+    "details": "Successful sign-in through the shared login page",
+    "ip": "172.24.67.10"
+  },
+  {
+    "time": "2026-10-27T06:52:09+00:00",
+    "admin": "Admin",
+    "action": "Admin login succeeded",
+    "details": "Successful sign-in through the shared login page",
+    "ip": "172.24.67.10"
+  },
+  {
+    "time": "2026-10-27T06:52:14+00:00",
+    "admin": "Admin",
+    "action": "Deleted user profile",
+    "details": "Arya",
+    "ip": "172.24.67.10"
+  },
+  {
+    "time": "2026-10-27T06:52:17+00:00",
+    "admin": "Admin",
+    "action": "Deleted user profile",
+    "details": "Nehan Mohammad",
+    "ip": "172.24.67.10"
+  },
+  {
+    "time": "2026-10-27T06:52:19+00:00",
+    "admin": "Admin",
+    "action": "Admin logout",
+    "details": "Admin signed out",
+    "ip": "172.24.67.10"
+  }
+]
