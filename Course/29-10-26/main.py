@@ -1,249 +1,155 @@
 
-import os
-import shutil
-import subprocess
-
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
+import subprocess
 
-# ==================================================
-# 1. SURFACE: z^2 = 2x^2 - y^2
-# ==================================================
-x = np.linspace(-2, 2, 180)
-y = np.linspace(-2, 2, 180)
-X, Y = np.meshgrid(x, y)
+# ==========================================
+# 1. Sampling parameters
+# ==========================================
+Fs = 40
+Ts = 1 / Fs
+N = 10
 
-Z2 = 2 * X**2 - Y**2
-Z2[Z2 < 0] = np.nan
-Z = np.sqrt(Z2)
+n = np.arange(N)
+ts = n * Ts
 
-# ==================================================
-# 2. POINT P
-# ==================================================
-P = np.array([1.0, 0.0, np.sqrt(2.0)])
+# Dense time axis for smooth continuous signals
+t = np.linspace(0, (N - 1) * Ts, 5000)
 
-# ==================================================
-# 3. UNIT NORMALS n1 AND -n1
-# ==================================================
-n1 = np.array([
-    2 / np.sqrt(6),
-    0.0,
-    -1 / np.sqrt(3)
-])
+# ==========================================
+# 2. Continuous-time signals
+# ==========================================
+x1 = np.cos(20 * np.pi * t)       # 10 Hz
+x2 = np.cos(100 * np.pi * t)      # 50 Hz
 
-n2 = -n1
+# ==========================================
+# 3. Sampled signals
+# ==========================================
+s1 = np.round(np.cos(20 * np.pi * ts), 10)
+s2 = np.round(np.cos(100 * np.pi * ts), 10)
 
-# ==================================================
-# 4. TANGENT PLANE
-# Equation: z = sqrt(2)*x
-# ==================================================
-xp = np.linspace(-1.5, 1.5, 35)
-yp = np.linspace(-1.5, 1.5, 35)
-XP, YP = np.meshgrid(xp, yp)
-ZP = np.sqrt(2.0) * XP
+# ==========================================
+# 4. Print all ten samples
+# ==========================================
+print("\nFIRST TEN SAMPLES")
+print("=" * 52)
+print(f"{'n':>3} {'Time(s)':>10} {'x1[n]':>12} {'x2[n]':>12}")
+print("-" * 52)
 
-# ==================================================
-# 5. TANGENT DIRECTIONS
-# ==================================================
-v1 = np.array([0.0, 1.0, 0.0])
-v2 = np.array([1.0, 0.0, np.sqrt(2.0)])
-v2 = v2 / np.linalg.norm(v2)
+for i in range(N):
+    print(f"{n[i]:3d} {ts[i]:10.3f} "
+          f"{s1[i]:12.3f} {s2[i]:12.3f}")
 
-# ==================================================
-# 6. CREATE 3D PLOT
-# ==================================================
-fig = plt.figure(figsize=(15, 11))
-ax = fig.add_subplot(111, projection="3d")
+# ==========================================
+# 5. Verify options A, B, C and D
+# ==========================================
+A = np.all(s1[0:3] > s2[0:3])
+B = np.all(s1[7:10] > s2[7:10])
+C = np.all(s2 > s1)
+D = np.all(s1[3:7] == s2[3:7])
 
-# Surface sheets
-ax.plot_surface(
-    X, Y, Z,
-    color="deepskyblue",
-    alpha=0.20,
-    linewidth=0
+print("\nOPTION-WISE VERIFICATION")
+print("=" * 52)
+print(f"(A) First three: x1 > x2        : {A}")
+print(f"(B) Last three: x1 > x2         : {B}")
+print(f"(C) All samples: x2 > x1        : {C}")
+print(f"(D) Fourth to seventh: x1 = x2  : {D}")
+
+print("\nFINAL ANSWER")
+print("Correct option: D" if D and not (A or B or C)
+      else "Check option results above.")
+
+# ==========================================
+# 6. Plot both sinusoids on the SAME graph
+# ==========================================
+fig, ax = plt.subplots(figsize=(14, 8))
+
+# Continuous curves in different colors
+ax.plot(
+    t, x1,
+    color='blue', linewidth=2,
+    label=r'$x_1(t)=\cos(20\pi t)$, 10 Hz'
+)
+ax.plot(
+    t, x2,
+    color='red', linewidth=1.8,
+    label=r'$x_2(t)=\cos(100\pi t)$, 50 Hz'
 )
 
-ax.plot_surface(
-    X, Y, -Z,
-    color="deepskyblue",
-    alpha=0.20,
-    linewidth=0
+# Stem plot for x1
+m1, st1, b1 = ax.stem(
+    ts, s1,
+    linefmt='b-', markerfmt='bo', basefmt='k-',
+    label=r'Samples of $x_1[n]$'
 )
 
-# Tangent plane
-ax.plot_surface(
-    XP, YP, ZP,
-    color="lightgreen",
-    alpha=0.40,
-    linewidth=0
+# Stem plot for x2
+m2, st2, b2 = ax.stem(
+    ts, s2,
+    linefmt='r--', markerfmt='rs', basefmt=' ',
+    label=r'Samples of $x_2[n]$'
 )
 
-# Point P
-ax.scatter(
-    P[0], P[1], P[2],
-    color="black",
-    s=65,
-    depthshade=False
-)
+# Style the stem markers and lines
+plt.setp(st1, linewidth=1.5, alpha=0.8)
+plt.setp(st2, linewidth=1.5, alpha=0.8)
+plt.setp(m1, markersize=7)
+plt.setp(m2, markersize=6)
 
-ax.text(
-    1.05, 0.08, np.sqrt(2) + 0.15,
-    r"$P=(1,0,\sqrt{2})$",
-    fontsize=11,
-    color="black"
-)
-
-# ==================================================
-# 7. DRAW NORMAL VECTORS
-# Both arrows start at P.
-# Arrow lengths are scaled for visibility.
-# ==================================================
-L = 1.35
-
-# n1
-ax.quiver(
-    P[0], P[1], P[2],
-    *(L * n1),
-    color="red",
-    linewidth=3,
-    arrow_length_ratio=0.15
-)
-
-ax.text(
-    *(P + L * n1 + np.array([0.05, 0.05, 0.18])),
-    r"$\mathbf{n}_1="
-    r"\left(\frac{2}{\sqrt{6}},0,"
-    r"-\frac{1}{\sqrt{3}}\right)$",
-    color="red",
-    fontsize=10
-)
-
-# -n1
-ax.quiver(
-    P[0], P[1], P[2],
-    *(L * n2),
-    color="purple",
-    linewidth=3,
-    arrow_length_ratio=0.15
-)
-
-ax.text(
-    *(P + L * n2 + np.array([0.05, 0.05, -0.22])),
-    r"$-\mathbf{n}_1="
-    r"\left(-\frac{2}{\sqrt{6}},0,"
-    r"\frac{1}{\sqrt{3}}\right)$",
-    color="purple",
-    fontsize=10
-)
-
-# ==================================================
-# 8. DRAW TANGENT VECTORS
-# ==================================================
-T = 0.85
-
-ax.quiver(
-    P[0], P[1], P[2],
-    *(T * v1),
-    color="blue",
-    linewidth=2.5,
-    arrow_length_ratio=0.18
-)
-
-ax.text(
-    *(P + T * v1 + np.array([0.02, 0.06, 0.08])),
-    r"$v_1=(0,1,0)$",
-    color="blue",
-    fontsize=11
-)
-
-ax.quiver(
-    P[0], P[1], P[2],
-    *(T * v2),
-    color="darkorange",
-    linewidth=2.5,
-    arrow_length_ratio=0.18
-)
-
-ax.text(
-    *(P + T * v2 + np.array([0.02, 0.02, 0.10])),
-    r"$v_2=\left(\frac{1}{\sqrt{3}},0,"
-    r"\sqrt{\frac{2}{3}}\right)$",
-    color="darkorange",
-    fontsize=10
-)
-
-# ==================================================
-# 9. AXES AND VIEW
-# ==================================================
-ax.set_xlabel("x", labelpad=10)
-ax.set_ylabel("y", labelpad=10)
-ax.set_zlabel("z", labelpad=10)
-
-ax.set_title(
-    "Quadratic Surface: Tangent Plane and Normals",
-    pad=20,
-    fontsize=14
-)
-
-ax.set_xlim(-2, 2)
-ax.set_ylim(-2, 2)
-ax.set_zlim(-3, 3)
-
-ax.set_box_aspect((1, 1, 1.3))
-ax.view_init(elev=24, azim=-55)
-ax.grid(True)
-
-# Legend
-legend_items = [
-    Line2D([0], [0], color="red", lw=3,
-           label=r"$\mathbf{n}_1$"),
-    Line2D([0], [0], color="purple", lw=3,
-           label=r"$-\mathbf{n}_1$"),
-    Line2D([0], [0], color="blue", lw=3,
-           label="Tangent direction v1"),
-    Line2D([0], [0], color="darkorange", lw=3,
-           label="Tangent direction v2")
-]
-
-ax.legend(handles=legend_items, loc="upper left")
-
-# ==================================================
-# 10. SAVE PDF
-# ==================================================
-plt.tight_layout()
-
-pdf_path = os.path.abspath("graph.pdf")
-
-try:
-    fig.savefig(
-        pdf_path,
-        format="pdf",
-        bbox_inches="tight"
+# ==========================================
+# 7. Mark and annotate the first three samples
+# ==========================================
+for i in range(3):
+    ax.annotate(
+        f'x1[{i}]={s1[i]:.0f}',
+        xy=(ts[i], s1[i]),
+        xytext=(8, 15),
+        textcoords='offset points',
+        color='blue',
+        fontsize=9,
+        fontweight='bold'
     )
-    print(f"PDF saved successfully: {pdf_path}")
-except Exception as error:
-    print(f"Could not save PDF: {error}")
-    plt.close(fig)
-    raise
 
+    ax.annotate(
+        f'x2[{i}]={s2[i]:.0f}',
+        xy=(ts[i], s2[i]),
+        xytext=(8, -22),
+        textcoords='offset points',
+        color='darkred',
+        fontsize=9,
+        fontweight='bold'
+    )
+
+# ==========================================
+# 8. Formatting
+# ==========================================
+ax.set_title(
+    'Two Analog Sinusoids Sampled at Fs = 40 Hz',
+    fontsize=15
+)
+ax.set_xlabel('Time (seconds)', fontsize=12)
+ax.set_ylabel('Amplitude', fontsize=12)
+
+ax.set_xlim(-0.005, ts[-1] + 0.005)
+ax.set_ylim(-1.45, 1.45)
+ax.set_xticks(ts)
+ax.set_xticklabels([f'{v:.3f}' for v in ts], rotation=45)
+
+ax.grid(True, linestyle=':', alpha=0.7)
+ax.axhline(0, color='black', linewidth=0.7)
+
+ax.legend(loc='upper right', fontsize=9)
+fig.tight_layout()
+
+# ==========================================
+# 9. Save PDF and open it in Termux
+# ==========================================
+filename = 'graph.pdf'
+fig.savefig(filename, bbox_inches='tight')
 plt.close(fig)
 
-# ==================================================
-# 11. OPEN PDF IN TERMUX
-# ==================================================
-if shutil.which("termux-open"):
-    try:
-        subprocess.run(
-            ["termux-open", pdf_path],
-            check=True
-        )
-        print("Opening graph.pdf...")
-    except (subprocess.CalledProcessError, OSError) as error:
-        print(f"Could not open PDF automatically: {error}")
-        print(f"Open it manually: {pdf_path}")
-else:
-    print("termux-open was not found.")
-    print(f"PDF is saved at: {pdf_path}")
-    print("Try: termux-open graph.pdf")
+print(f"\nPlot saved successfully as {filename}")
+print("Opening PDF in Termux...")
+
+subprocess.run(['termux-open', filename], check=True)
 
