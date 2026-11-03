@@ -58,3 +58,4 @@ Version v1.9
 Version v2.0
 
 1) Changed the layout for formulae to formula-cum-solution.
+2) Modified the Q62 image from the pdf ot latex form.

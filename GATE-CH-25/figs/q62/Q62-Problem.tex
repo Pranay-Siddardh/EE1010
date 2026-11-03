@@ -1,0 +1,95 @@
+
+\begin{tikzpicture}[
+    scale=0.7,
+    transform shape,
+    >=Stealth,
+    line cap=round,
+    line join=round,
+    wire/.style={draw=black,line width=0.9pt},
+    arrow/.style={
+        wire,
+        -{Stealth[length=3mm,width=2mm]}
+    },
+    block/.style={
+        draw=black,
+        line width=0.9pt,
+        align=center,
+        minimum height=1.25cm,
+        inner sep=5pt
+    },
+    sum/.style={
+        circle,
+        draw=black,
+        line width=0.9pt,
+        minimum size=0.56cm,
+        inner sep=0pt
+    }
+]
+
+% SUMMING JUNCTIONS
+\node[sum] (S1) at (0,0) {};
+\node[sum] (S2) at (5.5,0) {};
+
+\draw[wire] (S1.north west)--(S1.south east);
+\draw[wire] (S1.south west)--(S1.north east);
+\draw[wire] (S2.north west)--(S2.south east);
+\draw[wire] (S2.south west)--(S2.north east);
+
+% TRANSFER FUNCTION BLOCKS
+
+\node[block,minimum width=2.85cm,minimum height=1.5cm]
+(C1) at (2.75,0)
+{$K_c^m\left(\dfrac{\tau_I s+1}{\tau_I s}\right)$};
+
+\node[block,minimum width=1.25cm,minimum height=1.1cm]
+(C2) at (7.55,0)
+{$K_c^s$};
+
+\node[block,minimum width=1.5cm,minimum height=1.5cm]
+(G1) at (10.15,0)
+{$\dfrac{1}{2s+1}$};
+
+\node[block,minimum width=2.95cm,minimum height=1.5cm]
+(G2) at (13.55,0)
+{$\dfrac{2}{(8s+1)(4s+1)}$};
+
+% FORWARD SIGNAL PATH
+
+\draw[arrow] (-1.5,0)--(S1.west);
+\draw[arrow] (S1.east)--(C1.west);
+\draw[arrow] (C1.east)--(S2.west);
+\draw[arrow] (S2.east)--(C2.west);
+\draw[arrow] (C2.east)--(G1.west);
+
+\draw[arrow] (G1.east)--(G2.west);
+\draw[arrow] (G2.east)--(16.0,0);
+
+% SUMMING JUNCTION SIGNS
+
+\node at (-0.32,0.32) {$+$};
+\node at (-0.32,-0.35) {$-$};
+
+\node at (5.18,0.32) {$+$};
+\node at (5.18,-0.35) {$-$};
+
+% INNER FEEDBACK
+% ORIGIN: BOTTOM-CENTRE OF G1 BLOCK
+
+\draw[wire]
+(G1.south)--(G1.south |- 0,-1.05)
+--(5.5,-1.05);
+
+\draw[arrow]
+(5.5,-1.05)--(S2.south);
+
+% OUTER UNITY FEEDBACK
+
+\draw[wire]
+(16.0,0)--(16.0,-2.15)
+--(0,-2.15);
+
+\draw[arrow]
+(0,-2.15)--(S1.south);
+
+\end{tikzpicture}
+
