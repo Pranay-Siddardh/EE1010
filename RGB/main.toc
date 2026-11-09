@@ -2,29 +2,29 @@
 \contentsline {subsection}{\numberline {1.1}Problem-Statement}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Implementation}{2}{subsection.1.2}%
 \contentsline {subsubsection}{\numberline {1.2.1}Input Images}{2}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Grayscaled Images}{3}{subsubsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.3}Method-1: Fixed Thresholding}{4}{subsubsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.4}Method-2: Average Thresholding}{6}{subsubsection.1.2.4}%
-\contentsline {subsubsection}{\numberline {1.2.5}Comparative Analysis and Conclusion}{7}{subsubsection.1.2.5}%
-\contentsline {paragraph}{\numberline {1.2.5a}Summary of results}{7}{paragraph.1.2.5.1}%
-\contentsline {paragraph}{\numberline {1.2.5b}Conclusion}{7}{paragraph.1.2.5.2}%
-\contentsline {section}{Appendix\nobreakspace A: Image-Processing: Theory}{8}{section*.2}%
-\contentsline {subsection}{\numberline {A.1}Introduction}{8}{subsection.Appendix.A.1}%
-\contentsline {subsection}{\numberline {A.2}RGB Image Representation}{8}{subsection.Appendix.A.2}%
-\contentsline {subsubsection}{\numberline {A.2.1}JPEG Representation}{8}{subsubsection.Appendix.A.2.1}%
-\contentsline {subsubsection}{\numberline {A.2.2}Per-Pixel Storage}{9}{subsubsection.Appendix.A.2.2}%
-\contentsline {subsection}{\numberline {A.3}Colour Conversion}{10}{subsection.Appendix.A.3}%
-\contentsline {subsubsection}{\numberline {A.3.1}RGB to Luminance and Chrominance}{10}{subsubsection.Appendix.A.3.1}%
-\contentsline {subsubsection}{\numberline {A.3.2}Chrominance Components}{10}{subsubsection.Appendix.A.3.2}%
-\contentsline {subsubsection}{\numberline {A.3.3}Luminance Weighting}{10}{subsubsection.Appendix.A.3.3}%
-\contentsline {subsubsection}{\numberline {A.3.4}Information Reduction}{10}{subsubsection.Appendix.A.3.4}%
-\contentsline {subsection}{\numberline {A.4}RGB to Grayscale Conversion}{11}{subsection.Appendix.A.4}%
-\contentsline {subsubsection}{\numberline {A.4.1}Grayscale Intensity}{11}{subsubsection.Appendix.A.4.1}%
-\contentsline {subsubsection}{\numberline {A.4.2}Black and White}{11}{subsubsection.Appendix.A.4.2}%
-\contentsline {subsection}{\numberline {A.5}Grayscale and Black-and-White Conversion Algorithm}{11}{subsection.Appendix.A.5}%
-\contentsline {subsubsection}{\numberline {A.5.1}RGB to Grayscale Algorithm}{11}{subsubsection.Appendix.A.5.1}%
-\contentsline {subsubsection}{\numberline {A.5.2}Mapping to the Output Image}{12}{subsubsection.Appendix.A.5.2}%
-\contentsline {subsection}{\numberline {A.6}Thresholding Methods and Analysis}{12}{subsection.Appendix.A.6}%
-\contentsline {subsubsection}{\numberline {A.6.1}Global Mean Thresholding}{12}{subsubsection.Appendix.A.6.1}%
-\contentsline {subsubsection}{\numberline {A.6.2}Static Reference Thresholding}{12}{subsubsection.Appendix.A.6.2}%
-\contentsline {section}{References}{13}{section*.3}%
+\contentsline {subsubsection}{\numberline {1.2.2}Grayscaled Images}{4}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Method-1: Fixed Thresholding}{5}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Method-2: Average Thresholding}{7}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}Comparative Analysis and Conclusion}{9}{subsubsection.1.2.5}%
+\contentsline {paragraph}{\numberline {1.2.5a}Summary of results}{9}{paragraph.1.2.5.1}%
+\contentsline {paragraph}{\numberline {1.2.5b}Conclusion}{9}{paragraph.1.2.5.2}%
+\contentsline {section}{Appendix\nobreakspace A: Image-Processing: Theory}{10}{section*.2}%
+\contentsline {subsection}{\numberline {A.1}Introduction}{10}{subsection.Appendix.A.1}%
+\contentsline {subsection}{\numberline {A.2}RGB Image Representation}{10}{subsection.Appendix.A.2}%
+\contentsline {subsubsection}{\numberline {A.2.1}JPEG Representation}{10}{subsubsection.Appendix.A.2.1}%
+\contentsline {subsubsection}{\numberline {A.2.2}Per-Pixel Storage}{11}{subsubsection.Appendix.A.2.2}%
+\contentsline {subsection}{\numberline {A.3}Colour Conversion}{12}{subsection.Appendix.A.3}%
+\contentsline {subsubsection}{\numberline {A.3.1}RGB to Luminance and Chrominance}{12}{subsubsection.Appendix.A.3.1}%
+\contentsline {subsubsection}{\numberline {A.3.2}Chrominance Components}{12}{subsubsection.Appendix.A.3.2}%
+\contentsline {subsubsection}{\numberline {A.3.3}Luminance Weighting}{12}{subsubsection.Appendix.A.3.3}%
+\contentsline {subsubsection}{\numberline {A.3.4}Information Reduction}{12}{subsubsection.Appendix.A.3.4}%
+\contentsline {subsection}{\numberline {A.4}RGB to Grayscale Conversion}{13}{subsection.Appendix.A.4}%
+\contentsline {subsubsection}{\numberline {A.4.1}Grayscale Intensity}{13}{subsubsection.Appendix.A.4.1}%
+\contentsline {subsubsection}{\numberline {A.4.2}Black and White}{13}{subsubsection.Appendix.A.4.2}%
+\contentsline {subsection}{\numberline {A.5}Grayscale and Black-and-White Conversion Algorithm}{13}{subsection.Appendix.A.5}%
+\contentsline {subsubsection}{\numberline {A.5.1}RGB to Grayscale Algorithm}{13}{subsubsection.Appendix.A.5.1}%
+\contentsline {subsubsection}{\numberline {A.5.2}Mapping to the Output Image}{14}{subsubsection.Appendix.A.5.2}%
+\contentsline {subsection}{\numberline {A.6}Thresholding Methods and Analysis}{14}{subsection.Appendix.A.6}%
+\contentsline {subsubsection}{\numberline {A.6.1}Global Mean Thresholding}{14}{subsubsection.Appendix.A.6.1}%
+\contentsline {subsubsection}{\numberline {A.6.2}Static Reference Thresholding}{14}{subsubsection.Appendix.A.6.2}%
+\contentsline {section}{References}{15}{section*.3}%

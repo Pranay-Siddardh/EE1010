@@ -1,4 +1,4 @@
-% Problem statement and implementation for the RGB image-processing project.
+ation for the RGB image-processing project.
 % Image files are stored under figs/<name>/<type>.jpg.
 
 % Keep subsection headings numeric (1.1, 1.2) under IEEEtran.
@@ -61,7 +61,7 @@ The implementation is presented in four stages: the original input images, their
 \newcommand{\implementationimage}[2]{%
   \begin{minipage}[t]{0.47\textwidth}
     \centering
-    \IfFileExists{#1}{\includegraphics[width=\linewidth,height=3.1cm,keepaspectratio]{#1}}{\fbox{\parbox[c][2.4cm][c]{0.9\linewidth}{\centering\scriptsize Missing image file\\\texttt{\detokenize{#1}}}}}\par
+    \IfFileExists{#1}{\includegraphics[width=\linewidth,height=4.65cm,keepaspectratio]{#1}}{\fbox{\parbox[c][3.6cm][c]{0.9\linewidth}{\centering\scriptsize Missing image file\\\texttt{\detokenize{#1}}}}}\par
     \stepcounter{implementationimagecount}%
     \vspace{2pt}
     {\footnotesize Fig. \thesubsection.\arabic{subsubsection}.\arabic{implementationimagecount}: #2}
