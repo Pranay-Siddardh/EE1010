@@ -1,0 +1,74 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{gvv-sty}[2026/11/09 GVV-inspired academic report styling]
+
+\RequirePackage[a4paper,margin=25mm,headheight=15pt]{geometry}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lmodern}
+\RequirePackage{microtype}
+\RequirePackage{setspace}
+\RequirePackage{graphicx}
+\RequirePackage[table]{xcolor}
+\RequirePackage{hyperref}
+\RequirePackage{caption}
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage{tocloft}
+\RequirePackage{fancyhdr}
+
+\definecolor{ReportLight}{gray}{0.95}
+\definecolor{ReportRule}{gray}{0.35}
+
+\setstretch{1.08}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.18}
+
+\captionsetup{font=small,labelfont=bf}
+\setlist[itemize]{leftmargin=1.6em,itemsep=2pt,topsep=3pt}
+\setlist[enumerate]{leftmargin=1.7em,itemsep=2pt,topsep=3pt}
+
+% Numbering and section appearance following the user's earlier
+% GVV-style report layout.
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+\titleformat{\section}
+  {\centering\normalfont\large\bfseries}
+  {\thesection.}{0.65em}{\scshape}
+  [\vspace{0.15em}]
+\titleformat{\subsection}
+  {\normalfont\bfseries}
+  {\thesubsection}{0.65em}{\scshape}
+
+\titlespacing*{\section}{0pt}{1.55em}{0.8em}
+\titlespacing*{\subsection}{0pt}{1.15em}{0.35em}
+
+% Contents page: Roman-numbered sections, indented subsections,
+% dotted leaders, and compact spacing.
+\renewcommand{\contentsname}{Contents}
+\setcounter{tocdepth}{2}
+\setlength{\cftbeforesecskip}{7pt}
+\setlength{\cftbeforesubsecskip}{2pt}
+\setlength{\cftsecnumwidth}{3.2em}
+\setlength{\cftsubsecnumwidth}{4.2em}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsecpagefont}{\bfseries}
+\renewcommand{\cftdotsep}{1.5}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black,
+  citecolor=black,
+  pdftitle={Sports Record and Performance Report}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Sports Record and Performance Report}
+\fancyhead[R]{\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}

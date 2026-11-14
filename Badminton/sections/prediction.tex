@@ -1,0 +1,252 @@
+
+\section{Next-Game Prediction}
+
+The statistical analysis of historical match records
+provides a basis for estimating the scoring performance
+of the next game. This section develops a prediction
+model using the recorded scores from previous matches.
+
+The objective is to estimate the points likely to be
+scored by our team and the opponent in the next game.
+The prediction is performed independently for Singles,
+Doubles, and Mixed Doubles.
+
+% ==================================================
+\subsection{Prediction Objective}
+% ==================================================
+
+The prediction model aims to estimate three quantities:
+
+\begin{enumerate}
+    \item Expected points scored by our team.
+    \item Expected points scored by the opponent.
+    \item Expected net result of the next game.
+\end{enumerate}
+
+The predicted net result provides an indication of
+the expected scoring advantage.
+
+A positive predicted net result suggests that our
+team may score more points, while a negative value
+suggests that the opponent may score more points.
+
+These predictions are estimates based on historical
+data and do not guarantee the outcome of a future game.
+
+% ==================================================
+\subsection{Least-Squares Linear Regression}
+% ==================================================
+
+Least-squares linear regression is used to model the
+relationship between the chronological match index
+and the recorded scores.
+
+Let the historical matches be represented by
+
+\[
+(x_i,W_i), \qquad i=1,2,\ldots,n
+\]
+
+where:
+
+\begin{itemize}
+    \item $x_i$ is the chronological index of the
+    $i$-th recorded match.
+    \item $W_i$ is the points scored by our team.
+    \item $n$ is the number of valid match records.
+\end{itemize}
+
+A linear model is expressed as
+
+\[
+\widehat{W}(x)=a_W+b_Wx
+\]
+
+where $a_W$ is the intercept and $b_W$ is the slope.
+
+The slope and intercept are determined by minimizing
+the sum of squared prediction errors:
+
+\[
+S_W =
+\sum_{i=1}^{n}
+\left[W_i-(a_W+b_Wx_i)\right]^2
+\]
+
+The least-squares estimates are
+
+\[
+b_W =
+\frac{
+n\sum x_iW_i-(\sum x_i)(\sum W_i)
+}{
+n\sum x_i^2-(\sum x_i)^2
+}
+\]
+
+and
+
+\[
+a_W=\overline{W}-b_W\overline{x}
+\]
+
+The same procedure is applied independently to the
+opponent's scores.
+
+Thus, the opponent's scoring model is
+
+\[
+\widehat{L}(x)=a_L+b_Lx
+\]
+
+where $L_i$ represents the points scored by the
+opponent.
+
+% ==================================================
+\subsection{Predicting the Next Game}
+% ==================================================
+
+If $n$ valid records are available for a particular
+match format, the next chronological index is
+
+\[
+x_{\text{next}}=n+1
+\]
+
+The predicted points scored by our team are
+
+\[
+\widehat{W}_{\text{next}}
+=
+a_W+b_W(n+1)
+\]
+
+Similarly, the predicted points scored by the
+opponent are
+
+\[
+\widehat{L}_{\text{next}}
+=
+a_L+b_L(n+1)
+\]
+
+The predicted net result is then calculated as
+
+\[
+\widehat{R}_{\text{next}}
+=
+\widehat{W}_{\text{next}}
+-
+\widehat{L}_{\text{next}}
+\]
+
+This gives an estimated scoring comparison for
+the next game.
+
+% ==================================================
+\subsection{Separate Models for Match Formats}
+% ==================================================
+
+The prediction process is performed independently
+for all three match formats.
+
+\subsubsection{Singles Prediction}
+
+The Singles model uses only historical Singles
+records. Separate regression equations are fitted
+for our team's points and the opponent's points.
+
+The resulting equations are used to estimate the
+next Singles score.
+
+\subsubsection{Doubles Prediction}
+
+The Doubles model uses only historical Doubles
+records. This ensures that the prediction is based
+on the scoring pattern observed in Doubles matches.
+
+Separate equations are fitted for both teams to
+estimate the next Doubles score.
+
+\subsubsection{Mixed Doubles Prediction}
+
+The Mixed Doubles model uses only historical Mixed
+Doubles records. The same least-squares procedure
+is applied to estimate the next Mixed Doubles score.
+
+Using separate models avoids combining scoring
+patterns from different match formats.
+
+% ==================================================
+\subsection{Prediction Summary}
+% ==================================================
+
+The final predictions can be presented in the
+following table after evaluating the regression
+equations.
+
+\begin{table}[H]
+\centering
+\caption{Estimated Scores for the Next Game}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Format} &
+\textbf{Our Points} &
+\textbf{Opponent Points} &
+\textbf{Net Result} \\
+\midrule
+Singles & -- & -- & -- \\
+Doubles & -- & -- & -- \\
+Mixed Doubles & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The predicted scores are continuous numerical
+estimates. Since actual match scores are integers,
+the estimates may be rounded to the nearest
+non-negative integer for presentation.
+
+% ==================================================
+\subsection{Limitations of the Model}
+% ==================================================
+
+The prediction model is based on historical scoring
+records and assumes that the observed linear trend
+provides useful information about future performance.
+
+However, several factors can influence the actual
+result:
+
+\begin{itemize}
+    \item Changes in the players participating in
+    a match.
+    \item Differences in opponent strength.
+    \item Player fatigue and physical condition.
+    \item Variations in playing conditions.
+    \item The relatively small number of records
+    available for some match formats.
+\end{itemize}
+
+The model does not explicitly account for these
+factors. Therefore, its output should be interpreted
+as a statistical estimate rather than a guaranteed
+match result.
+
+% ==================================================
+\subsection{Conclusion}
+% ==================================================
+
+Least-squares linear regression provides a simple
+method for estimating the next game's scoring
+performance from historical records.
+
+By fitting separate models for Singles, Doubles,
+and Mixed Doubles, the prediction process preserves
+the differences between the three match formats.
+
+The predicted scores and net results provide a
+quantitative estimate of future scoring performance
+and complement the descriptive statistical analysis
+presented in the previous section.
+

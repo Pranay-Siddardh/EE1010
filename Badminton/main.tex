@@ -1,0 +1,153 @@
+
+\documentclass[a4paper,12pt]{article}
+
+% ==================================================
+% PAGE CONFIGURATION
+% ==================================================
+
+\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage{setspace}
+
+% ==================================================
+% GVV STYLE
+% ==================================================
+
+% Pass hyperlink options before loading GVV packages.
+\PassOptionsToPackage{
+    colorlinks=true,
+    linkcolor=red,
+    urlcolor=red,
+    citecolor=red
+}{hyperref}
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+
+% ==================================================
+% MATHEMATICS AND TABLES
+% ==================================================
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% ==================================================
+% GRAPHICS AND FORMATTING
+% ==================================================
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+% ==================================================
+% DOCUMENT FORMATTING
+% ==================================================
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\arraystretch}{1.15}
+
+\onehalfspacing
+
+% Automatic hierarchical numbering
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+% ==================================================
+% DOCUMENT INFORMATION
+% ==================================================
+
+\title{}
+\author{}
+\date{}
+
+% ==================================================
+% DOCUMENT START
+% ==================================================
+
+\begin{document}
+
+% --------------------------------------------------
+% TITLE PAGE
+% --------------------------------------------------
+
+\begin{titlepage}
+    \centering
+
+    \vspace*{2cm}
+
+    {\Large\bfseries BADMINTON PERFORMANCE REPORT\par}
+
+    \vspace{0.5cm}
+
+    {\large Statistical Analysis and Performance Prediction\par}
+
+    \vspace{2cm}
+
+    {\large
+    Prepared by\\[0.4cm]
+    \textbf{[Your Name / Team Names]}
+    \par}
+
+    \vfill
+
+    {\large
+    Department of [Department Name]\\
+    [Institution Name]
+    \par}
+
+    \vspace{1cm}
+
+    {\large
+    \today
+    \par}
+
+    \vspace{1cm}
+
+    % Insert your chosen motto here.
+    \textit{[Project Motto]}
+
+\end{titlepage}
+
+% --------------------------------------------------
+% TABLE OF CONTENTS
+% --------------------------------------------------
+
+\pagenumbering{roman}
+
+\tableofcontents
+
+\clearpage
+
+% --------------------------------------------------
+% MAIN CONTENT
+% --------------------------------------------------
+
+\pagenumbering{arabic}
+
+\input{sections/introduction.tex}
+
+\clearpage
+\input{sections/match_records.tex}
+
+\clearpage
+\input{sections/statistical_analysis.tex}
+
+\clearpage
+\input{sections/prediction.tex}
+
+% ==================================================
+% DOCUMENT END
+% ==================================================
+
+\end{document}
+

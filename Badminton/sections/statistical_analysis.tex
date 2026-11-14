@@ -1,0 +1,280 @@
+
+\section{Statistical Analysis}
+
+This section analyses the recorded badminton match
+results using statistical methods. The objective is to
+understand the team's performance across Singles,
+Doubles, and Mixed Doubles formats.
+
+The analysis considers the points scored by our team,
+the points scored by the opponents, and the difference
+between the two. Descriptive statistics are used to
+identify general performance patterns and variations
+in the recorded results.
+
+% ==================================================
+\subsection{Performance Parameters}
+% ==================================================
+
+The following parameters are used throughout the
+analysis.
+
+\begin{itemize}
+
+    \item \textbf{Wins:} Points scored by our team.
+
+    \item \textbf{Losses:} Points scored by the
+    opposing team.
+
+    \item \textbf{Net Result:} Difference between
+    points scored by our team and the opponent.
+
+\end{itemize}
+
+For a match record, the net result is calculated as
+
+\[
+R_i = W_i - L_i
+\]
+
+where:
+
+\begin{itemize}
+    \item $W_i$ represents the points scored by our
+    team in the $i$-th match.
+    \item $L_i$ represents the points scored by the
+    opponent in the $i$-th match.
+    \item $R_i$ represents the net result.
+\end{itemize}
+
+A positive net result indicates that our team scored
+more points, while a negative value indicates that
+the opponent scored more points.
+
+% ==================================================
+\subsection{Descriptive Statistics}
+% ==================================================
+
+Descriptive statistics provide a summary of the
+recorded performance in each match format.
+
+The following statistical measures are considered.
+
+\subsubsection{Mean}
+
+The arithmetic mean represents the average number of
+points scored per recorded match.
+
+For the points scored by our team,
+
+\[
+\overline{W} =
+\frac{1}{n}\sum_{i=1}^{n} W_i
+\]
+
+Similarly, the average points scored by the opponent
+are given by
+
+\[
+\overline{L} =
+\frac{1}{n}\sum_{i=1}^{n} L_i
+\]
+
+The average net result is
+
+\[
+\overline{R} =
+\frac{1}{n}\sum_{i=1}^{n} R_i
+\]
+
+where $n$ is the number of valid records for the
+respective match format.
+
+\subsubsection{Standard Deviation}
+
+The standard deviation measures the variation of
+individual match results around their mean.
+
+For our team's points,
+
+\[
+\sigma_W =
+\sqrt{
+\frac{1}{n}
+\sum_{i=1}^{n}
+(W_i-\overline{W})^2
+}
+\]
+
+A lower standard deviation indicates that the
+recorded scores are relatively close to the average.
+A higher value indicates greater variation between
+matches.
+
+The same calculation can be applied to the opponent's
+scores and the net results.
+
+\subsubsection{Total Points}
+
+The total points scored by both teams are calculated
+as
+
+\[
+W_{\text{total}} =
+\sum_{i=1}^{n} W_i
+\]
+
+\[
+L_{\text{total}} =
+\sum_{i=1}^{n} L_i
+\]
+
+The cumulative net result is
+
+\[
+R_{\text{total}} =
+W_{\text{total}} - L_{\text{total}}
+\]
+
+These values provide an overall comparison of
+scoring performance within each match format.
+
+% ==================================================
+\subsection{Comparison Across Match Formats}
+% ==================================================
+
+The three match formats are analysed independently
+to understand how performance differs between
+Singles, Doubles, and Mixed Doubles.
+
+The comparison considers:
+
+\begin{enumerate}
+    \item Number of recorded matches.
+    \item Total points scored by our team.
+    \item Total points scored by opponents.
+    \item Average points scored per match.
+    \item Average net result.
+    \item Standard deviation of net results.
+\end{enumerate}
+
+The comparison can be summarised using the following
+table.
+
+\begin{table}[H]
+\centering
+\caption{Summary of Statistical Measures}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Parameter} &
+\textbf{Singles} &
+\textbf{Doubles} &
+\textbf{Mixed} \\
+\midrule
+Number of Matches & -- & -- & -- \\
+Total Wins        & -- & -- & -- \\
+Total Losses      & -- & -- & -- \\
+Average Wins      & -- & -- & -- \\
+Average Losses    & -- & -- & -- \\
+Average Net Result& -- & -- & -- \\
+Std. Deviation    & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The table allows the three formats to be compared
+using consistent statistical measures.
+
+% ==================================================
+\subsection{Date-wise Performance Analysis}
+% ==================================================
+
+Date-wise analysis is used to identify the variation
+in performance over the observation period.
+
+For each date, the net result is calculated using
+
+\[
+R_d = W_d - L_d
+\]
+
+where $W_d$ and $L_d$ represent the total points
+recorded for our team and the opponent on date $d$,
+respectively, for the selected match format.
+
+The recorded dates can then be ranked according to
+their net results.
+
+A higher positive value indicates a stronger
+scoring advantage, whereas a negative value indicates
+a scoring disadvantage.
+
+This ranking helps identify dates with comparatively
+strong and weak performances.
+
+% ==================================================
+\subsection{Graphical Analysis}
+% ==================================================
+
+Graphs are used to make the statistical patterns
+easier to interpret.
+
+The following visualisations are considered for
+each match format.
+
+\subsubsection{Points Scored Over Time}
+
+A time-series plot is used to represent the points
+scored by our team and the opponent across the
+recorded dates.
+
+The horizontal axis represents the date, while the
+vertical axis represents the number of points.
+
+This plot helps identify changes in scoring
+performance over the observation period.
+
+\subsubsection{Net Result Over Time}
+
+A separate plot represents the net result for each
+recorded date.
+
+A horizontal reference line at zero separates
+positive and negative net results.
+
+The average net result can also be represented as
+a horizontal reference line to compare individual
+dates against the overall average.
+
+\subsubsection{Distribution of Net Results}
+
+A distribution plot can be used to understand how
+frequently different net-result values occur.
+
+This helps determine whether the results are
+concentrated around the average or spread across a
+wide range of values.
+
+% ==================================================
+\subsection{Interpretation}
+% ==================================================
+
+The statistical measures and graphical
+representations provide complementary views of
+performance.
+
+The mean describes the average scoring performance,
+while the standard deviation indicates how much
+individual results vary.
+
+The cumulative net result gives an overall scoring
+comparison, whereas date-wise rankings identify
+individual periods of relatively strong or weak
+performance.
+
+Together, these measures establish a statistical
+basis for comparing the three match formats and
+provide the historical data required for the
+next-game prediction model discussed in the
+following section.
+
